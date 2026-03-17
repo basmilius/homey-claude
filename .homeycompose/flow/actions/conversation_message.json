@@ -1,0 +1,67 @@
+{
+    "id": "conversation_message",
+    "title": {
+        "en": "Send conversation message",
+        "nl": "Stuur gespreksbericht"
+    },
+    "titleFormatted": {
+        "en": "Say to [[conversation_id]]: [[message]]",
+        "nl": "Zeg tegen [[conversation_id]]: [[message]]"
+    },
+    "hint": {
+        "en": "Sends a message in a named conversation. Previous messages in the same conversation are remembered.",
+        "nl": "Stuurt een bericht in een benoemd gesprek. Eerdere berichten in hetzelfde gesprek worden onthouden."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "conversation_id",
+            "title": {
+                "en": "Conversation name",
+                "nl": "Gespreksnaam"
+            },
+            "placeholder": {
+                "en": "my-conversation",
+                "nl": "mijn-gesprek"
+            }
+        },
+        {
+            "type": "text",
+            "name": "message",
+            "title": {
+                "en": "Message",
+                "nl": "Bericht"
+            },
+            "placeholder": {
+                "en": "What did I just say?",
+                "nl": "Wat heb ik net gezegd?"
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "name": "response",
+            "type": "string",
+            "title": {
+                "en": "Response",
+                "nl": "Antwoord"
+            },
+            "example": {
+                "en": "You said hello.",
+                "nl": "Je zei hallo."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

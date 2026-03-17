@@ -1,0 +1,98 @@
+{
+    "id": "conversation_message_with_model",
+    "title": {
+        "en": "Send conversation message (choose model)",
+        "nl": "Stuur gespreksbericht (kies model)"
+    },
+    "titleFormatted": {
+        "en": "Say to [[conversation_id]] ([[model]]): [[message]]",
+        "nl": "Zeg tegen [[conversation_id]] ([[model]]): [[message]]"
+    },
+    "hint": {
+        "en": "Sends a message in a named conversation. Previous messages are remembered. Lets you choose the model per flow card.",
+        "nl": "Stuurt een bericht in een benoemd gesprek. Eerdere berichten worden onthouden. Laat je het model per flow kaart kiezen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "conversation_id",
+            "title": {
+                "en": "Conversation name",
+                "nl": "Gespreksnaam"
+            },
+            "placeholder": {
+                "en": "my-conversation",
+                "nl": "mijn-gesprek"
+            }
+        },
+        {
+            "type": "text",
+            "name": "message",
+            "title": {
+                "en": "Message",
+                "nl": "Bericht"
+            },
+            "placeholder": {
+                "en": "What did I just say?",
+                "nl": "Wat heb ik net gezegd?"
+            }
+        },
+        {
+            "type": "dropdown",
+            "name": "model",
+            "title": {
+                "en": "Model",
+                "nl": "Model"
+            },
+            "values": [
+                {
+                    "id": "claude-haiku-4-5-20251001",
+                    "label": {
+                        "en": "Claude Haiku 4.5",
+                        "nl": "Claude Haiku 4.5"
+                    }
+                },
+                {
+                    "id": "claude-sonnet-4-6",
+                    "label": {
+                        "en": "Claude Sonnet 4.6",
+                        "nl": "Claude Sonnet 4.6"
+                    }
+                },
+                {
+                    "id": "claude-opus-4-6",
+                    "label": {
+                        "en": "Claude Opus 4.6",
+                        "nl": "Claude Opus 4.6"
+                    }
+                }
+            ]
+        }
+    ],
+    "tokens": [
+        {
+            "name": "response",
+            "type": "string",
+            "title": {
+                "en": "Response",
+                "nl": "Antwoord"
+            },
+            "example": {
+                "en": "You said hello.",
+                "nl": "Je zei hallo."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

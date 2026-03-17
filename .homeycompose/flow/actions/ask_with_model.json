@@ -1,0 +1,86 @@
+{
+    "id": "ask_with_model",
+    "title": {
+        "en": "Ask Claude a question (choose model)",
+        "nl": "Stel Claude een vraag (kies model)"
+    },
+    "titleFormatted": {
+        "en": "Ask Claude ([[model]]): [[question]]",
+        "nl": "Vraag Claude ([[model]]): [[question]]"
+    },
+    "hint": {
+        "en": "Asks Claude a question and returns the answer as a token. Lets you choose the model per flow card.",
+        "nl": "Stelt Claude een vraag en geeft het antwoord terug als token. Laat je het model per flow kaart kiezen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "question",
+            "title": {
+                "en": "Question",
+                "nl": "Vraag"
+            },
+            "placeholder": {
+                "en": "What is the capital of France?",
+                "nl": "Wat is de hoofdstad van Frankrijk?"
+            }
+        },
+        {
+            "type": "dropdown",
+            "name": "model",
+            "title": {
+                "en": "Model",
+                "nl": "Model"
+            },
+            "values": [
+                {
+                    "id": "claude-haiku-4-5-20251001",
+                    "label": {
+                        "en": "Claude Haiku 4.5",
+                        "nl": "Claude Haiku 4.5"
+                    }
+                },
+                {
+                    "id": "claude-sonnet-4-6",
+                    "label": {
+                        "en": "Claude Sonnet 4.6",
+                        "nl": "Claude Sonnet 4.6"
+                    }
+                },
+                {
+                    "id": "claude-opus-4-6",
+                    "label": {
+                        "en": "Claude Opus 4.6",
+                        "nl": "Claude Opus 4.6"
+                    }
+                }
+            ]
+        }
+    ],
+    "tokens": [
+        {
+            "name": "answer",
+            "type": "string",
+            "title": {
+                "en": "Answer",
+                "nl": "Antwoord"
+            },
+            "example": {
+                "en": "Paris is the capital of France.",
+                "nl": "Parijs is de hoofdstad van Frankrijk."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

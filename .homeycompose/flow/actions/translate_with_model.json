@@ -1,0 +1,98 @@
+{
+    "id": "translate_with_model",
+    "title": {
+        "en": "Translate text (choose model)",
+        "nl": "Vertaal tekst (kies model)"
+    },
+    "titleFormatted": {
+        "en": "Translate [[text]] to [[target_language]] ([[model]])",
+        "nl": "Vertaal [[text]] naar [[target_language]] ([[model]])"
+    },
+    "hint": {
+        "en": "Translates text to the specified language using Claude. Lets you choose the model per flow card.",
+        "nl": "Vertaalt tekst naar de opgegeven taal met Claude. Laat je het model per flow kaart kiezen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "text",
+            "title": {
+                "en": "Text to translate",
+                "nl": "Te vertalen tekst"
+            },
+            "placeholder": {
+                "en": "Hello, how are you?",
+                "nl": "Hallo, hoe gaat het?"
+            }
+        },
+        {
+            "type": "text",
+            "name": "target_language",
+            "title": {
+                "en": "Target language",
+                "nl": "Doeltaal"
+            },
+            "placeholder": {
+                "en": "Dutch",
+                "nl": "Engels"
+            }
+        },
+        {
+            "type": "dropdown",
+            "name": "model",
+            "title": {
+                "en": "Model",
+                "nl": "Model"
+            },
+            "values": [
+                {
+                    "id": "claude-haiku-4-5-20251001",
+                    "label": {
+                        "en": "Claude Haiku 4.5",
+                        "nl": "Claude Haiku 4.5"
+                    }
+                },
+                {
+                    "id": "claude-sonnet-4-6",
+                    "label": {
+                        "en": "Claude Sonnet 4.6",
+                        "nl": "Claude Sonnet 4.6"
+                    }
+                },
+                {
+                    "id": "claude-opus-4-6",
+                    "label": {
+                        "en": "Claude Opus 4.6",
+                        "nl": "Claude Opus 4.6"
+                    }
+                }
+            ]
+        }
+    ],
+    "tokens": [
+        {
+            "name": "translation",
+            "type": "string",
+            "title": {
+                "en": "Translation",
+                "nl": "Vertaling"
+            },
+            "example": {
+                "en": "Hallo, hoe gaat het?",
+                "nl": "Hello, how are you?"
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "id": "response_contains",
+    "title": {
+        "en": "Text contains",
+        "nl": "Tekst bevat"
+    },
+    "titleFormatted": {
+        "en": "[[text]] contains !{{|not }}[[needle]]",
+        "nl": "[[text]] bevat !{{|niet }}[[needle]]"
+    },
+    "hint": {
+        "en": "Checks if a text contains a given word or phrase (case-insensitive). Useful for checking Claude's responses.",
+        "nl": "Controleert of een tekst een bepaald woord of zin bevat (hoofdletterongevoelig). Handig voor het controleren van Claude-antwoorden."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "text",
+            "title": {
+                "en": "Text",
+                "nl": "Tekst"
+            },
+            "placeholder": {
+                "en": "The text to search in",
+                "nl": "De tekst om in te zoeken"
+            }
+        },
+        {
+            "type": "text",
+            "name": "needle",
+            "title": {
+                "en": "Word or phrase",
+                "nl": "Woord of zin"
+            },
+            "placeholder": {
+                "en": "yes",
+                "nl": "ja"
+            }
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "id": "translate",
+    "title": {
+        "en": "Translate text",
+        "nl": "Vertaal tekst"
+    },
+    "titleFormatted": {
+        "en": "Translate [[text]] to [[target_language]]",
+        "nl": "Vertaal [[text]] naar [[target_language]]"
+    },
+    "hint": {
+        "en": "Translates text to the specified language using Claude. Uses the default model from settings.",
+        "nl": "Vertaalt tekst naar de opgegeven taal met Claude. Gebruikt het standaard model uit de instellingen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "text",
+            "title": {
+                "en": "Text to translate",
+                "nl": "Te vertalen tekst"
+            },
+            "placeholder": {
+                "en": "Hello, how are you?",
+                "nl": "Hallo, hoe gaat het?"
+            }
+        },
+        {
+            "type": "text",
+            "name": "target_language",
+            "title": {
+                "en": "Target language",
+                "nl": "Doeltaal"
+            },
+            "placeholder": {
+                "en": "Dutch",
+                "nl": "Engels"
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "name": "translation",
+            "type": "string",
+            "title": {
+                "en": "Translation",
+                "nl": "Vertaling"
+            },
+            "example": {
+                "en": "Hallo, hoe gaat het?",
+                "nl": "Hello, how are you?"
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

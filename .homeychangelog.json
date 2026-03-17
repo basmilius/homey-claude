@@ -1,0 +1,277 @@
+{
+  "0.0.1": {
+    "en": "Initial test release."
+  },
+  "0.0.2": {
+    "en": "Small tweaks and fixes for modes."
+  },
+  "0.0.3": {
+    "en": "Tweaks to modes."
+  },
+  "0.0.4": {
+    "en": "Added new math then-cards and added signals."
+  },
+  "0.0.5": {
+    "en": "Fixed a few issues with cycles."
+  },
+  "0.0.6": {
+    "en": "Refactored most flow cards and introduced timer cards without functionality for now."
+  },
+  "0.0.7": {
+    "en": "Implemented initial logic for timers."
+  },
+  "0.0.8": {
+    "en": "Introduce Flags."
+  },
+  "0.1.0": {
+    "en": "Introduce dice rolls condition."
+  },
+  "0.2.0": {
+    "en": "Update the assets and branding a bit."
+  },
+  "1.0.0": {
+    "en": "First version!"
+  },
+  "1.0.1": {
+    "en": "Added a hint to the school holiday flow card."
+  },
+  "1.0.2": {
+    "en": "Fixed a bug where a token would receive the wrong value."
+  },
+  "1.0.3": {
+    "en": "Fixed a translated token error where the token would not be added at all."
+  },
+  "1.0.4": {
+    "en": "Added app manifest tags."
+  },
+  "1.0.5": {
+    "en": "Added a missing null check."
+  },
+  "1.0.6": {
+    "en": "Added a missing null-check in timers."
+  },
+  "1.0.7": {
+    "en": "Added a missing null check."
+  },
+  "1.1.0": {
+    "en": "This update adds two new trigger cards: 'Flag updated' and 'Mode updated'."
+  },
+  "1.2.0": {
+    "en": "This update adds a new flag on/off widget for your dashboards."
+  },
+  "1.2.1": {
+    "en": "Reworked some internal logic."
+  },
+  "1.2.2": {
+    "en": "Fixed a bug where the timer remaining flow card could fire multiple times. This only was the case when multiple remaining timer cards were used with the same time, for a single timer."
+  },
+  "1.3.0": {
+    "en": "This update introduces a no-repeat flow card and adds translations for all supported languages."
+  },
+  "1.3.1": {
+    "en": "This update introduces a no-repeat flow card and adds translations for all supported languages."
+  },
+  "1.4.0": {
+    "en": "This update introduces a new no-repeat flow card as well as a new current mode dashboard widget."
+  },
+  "1.4.1": {
+    "en": "This update introduces a new no-repeat flow card as well as a new current mode dashboard widget."
+  },
+  "1.4.2": {
+    "en": "This update introduces a new no-repeat flow card as well as a new current mode dashboard widget."
+  },
+  "1.4.3": {
+    "en": "This update introduces a new no-repeat flow card as well as a new current mode dashboard widget."
+  },
+  "1.5.0": {
+    "en": "Introduces no-repeat and clear-no-repeat flow cards, a new slider widget that can be controlled from flows via the slider-set and slider-changed cards, and a new widget that shows the current mode."
+  },
+  "1.5.1": {
+    "en": "Fixed an app startup crash."
+  },
+  "1.5.2": {
+    "en": "Fixed a bug where the stop timer card did not properly remove a timer from the scheduler."
+  },
+  "1.5.3": {
+    "en": "This update optimizes the performance of certain flag and mode trigger execution. It also fixes a bug where the timer remaining action flow card could fire twice when a timer was paused on that exact moment."
+  },
+  "1.5.4": {
+    "en": "This update removes an obsolete library that was used."
+  },
+  "1.5.5": {
+    "en": "Reworked how icons are loaded."
+  },
+  "1.6.0": {
+    "en": "This update adds the ability to customize icons and colors for flags and modes. You may customize these from app settings."
+  },
+  "1.6.1": {
+    "en": "This update adds the ability to customize icons and colors for flags and modes. You may customize these from app settings."
+  },
+  "1.6.2": {
+    "en": "This update adds the ability to customize icons and colors for flags and modes. You may customize these from app settings."
+  },
+  "1.6.3": {
+    "en": "This update adds the ability to customize icons and colors for flags and modes. You may customize these from app settings."
+  },
+  "1.6.4": {
+    "en": "No significant changes, just some internal refactorings."
+  },
+  "1.6.5": {
+    "en": "Fixed a bug where non-standard languages could not properly initialize."
+  },
+  "1.6.6": {
+    "en": "Simplified code a bit."
+  },
+  "1.6.9": {
+    "en": "No significant changes, just some internal refactorings."
+  },
+  "1.6.10": {
+    "en": "Add Homey Community Topic ID."
+  },
+  "1.6.11": {
+    "en": "Internal optimization."
+  },
+  "1.6.12": {
+    "en": "This update introduces a new flow trigger for when the current mode changes."
+  },
+  "1.6.13": {
+    "en": "This update adds the ability to invert the cycle has value, timer is finished, timer is paused and timer is running conditions."
+  },
+  "1.6.14": {
+    "en": "This update fixes a bug where modes could not be activated or deactivated while timeline notifications were disabled."
+  },
+  "1.6.15": {
+    "en": "Fixed a typo."
+  },
+  "1.7.0": {
+    "en": "This update introduces labels, events and corresponding widgets. It also adds support for Arabic."
+  },
+  "1.8.2": {
+    "en": "This update introduces a timer widget, streamlines internal logic and adds more api endpoints."
+  },
+  "1.8.3": {
+    "en": "Fixed a bug where the timer count in app settings only counted non-stopped timers."
+  },
+  "1.9.0": {
+    "en": "This update introduces a filter setting for the Flags-widget, this allows you to select which flags are shown in the widget. It also fixes a bug where widgets were not updated when new flags and modes were added."
+  },
+  "1.9.1": {
+    "en": "This update adds more verbose logging for dianostics reports."
+  },
+  "1.9.2": {
+    "en": "No significant changes, just a library version bump."
+  },
+  "1.9.3": {
+    "en": "Cleanup and internal refactorings."
+  },
+  "1.9.4": {
+    "en": "This update add internal cleanup logic and fixes a few instances where autocomplete providers did not check all flow cards."
+  },
+  "1.9.5": {
+    "en": "Add paypal donate option."
+  },
+  "1.9.6": {
+    "en": "This update adds a welcome notification with a reference to the documentation website."
+  },
+  "1.10.0": {
+    "en": "This update adds a filter option to the Modes-widget."
+  },
+  "1.10.1": {
+    "en": "Fixes a bug where clicks wouldn't register while using a hardware pointer on an iPad."
+  },
+  "1.10.2": {
+    "en": "Fixes a typo, thanks @s73nm!"
+  },
+  "1.10.3": {
+    "en": "This update introduces a new value token to the label changed trigger."
+  },
+  "1.10.4": {
+    "en": "Bump dependencies."
+  },
+  "1.10.5": {
+    "en": "Fixed an issue where only saved sliders were available in the slider widget."
+  },
+  "1.11.0": {
+    "en": "This update adds a new utility flow card to calculate the percentage between two timestamps."
+  },
+  "1.12.0": {
+    "en": "This update introduces Sets, which are groups of boolean values. It also fixes a bug with encoding of names and an issue with timers where the remaining trigger could in rare cases fire after the timer was finished."
+  },
+  "1.12.1": {
+    "en": "This update introduces Sets, which are groups of boolean values."
+  },
+  "1.12.2": {
+    "en": "This update introduces Sets, which are groups of boolean values."
+  },
+  "1.12.3": {
+    "en": "This update introduces Sets, which are groups of boolean values."
+  },
+  "1.12.4": {
+    "en": "Bump dependencies."
+  },
+  "1.12.5": {
+    "en": "This update improves all translations for consistency."
+  },
+  "1.13.0": {
+    "en": "This update adds previous step flow cards for cycles. Event condition flow cards can now be inverted, thanks @s73nm"
+  },
+  "1.13.1": {
+    "en": "This update adds missing inverted condition flow card titles and makes translations a more consistent."
+  },
+  "1.14.0": {
+    "en": "This update adds a new Reactivate current mode flow action."
+  },
+  "1.15.0": {
+    "en": "This update introduces new activate flag/mode for [duration] flow actions, flag/mode is active for at least [duration] flow conditions. It also adds new start/set timer for a randomized duration flow actions. And last but not least, it adds a widget setting for slider step size.",
+    "nl": "Deze update introduceert nieuwe activeer flag/stand voor [duur] flow acties, de flag/stand is actief voor tenminste [duur] flow condities. Ook worden er nieuwe start/set timers voor willekeurige duur flow acties toegevoegd. En ten slotte wordt er een widget instelling voor slider stapgrootte toegevoegd."
+  },
+  "1.15.1": {
+    "en": "Updated app readme."
+  },
+  "1.15.2": {
+    "en": "This update introduces a new 'Retrieve info of timer' flow action, which provides flow tokens for the timer status, remaining time and remaining seconds."
+  },
+  "1.16.0": {
+    "en": "This update rewrites how app settings are rendered."
+  },
+  "1.16.1": {
+    "en": "Bump deps."
+  },
+  "1.17.0": {
+    "en": "This update introduces repeating timers."
+  },
+  "1.17.1": {
+    "en": "Small clarification in repeating timers feature."
+  },
+  "1.17.2": {
+    "en": "This update improves startup performance.",
+    "nl": "Deze update verbetert de prestaties bij het opstarten."
+  },
+  "1.17.3": {
+    "en": "Update dependencies."
+  },
+  "1.17.4": {
+    "en": "Update dependencies."
+  },
+  "1.17.5": {
+    "en": "Update dependencies. (Build upload failed?)"
+  },
+  "1.17.6": {
+    "en": "Update dependencies."
+  },
+  "1.18.0": {
+    "en": "This update adds milliseconds as a timing unit for everything time-related, thanks @stefan-schweiger!. The Set states widget now has an opt-in setting to allow toggling states from the widget.",
+    "nl": "Deze update voegt milliseconden toe als een tijd-eenheid voor alles tijdgerelateerd, bedankt @stefan-schweiger!. De Set statussen widget heeft nu een optie om statussen te kunnen togglen vanaf de widget."
+  },
+  "1.18.1": {
+    "en": "This update fixes a bug where unneeded mode and flag updates were triggered when the name was somehow empty.",
+    "nl": "Deze update fixt een bug waarbij onnodige mode en flag updates werden getriggert wanneer de naam leeg was."
+  },
+  "1.18.2": {
+    "en": "Introduces a new at least N states in set became active trigger and a new at least n states in set are active. This update also makes the code a bit simpler."
+  },
+  "1.19.0":{
+    "en": "This update reworks the internal logic of the app to be more efficient and more reliable.",
+    "nl": "Deze update rewerkt de interne logica van de app om efficiënter en betrouwbaarder te zijn."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "notification": {
+    "welcome": "Welkom bij **Claude**! Ga naar de app-instellingen om je Anthropic API-sleutel in te stellen."
+  },
+  "settings": {
+    "title": "Claude",
+    "subtitle": "Stel je Claude AI-integratie in",
+    "api_key": {
+      "title": "API-sleutel",
+      "description": "Je Anthropic API-sleutel. Je kunt er een vinden of aanmaken op console.anthropic.com.",
+      "placeholder": "sk-ant-..."
+    },
+    "model": {
+      "title": "Standaard model",
+      "description": "Het Claude-model dat standaard wordt gebruikt. Individuele flow-kaarten kunnen dit overschrijven."
+    },
+    "max_tokens": {
+      "title": "Maximale tokens",
+      "description": "Maximaal aantal tokens in het antwoord van Claude. Hogere waarden staan langere antwoorden toe."
+    },
+    "test": {
+      "button": "Verbinding testen",
+      "success": "Verbinding geslaagd!",
+      "error": "Verbinding mislukt: {{error}}"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+    "id": "ask",
+    "title": {
+        "en": "Ask Claude a question",
+        "nl": "Stel Claude een vraag"
+    },
+    "titleFormatted": {
+        "en": "Ask Claude: [[question]]",
+        "nl": "Vraag Claude: [[question]]"
+    },
+    "hint": {
+        "en": "Asks Claude a question and returns the answer as a token. Uses the default model from settings.",
+        "nl": "Stelt Claude een vraag en geeft het antwoord terug als token. Gebruikt het standaard model uit de instellingen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "question",
+            "title": {
+                "en": "Question",
+                "nl": "Vraag"
+            },
+            "placeholder": {
+                "en": "What is the capital of France?",
+                "nl": "Wat is de hoofdstad van Frankrijk?"
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "name": "answer",
+            "type": "string",
+            "title": {
+                "en": "Answer",
+                "nl": "Antwoord"
+            },
+            "example": {
+                "en": "Paris is the capital of France.",
+                "nl": "Parijs is de hoofdstad van Frankrijk."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "id": "generate",
+    "title": {
+        "en": "Generate text",
+        "nl": "Genereer tekst"
+    },
+    "titleFormatted": {
+        "en": "Generate: [[prompt]]",
+        "nl": "Genereer: [[prompt]]"
+    },
+    "hint": {
+        "en": "Generates text based on a prompt using Claude. Uses the default model from settings.",
+        "nl": "Genereert tekst op basis van een prompt met Claude. Gebruikt het standaard model uit de instellingen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "prompt",
+            "title": {
+                "en": "Prompt",
+                "nl": "Prompt"
+            },
+            "placeholder": {
+                "en": "Write a short poem about the rain.",
+                "nl": "Schrijf een kort gedicht over de regen."
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "name": "result",
+            "type": "string",
+            "title": {
+                "en": "Generated text",
+                "nl": "Gegenereerde tekst"
+            },
+            "example": {
+                "en": "The rain falls softly on the window pane.",
+                "nl": "De regen tikt zacht op het raam."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

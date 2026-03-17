@@ -1,0 +1,86 @@
+{
+    "id": "generate_with_model",
+    "title": {
+        "en": "Generate text (choose model)",
+        "nl": "Genereer tekst (kies model)"
+    },
+    "titleFormatted": {
+        "en": "Generate ([[model]]): [[prompt]]",
+        "nl": "Genereer ([[model]]): [[prompt]]"
+    },
+    "hint": {
+        "en": "Generates text based on a prompt using Claude. Lets you choose the model per flow card.",
+        "nl": "Genereert tekst op basis van een prompt met Claude. Laat je het model per flow kaart kiezen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "prompt",
+            "title": {
+                "en": "Prompt",
+                "nl": "Prompt"
+            },
+            "placeholder": {
+                "en": "Write a short poem about the rain.",
+                "nl": "Schrijf een kort gedicht over de regen."
+            }
+        },
+        {
+            "type": "dropdown",
+            "name": "model",
+            "title": {
+                "en": "Model",
+                "nl": "Model"
+            },
+            "values": [
+                {
+                    "id": "claude-haiku-4-5-20251001",
+                    "label": {
+                        "en": "Claude Haiku 4.5",
+                        "nl": "Claude Haiku 4.5"
+                    }
+                },
+                {
+                    "id": "claude-sonnet-4-6",
+                    "label": {
+                        "en": "Claude Sonnet 4.6",
+                        "nl": "Claude Sonnet 4.6"
+                    }
+                },
+                {
+                    "id": "claude-opus-4-6",
+                    "label": {
+                        "en": "Claude Opus 4.6",
+                        "nl": "Claude Opus 4.6"
+                    }
+                }
+            ]
+        }
+    ],
+    "tokens": [
+        {
+            "name": "result",
+            "type": "string",
+            "title": {
+                "en": "Generated text",
+                "nl": "Gegenereerde tekst"
+            },
+            "example": {
+                "en": "The rain falls softly on the window pane.",
+                "nl": "De regen tikt zacht op het raam."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

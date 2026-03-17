@@ -1,0 +1,114 @@
+{
+    "id": "summarize",
+    "title": {
+        "en": "Summarize text",
+        "nl": "Vat tekst samen"
+    },
+    "titleFormatted": {
+        "en": "Summarize [[text]] in [[language]]",
+        "nl": "Vat [[text]] samen in [[language]]"
+    },
+    "hint": {
+        "en": "Summarizes a text using Claude. Uses the default model from settings.",
+        "nl": "Vat een tekst samen met Claude. Gebruikt het standaard model uit de instellingen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "text",
+            "title": {
+                "en": "Text to summarize",
+                "nl": "Tekst om samen te vatten"
+            },
+            "placeholder": {
+                "en": "Paste the text you want to summarize here.",
+                "nl": "Plak hier de tekst die je wilt samenvatten."
+            }
+        },
+        {
+            "type": "dropdown",
+            "name": "language",
+            "title": {
+                "en": "Summary language",
+                "nl": "Taal van de samenvatting"
+            },
+            "values": [
+                {
+                    "id": "same",
+                    "label": {
+                        "en": "Same as input",
+                        "nl": "Zelfde als invoer"
+                    }
+                },
+                {
+                    "id": "English",
+                    "label": {
+                        "en": "English",
+                        "nl": "Engels"
+                    }
+                },
+                {
+                    "id": "Dutch",
+                    "label": {
+                        "en": "Dutch",
+                        "nl": "Nederlands"
+                    }
+                },
+                {
+                    "id": "German",
+                    "label": {
+                        "en": "German",
+                        "nl": "Duits"
+                    }
+                },
+                {
+                    "id": "French",
+                    "label": {
+                        "en": "French",
+                        "nl": "Frans"
+                    }
+                },
+                {
+                    "id": "Spanish",
+                    "label": {
+                        "en": "Spanish",
+                        "nl": "Spaans"
+                    }
+                },
+                {
+                    "id": "Italian",
+                    "label": {
+                        "en": "Italian",
+                        "nl": "Italiaans"
+                    }
+                }
+            ]
+        }
+    ],
+    "tokens": [
+        {
+            "name": "summary",
+            "type": "string",
+            "title": {
+                "en": "Summary",
+                "nl": "Samenvatting"
+            },
+            "example": {
+                "en": "The article discusses the impact of climate change.",
+                "nl": "Het artikel bespreekt de impact van klimaatverandering."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+  "notification": {
+    "welcome": "Welcome to **Claude**! Go to the app settings to configure your Anthropic API key."
+  },
+  "settings": {
+    "title": "Claude",
+    "subtitle": "Configure your Claude AI integration",
+    "api_key": {
+      "title": "API Key",
+      "description": "Your Anthropic API key. You can find or create one at console.anthropic.com.",
+      "placeholder": "sk-ant-..."
+    },
+    "model": {
+      "title": "Default Model",
+      "description": "The Claude model to use by default. Individual flow cards can override this."
+    },
+    "max_tokens": {
+      "title": "Max Tokens",
+      "description": "Maximum number of tokens in Claude's response. Higher values allow longer responses."
+    },
+    "test": {
+      "button": "Test Connection",
+      "success": "Connection successful!",
+      "error": "Connection failed: {{error}}"
+    }
+  }
+}

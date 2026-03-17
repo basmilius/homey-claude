@@ -1,0 +1,29 @@
+{
+    "id": "conversation_clear",
+    "title": {
+        "en": "Clear conversation",
+        "nl": "Wis gesprek"
+    },
+    "titleFormatted": {
+        "en": "Clear conversation [[conversation_id]]",
+        "nl": "Wis gesprek [[conversation_id]]"
+    },
+    "hint": {
+        "en": "Clears all messages from the specified conversation.",
+        "nl": "Wist alle berichten uit het opgegeven gesprek."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "conversation_id",
+            "title": {
+                "en": "Conversation name",
+                "nl": "Gespreksnaam"
+            },
+            "placeholder": {
+                "en": "my-conversation",
+                "nl": "mijn-gesprek"
+            }
+        }
+    ]
+}

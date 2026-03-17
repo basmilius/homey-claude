@@ -1,0 +1,26 @@
+import {action, FlowActionEntity} from '@basmilius/homey-common';
+import type {ClaudeApp} from '../../types';
+
+/**
+ * Action: Translate text to a target language using Claude.
+ */
+@action('translate')
+export default class extends FlowActionEntity<ClaudeApp, Args, never, Result> {
+    async onRun(args: Args): Promise<Result> {
+        const prompt = `Translate the following text to ${args.target_language}. Provide only the translation, no additional commentary:\n\n${args.text}`;
+
+        const {answer, model} = await this.app.brain.claude.ask(prompt);
+
+        return {translation: answer, model_used: model};
+    }
+}
+
+type Args = {
+    readonly text: string;
+    readonly target_language: string;
+};
+
+type Result = {
+    readonly translation: string;
+    readonly model_used: string;
+};

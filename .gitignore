@@ -1,0 +1,15 @@
+/env.json
+/node_modules/
+/.claude/
+/.homeybuild/
+.idea/*
+/package-lock.json
+
+/docs/.vitepress/dist
+/docs/.vitepress/cache
+
+/settings-ui/node_modules
+/settings-ui/package-lock.json
+
+!/.idea/.name
+!/.idea/icon.svg
