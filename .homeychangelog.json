@@ -1,5 +1,9 @@
 {
-  "1.0.1": {
-    "en": "Added Homey Community Topic ID."
-  }
+    "1.0.1": {
+        "en": "Added Homey Community Topic ID."
+    },
+    "1.1.0": {
+        "en": "Added support for the Homey MCP Server.",
+        "nl": "Ondersteuning toegevoegd voor de Homey MCP Server."
+    }
 }
