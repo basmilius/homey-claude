@@ -1,83 +1,83 @@
 {
-    "id": "com.basmilius.claude",
-    "version": "1.0.0",
-    "compatibility": ">=12.4.0",
-    "sdk": 3,
-    "brandColor": "#CC785C",
-    "platforms": [
-        "local"
+  "id": "com.basmilius.claude",
+  "version": "1.0.1",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "brandColor": "#CC785C",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Claude",
+    "nl": "Claude"
+  },
+  "description": {
+    "en": "Bring Claude AI by Anthropic into your Homey flows.",
+    "nl": "Breng Claude AI van Anthropic in je Homey flows."
+  },
+  "category": [
+    "tools"
+  ],
+  "tags": {
+    "en": [
+      "ai",
+      "claude",
+      "anthropic",
+      "llm",
+      "chatgpt",
+      "gpt",
+      "automation",
+      "flow",
+      "smart"
     ],
-    "name": {
-        "en": "Claude",
-        "nl": "Claude"
-    },
-    "description": {
-        "en": "Bring Claude AI by Anthropic into your Homey flows.",
-        "nl": "Breng Claude AI van Anthropic in je Homey flows."
-    },
-    "category": [
-        "tools"
-    ],
-    "tags": {
-        "en": [
-            "ai",
-            "claude",
-            "anthropic",
-            "llm",
-            "chatgpt",
-            "gpt",
-            "automation",
-            "flow",
-            "smart"
-        ],
-        "nl": [
-            "ai",
-            "claude",
-            "anthropic",
-            "automatisering",
-            "flow",
-            "slim"
-        ]
-    },
-    "permissions": [],
-    "images": {
-        "small": "/assets/images/small.png",
-        "large": "/assets/images/large.png",
-        "xlarge": "/assets/images/xlarge.png"
-    },
-    "author": {
-        "name": "Bas Milius",
-        "email": "bas@mili.us"
-    },
-    "bugs": {
-        "url": "https://github.com/basmilius/homey-claude/issues"
-    },
-    "homepage": "https://bas.dev",
-    "source": "https://github.com/basmilius/homey-claude",
-    "support": "https://github.com/basmilius/homey-claude/issues",
-    "homeyCommunityTopicId": 152648,
-    "contributing": {
-        "donate": {
-            "paypal": {
-                "username": "basmilius"
-            },
-            "githubSponsors": {
-                "username": "basmilius"
-            }
-        }
-    },
-    "api": {
-        "getSettings": {
-            "method": "GET",
-            "path": "/settings"
-        },
-        "saveSettings": {
-            "method": "PUT",
-            "path": "/settings"
-        },
-        "testConnection": {
-            "method": "POST",
-            "path": "/test-connection"
-        }
+    "nl": [
+      "ai",
+      "claude",
+      "anthropic",
+      "automatisering",
+      "flow",
+      "slim"
+    ]
+  },
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Bas Milius",
+    "email": "bas@mili.us"
+  },
+  "bugs": {
+    "url": "https://github.com/basmilius/homey-claude/issues"
+  },
+  "homepage": "https://bas.dev",
+  "source": "https://github.com/basmilius/homey-claude",
+  "support": "https://github.com/basmilius/homey-claude/issues",
+  "homeyCommunityTopicId": 152648,
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "basmilius"
+      },
+      "githubSponsors": {
+        "username": "basmilius"
+      }
     }
+  },
+  "api": {
+    "getSettings": {
+      "method": "GET",
+      "path": "/settings"
+    },
+    "saveSettings": {
+      "method": "PUT",
+      "path": "/settings"
+    },
+    "testConnection": {
+      "method": "POST",
+      "path": "/test-connection"
+    }
+  }
 }
