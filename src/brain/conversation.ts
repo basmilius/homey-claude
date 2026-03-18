@@ -1,5 +1,5 @@
-import {Shortcuts} from '@basmilius/homey-common';
-import type {ClaudeApp, ConversationMessage} from '../types';
+import { Shortcuts } from '@basmilius/homey-common';
+import type { ClaudeApp, ConversationMessage } from '../types';
 
 /**
  * Manages multi-turn conversation histories in memory.

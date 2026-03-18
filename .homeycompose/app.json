@@ -78,6 +78,18 @@
     "testConnection": {
       "method": "POST",
       "path": "/test-connection"
+    },
+    "getHomeyOauthAuthUrl": {
+      "method": "GET",
+      "path": "/homey-oauth/auth-url"
+    },
+    "getHomeyOauthStatus": {
+      "method": "GET",
+      "path": "/homey-oauth/status"
+    },
+    "deleteHomeyOauthDisconnect": {
+      "method": "DELETE",
+      "path": "/homey-oauth/disconnect"
     }
   }
 }

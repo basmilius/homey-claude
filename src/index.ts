@@ -1,9 +1,9 @@
-import {App} from '@basmilius/homey-common';
-import {Brain} from './brain';
-import {Actions, Conditions} from './flow';
-import type {ClaudeApp} from './types';
+import { App } from '@basmilius/homey-common';
+import { Brain } from './brain';
+import { Actions, Conditions } from './flow';
+import type { ClaudeApp } from './types';
 
-export default class extends App<ClaudeApp> {
+export default class Claude extends App<ClaudeApp> {
     get brain(): Brain {
         return this.#brain;
     }
@@ -29,6 +29,7 @@ export default class extends App<ClaudeApp> {
 
     #registerActions(): void {
         this.registry.action(Actions.Ask);
+        this.registry.action(Actions.AskWithHomey);
         this.registry.action(Actions.AskWithModel);
         this.registry.action(Actions.ConversationClear);
         this.registry.action(Actions.ConversationMessage);

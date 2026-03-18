@@ -35,6 +35,8 @@ declare namespace Homey {
     ): Promise<T>;
 
     export function on(event: string, callback: (...args: any[]) => void): void;
+
+    export function openURL(url: string): void;
 }
 
 declare global {

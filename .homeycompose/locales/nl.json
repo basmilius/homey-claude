@@ -18,10 +18,25 @@
             "title": "Maximale tokens",
             "description": "Maximaal aantal tokens in het antwoord van Claude. Hogere waarden staan langere antwoorden toe."
         },
+        "save": {
+            "button": "Instellingen opslaan",
+            "success": "Instellingen opgeslagen!",
+            "error": "Opslaan mislukt: {{error}}"
+        },
         "test": {
             "button": "Verbinding testen",
             "success": "Verbinding geslaagd!",
             "error": "Verbinding mislukt: {{error}}"
+        },
+        "homey_mcp": {
+            "title": "Homey MCP",
+            "description": "Verbind met je Homey via MCP om Claude toegang te geven tot je apparaten en flows. Gebruik daarna de flow-kaart \"Stel Claude een vraag met Homey-context\".",
+            "connect": "Verbinden met Homey",
+            "disconnect": "Verbinding verbreken",
+            "connected": "Verbonden met Homey MCP",
+            "connecting": "Authenticatie openen...",
+            "waiting": "Wachten op authenticatie...",
+            "error": "Authenticatie mislukt: {{error}}"
         }
     }
 }

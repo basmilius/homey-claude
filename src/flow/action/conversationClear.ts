@@ -1,5 +1,5 @@
-import {action, FlowActionEntity} from '@basmilius/homey-common';
-import type {ClaudeApp} from '../../types';
+import { action, FlowActionEntity } from '@basmilius/homey-common';
+import type { ClaudeApp } from '../../types';
 
 /**
  * Action: Clear the conversation history for a named conversation.

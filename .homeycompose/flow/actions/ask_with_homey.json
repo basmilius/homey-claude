@@ -1,0 +1,55 @@
+{
+    "id": "ask_with_homey",
+    "title": {
+        "en": "Ask Claude with Homey context",
+        "nl": "Stel Claude een vraag met Homey-context"
+    },
+    "titleFormatted": {
+        "en": "Ask Claude (Homey): [[question]]",
+        "nl": "Vraag Claude (Homey): [[question]]"
+    },
+    "hint": {
+        "en": "Asks Claude a question and gives it access to your Homey devices and flows via MCP. Requires Homey MCP authentication in the app settings.",
+        "nl": "Stelt Claude een vraag en geeft het toegang tot je Homey-apparaten en flows via MCP. Vereist Homey MCP-authenticatie in de app-instellingen."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "question",
+            "title": {
+                "en": "Question",
+                "nl": "Vraag"
+            },
+            "placeholder": {
+                "en": "Which lights are currently on?",
+                "nl": "Welke lampen zijn momenteel aan?"
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "name": "answer",
+            "type": "string",
+            "title": {
+                "en": "Answer",
+                "nl": "Antwoord"
+            },
+            "example": {
+                "en": "The living room light and kitchen light are currently on.",
+                "nl": "De woonkamerlamp en keukenlamp zijn momenteel aan."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

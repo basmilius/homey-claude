@@ -8,8 +8,8 @@
 <script
     lang="ts"
     setup>
-defineProps<{
-    readonly subtitle: string;
-    readonly title: string;
-}>();
+    defineProps<{
+        readonly subtitle: string;
+        readonly title: string;
+    }>();
 </script>

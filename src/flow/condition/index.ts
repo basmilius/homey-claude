@@ -1,1 +1,1 @@
-export {default as ResponseContains} from './responseContains';
+export { default as ResponseContains } from './responseContains';

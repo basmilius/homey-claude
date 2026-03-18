@@ -1,5 +1,5 @@
-import {action, FlowActionEntity} from '@basmilius/homey-common';
-import type {ClaudeApp} from '../../types';
+import { action, FlowActionEntity } from '@basmilius/homey-common';
+import type { ClaudeApp } from '../../types';
 
 /**
  * Action: Generate text from a prompt with a specific model chosen per flow card.

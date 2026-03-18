@@ -1,5 +1,5 @@
-import {action, FlowActionEntity} from '@basmilius/homey-common';
-import type {ClaudeApp} from '../../types';
+import { action, FlowActionEntity } from '@basmilius/homey-common';
+import type { ClaudeApp } from '../../types';
 
 /**
  * Action: Translate text to a target language using Claude.

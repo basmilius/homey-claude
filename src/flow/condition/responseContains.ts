@@ -1,5 +1,5 @@
-import {condition, FlowConditionEntity} from '@basmilius/homey-common';
-import type {ClaudeApp} from '../../types';
+import { condition, FlowConditionEntity } from '@basmilius/homey-common';
+import type { ClaudeApp } from '../../types';
 
 /**
  * Condition: Check if a text contains a given substring (case-insensitive).

@@ -22,6 +22,21 @@
       "button": "Test Connection",
       "success": "Connection successful!",
       "error": "Connection failed: {{error}}"
+    },
+    "save": {
+      "button": "Save Settings",
+      "success": "Settings saved!",
+      "error": "Failed to save: {{error}}"
+    },
+    "homey_mcp": {
+      "title": "Homey MCP",
+      "description": "Connect to your Homey via MCP to give Claude access to your devices and flows. After connecting, use the \"Ask Claude with Homey context\" flow card.",
+      "connect": "Connect to Homey",
+      "disconnect": "Disconnect",
+      "connected": "Connected to Homey MCP",
+      "connecting": "Opening authentication...",
+      "waiting": "Waiting for authentication...",
+      "error": "Authentication failed: {{error}}"
     }
   }
 }
