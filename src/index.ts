@@ -28,6 +28,8 @@ export default class Claude extends App<ClaudeApp> {
     }
 
     #registerActions(): void {
+        this.registry.action(Actions.AnalyzeImage);
+        this.registry.action(Actions.AnalyzeImageWithModel);
         this.registry.action(Actions.Ask);
         this.registry.action(Actions.AskWithHomey);
         this.registry.action(Actions.AskWithModel);

@@ -1,4 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
+import type { Base64ImageSource } from '@anthropic-ai/sdk/resources/messages/messages';
 import type { BetaRequestMCPServerURLDefinition } from '@anthropic-ai/sdk/resources/beta/messages/messages';
 import { Shortcuts } from '@basmilius/homey-common';
 import { DEFAULT_MAX_TOKENS, DEFAULT_MODEL, SETTING_API_KEY, SETTING_DEFAULT_MODEL, SETTING_DEFAULT_SYSTEM_PROMPT, SETTING_MAX_TOKENS } from '../const';
@@ -31,6 +32,38 @@ export default class Claude extends Shortcuts<ClaudeApp> {
     }
 
     /**
+     * Sends a message with an image to Claude for visual analysis.
+     *
+     * @param prompt - The text prompt describing what to analyze.
+     * @param imageBuffer - The raw image data as a Buffer.
+     * @param mimeType - The MIME type of the image (e.g. image/jpeg, image/png).
+     * @param systemPrompt - Optional system prompt override.
+     * @param model - Optional model override.
+     * @param maxTokens - Optional max tokens override.
+     */
+    async askWithImage(prompt: string, imageBuffer: Buffer, mimeType: string, systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
+        const client = this.#createClient();
+
+        const imageSource: Base64ImageSource = {
+            type: 'base64',
+            media_type: mimeType as Base64ImageSource['media_type'],
+            data: imageBuffer.toString('base64')
+        };
+
+        const messages: Anthropic.MessageParam[] = [{
+            role: 'user',
+            content: [
+                {type: 'image', source: imageSource},
+                {type: 'text', text: prompt}
+            ]
+        }];
+
+        const params = this.#buildParams(messages, systemPrompt, model, maxTokens);
+
+        return this.#executeRequest(client, params);
+    }
+
+    /**
      * Sends a message to Claude with access to one or more MCP servers as tools.
      */
     async askWithMcpServers(prompt: string, mcpServers: BetaRequestMCPServerURLDefinition[], systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
@@ -40,7 +73,7 @@ export default class Claude extends Shortcuts<ClaudeApp> {
         return this.#executeMcpRequest(client, params, mcpServers);
     }
 
-    #buildParams(messages: ConversationMessage[], systemPrompt?: string, model?: string, maxTokens?: number): Anthropic.MessageCreateParamsNonStreaming {
+    #buildParams(messages: ConversationMessage[] | Anthropic.MessageParam[], systemPrompt?: string, model?: string, maxTokens?: number): Anthropic.MessageCreateParamsNonStreaming {
         const resolvedModel = model && model !== 'default'
             ? model
             : (this.settings.get(SETTING_DEFAULT_MODEL) as string | null ?? DEFAULT_MODEL);

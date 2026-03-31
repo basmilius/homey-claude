@@ -1,0 +1,155 @@
+{
+    "id": "analyze_image",
+    "droptoken": ["image"],
+    "title": {
+        "en": "Analyze an image with Claude",
+        "nl": "Analyseer een afbeelding met Claude",
+        "de": "Ein Bild mit Claude analysieren",
+        "fr": "Analyser une image avec Claude",
+        "it": "Analizza un'immagine con Claude",
+        "sv": "Analysera en bild med Claude",
+        "no": "Analyser et bilde med Claude",
+        "es": "Analizar una imagen con Claude",
+        "da": "Analyser et billede med Claude",
+        "ru": "Анализировать изображение с Claude",
+        "pl": "Analizuj obraz z Claude",
+        "ko": "Claude로 이미지 분석하기",
+        "ar": "تحليل صورة مع Claude"
+    },
+    "titleFormatted": {
+        "en": "Analyze image [[droptoken]] with prompt [[prompt]]",
+        "nl": "Analyseer afbeelding [[droptoken]] met prompt [[prompt]]",
+        "de": "Bild [[droptoken]] mit Prompt [[prompt]] analysieren",
+        "fr": "Analyser l'image [[droptoken]] avec le prompt [[prompt]]",
+        "it": "Analizza immagine [[droptoken]] con prompt [[prompt]]",
+        "sv": "Analysera bild [[droptoken]] med prompt [[prompt]]",
+        "no": "Analyser bilde [[droptoken]] med prompt [[prompt]]",
+        "es": "Analizar imagen [[droptoken]] con prompt [[prompt]]",
+        "da": "Analyser billede [[droptoken]] med prompt [[prompt]]",
+        "ru": "Анализировать изображение [[droptoken]] с запросом [[prompt]]",
+        "pl": "Analizuj obraz [[droptoken]] z promptem [[prompt]]",
+        "ko": "이미지 [[droptoken]]를 프롬프트 [[prompt]]로 분석",
+        "ar": "تحليل الصورة [[droptoken]] مع التعليمات [[prompt]]"
+    },
+    "hint": {
+        "en": "Sends an image to Claude for visual analysis with a custom prompt. Uses the default model from settings.",
+        "nl": "Stuurt een afbeelding naar Claude voor visuele analyse met een aangepaste prompt. Gebruikt het standaard model uit de instellingen.",
+        "de": "Sendet ein Bild an Claude zur visuellen Analyse mit einem benutzerdefinierten Prompt. Verwendet das Standardmodell aus den Einstellungen.",
+        "fr": "Envoie une image a Claude pour une analyse visuelle avec un prompt personnalise. Utilise le modele par defaut des parametres.",
+        "it": "Invia un'immagine a Claude per l'analisi visiva con un prompt personalizzato. Usa il modello predefinito dalle impostazioni.",
+        "sv": "Skickar en bild till Claude for visuell analys med en anpassad prompt. Anvander standardmodellen fran installningarna.",
+        "no": "Sender et bilde til Claude for visuell analyse med en egendefinert prompt. Bruker standardmodellen fra innstillingene.",
+        "es": "Envia una imagen a Claude para analisis visual con un prompt personalizado. Usa el modelo predeterminado de la configuracion.",
+        "da": "Sender et billede til Claude til visuel analyse med en brugerdefineret prompt. Bruger standardmodellen fra indstillingerne.",
+        "ru": "Отправляет изображение в Claude для визуального анализа с пользовательским запросом. Использует модель по умолчанию из настроек.",
+        "pl": "Wysyla obraz do Claude do analizy wizualnej z wlasnym promptem. Uzywa domyslnego modelu z ustawien.",
+        "ko": "사용자 정의 프롬프트로 이미지를 Claude에 보내 시각적 분석을 수행합니다. 설정의 기본 모델을 사용합니다.",
+        "ar": "يرسل صورة الى Claude للتحليل البصري مع تعليمات مخصصة. يستخدم النموذج الافتراضي من الاعدادات."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "prompt",
+            "title": {
+                "en": "Prompt",
+                "nl": "Prompt",
+                "de": "Prompt",
+                "fr": "Prompt",
+                "it": "Prompt",
+                "sv": "Prompt",
+                "no": "Prompt",
+                "es": "Prompt",
+                "da": "Prompt",
+                "ru": "Запрос",
+                "pl": "Prompt",
+                "ko": "프롬프트",
+                "ar": "التعليمات"
+            },
+            "placeholder": {
+                "en": "Describe what you see in this image",
+                "nl": "Beschrijf wat je ziet in deze afbeelding",
+                "de": "Beschreibe was du in diesem Bild siehst",
+                "fr": "Decris ce que tu vois dans cette image",
+                "it": "Descrivi cosa vedi in questa immagine",
+                "sv": "Beskriv vad du ser i denna bild",
+                "no": "Beskriv hva du ser i dette bildet",
+                "es": "Describe lo que ves en esta imagen",
+                "da": "Beskriv hvad du ser i dette billede",
+                "ru": "Опишите что вы видите на этом изображении",
+                "pl": "Opisz co widzisz na tym obrazie",
+                "ko": "이 이미지에서 보이는 것을 설명하세요",
+                "ar": "صف ما تراه في هذه الصورة"
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "name": "answer",
+            "type": "string",
+            "title": {
+                "en": "Answer",
+                "nl": "Antwoord",
+                "de": "Antwort",
+                "fr": "Reponse",
+                "it": "Risposta",
+                "sv": "Svar",
+                "no": "Svar",
+                "es": "Respuesta",
+                "da": "Svar",
+                "ru": "Ответ",
+                "pl": "Odpowiedz",
+                "ko": "답변",
+                "ar": "إجابة"
+            },
+            "example": {
+                "en": "The image shows a living room with a couch and a TV.",
+                "nl": "De afbeelding toont een woonkamer met een bank en een tv.",
+                "de": "Das Bild zeigt ein Wohnzimmer mit einem Sofa und einem Fernseher.",
+                "fr": "L'image montre un salon avec un canape et une television.",
+                "it": "L'immagine mostra un soggiorno con un divano e una TV.",
+                "sv": "Bilden visar ett vardagsrum med en soffa och en TV.",
+                "no": "Bildet viser en stue med en sofa og en TV.",
+                "es": "La imagen muestra una sala de estar con un sofa y un televisor.",
+                "da": "Billedet viser en stue med en sofa og et TV.",
+                "ru": "На изображении гостиная с диваном и телевизором.",
+                "pl": "Obraz przedstawia salon z kanapa i telewizorem.",
+                "ko": "이미지는 소파와 TV가 있는 거실을 보여줍니다.",
+                "ar": "تظهر الصورة غرفة معيشة بها اريكة وتلفزيون."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model",
+                "de": "Verwendetes Modell",
+                "fr": "Modele utilise",
+                "it": "Modello utilizzato",
+                "sv": "Anvand modell",
+                "no": "Brukt modell",
+                "es": "Modelo utilizado",
+                "da": "Brugt model",
+                "ru": "Используемая модель",
+                "pl": "Uzyty model",
+                "ko": "사용된 모델",
+                "ar": "النموذج المستخدم"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001",
+                "de": "claude-haiku-4-5-20251001",
+                "fr": "claude-haiku-4-5-20251001",
+                "it": "claude-haiku-4-5-20251001",
+                "sv": "claude-haiku-4-5-20251001",
+                "no": "claude-haiku-4-5-20251001",
+                "es": "claude-haiku-4-5-20251001",
+                "da": "claude-haiku-4-5-20251001",
+                "ru": "claude-haiku-4-5-20251001",
+                "pl": "claude-haiku-4-5-20251001",
+                "ko": "claude-haiku-4-5-20251001",
+                "ar": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

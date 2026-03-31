@@ -1,3 +1,5 @@
+export { default as AnalyzeImage } from './analyzeImage';
+export { default as AnalyzeImageWithModel } from './analyzeImageWithModel';
 export { default as Ask } from './ask';
 export { default as AskWithHomey } from './askWithHomey';
 export { default as AskWithModel } from './askWithModel';
