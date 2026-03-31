@@ -1,0 +1,79 @@
+{
+    "id": "response_ready",
+    "title": {
+        "en": "Claude response ready",
+        "nl": "Claude antwoord gereed",
+        "de": "Claude-Antwort bereit",
+        "fr": "Reponse de Claude prete",
+        "it": "Risposta di Claude pronta",
+        "sv": "Claude-svar klart",
+        "no": "Claude-svar klart",
+        "es": "Respuesta de Claude lista",
+        "da": "Claude-svar klar",
+        "ru": "Ответ Claude готов",
+        "pl": "Odpowiedz Claude gotowa",
+        "ko": "Claude 응답 준비됨",
+        "ar": "رد Claude جاهز"
+    },
+    "hint": {
+        "en": "Triggers when Claude has generated a text response from any action card.",
+        "nl": "Triggert wanneer Claude een tekstantwoord heeft gegenereerd vanuit een willekeurige actiekaart.",
+        "de": "Wird ausgelost wenn Claude eine Textantwort aus einer Aktionskarte generiert hat.",
+        "fr": "Se declenche lorsque Claude a genere une reponse textuelle a partir d'une carte d'action.",
+        "it": "Si attiva quando Claude ha generato una risposta testuale da qualsiasi scheda azione.",
+        "sv": "Utloses nar Claude har genererat ett textsvar fran nagot atgardskort.",
+        "no": "Utloses nar Claude har generert et tekstsvar fra et handlingskort.",
+        "es": "Se activa cuando Claude ha generado una respuesta de texto desde cualquier tarjeta de accion.",
+        "da": "Udloses nar Claude har genereret et tekstsvar fra et handlingskort.",
+        "ru": "Срабатывает когда Claude сгенерировал текстовый ответ из любой карточки действия.",
+        "pl": "Wyzwalany gdy Claude wygeneruje odpowiedz tekstowa z dowolnej karty akcji.",
+        "ko": "Claude가 액션 카드에서 텍스트 응답을 생성했을 때 트리거됩니다.",
+        "ar": "يتم تشغيله عندما ينشئ Claude استجابة نصية من اي بطاقة اجراء."
+    },
+    "tokens": [
+        {
+            "name": "response",
+            "type": "string",
+            "title": {
+                "en": "Response",
+                "nl": "Antwoord",
+                "de": "Antwort",
+                "fr": "Reponse",
+                "it": "Risposta",
+                "sv": "Svar",
+                "no": "Svar",
+                "es": "Respuesta",
+                "da": "Svar",
+                "ru": "Ответ",
+                "pl": "Odpowiedz",
+                "ko": "응답",
+                "ar": "الرد"
+            },
+            "example": {
+                "en": "Paris is the capital of France."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model",
+                "de": "Verwendetes Modell",
+                "fr": "Modele utilise",
+                "it": "Modello utilizzato",
+                "sv": "Anvand modell",
+                "no": "Brukt modell",
+                "es": "Modelo utilizado",
+                "da": "Brugt model",
+                "ru": "Используемая модель",
+                "pl": "Uzyty model",
+                "ko": "사용된 모델",
+                "ar": "النموذج المستخدم"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

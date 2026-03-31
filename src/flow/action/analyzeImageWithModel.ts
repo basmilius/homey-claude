@@ -18,6 +18,8 @@ export default class extends FlowActionEntity<ClaudeApp, Args, never, Result> {
             args.model
         );
 
+        await this.app.triggerImageResponseReady(answer, model);
+
         return {answer, model_used: model};
     }
 }

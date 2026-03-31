@@ -201,9 +201,304 @@
     "deleteHomeyOauthDisconnect": {
       "method": "DELETE",
       "path": "/homey-oauth/disconnect"
+    },
+    "getScheduledCommands": {
+      "method": "GET",
+      "path": "/scheduled-commands"
+    },
+    "deleteScheduledCommand": {
+      "method": "DELETE",
+      "path": "/scheduled-commands/:id"
+    },
+    "generateInstructions": {
+      "method": "POST",
+      "path": "/generate-instructions"
     }
   },
   "flow": {
+    "triggers": [
+      {
+        "id": "image_response_ready",
+        "title": {
+          "en": "Claude image analysis ready",
+          "nl": "Claude beeldanalyse gereed",
+          "de": "Claude-Bildanalyse bereit",
+          "fr": "Analyse d'image Claude prete",
+          "it": "Analisi immagine Claude pronta",
+          "sv": "Claude bildanalys klar",
+          "no": "Claude bildeanalyse klar",
+          "es": "Analisis de imagen de Claude listo",
+          "da": "Claude billedanalyse klar",
+          "ru": "Анализ изображения Claude готов",
+          "pl": "Analiza obrazu Claude gotowa",
+          "ko": "Claude 이미지 분석 준비됨",
+          "ar": "تحليل صورة Claude جاهز"
+        },
+        "hint": {
+          "en": "Triggers when Claude has finished analyzing an image.",
+          "nl": "Triggert wanneer Claude klaar is met het analyseren van een afbeelding.",
+          "de": "Wird ausgelost wenn Claude die Analyse eines Bildes abgeschlossen hat.",
+          "fr": "Se declenche lorsque Claude a termine l'analyse d'une image.",
+          "it": "Si attiva quando Claude ha terminato l'analisi di un'immagine.",
+          "sv": "Utloses nar Claude har slutfort analysen av en bild.",
+          "no": "Utloses nar Claude har fullfort analysen av et bilde.",
+          "es": "Se activa cuando Claude ha terminado de analizar una imagen.",
+          "da": "Udloses nar Claude har afsluttet analysen af et billede.",
+          "ru": "Срабатывает когда Claude завершил анализ изображения.",
+          "pl": "Wyzwalany gdy Claude zakonczy analize obrazu.",
+          "ko": "Claude가 이미지 분석을 완료했을 때 트리거됩니다.",
+          "ar": "يتم تشغيله عندما ينتهي Claude من تحليل صورة."
+        },
+        "tokens": [
+          {
+            "name": "response",
+            "type": "string",
+            "title": {
+              "en": "Response",
+              "nl": "Antwoord",
+              "de": "Antwort",
+              "fr": "Reponse",
+              "it": "Risposta",
+              "sv": "Svar",
+              "no": "Svar",
+              "es": "Respuesta",
+              "da": "Svar",
+              "ru": "Ответ",
+              "pl": "Odpowiedz",
+              "ko": "응답",
+              "ar": "الرد"
+            },
+            "example": {
+              "en": "The image shows a living room with a couch and a TV."
+            }
+          },
+          {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+              "en": "Model used",
+              "nl": "Gebruikte model",
+              "de": "Verwendetes Modell",
+              "fr": "Modele utilise",
+              "it": "Modello utilizzato",
+              "sv": "Anvand modell",
+              "no": "Brukt modell",
+              "es": "Modelo utilizado",
+              "da": "Brugt model",
+              "ru": "Используемая модель",
+              "pl": "Uzyty model",
+              "ko": "사용된 모델",
+              "ar": "النموذج المستخدم"
+            },
+            "example": {
+              "en": "claude-haiku-4-5-20251001"
+            }
+          }
+        ]
+      },
+      {
+        "id": "response_ready",
+        "title": {
+          "en": "Claude response ready",
+          "nl": "Claude antwoord gereed",
+          "de": "Claude-Antwort bereit",
+          "fr": "Reponse de Claude prete",
+          "it": "Risposta di Claude pronta",
+          "sv": "Claude-svar klart",
+          "no": "Claude-svar klart",
+          "es": "Respuesta de Claude lista",
+          "da": "Claude-svar klar",
+          "ru": "Ответ Claude готов",
+          "pl": "Odpowiedz Claude gotowa",
+          "ko": "Claude 응답 준비됨",
+          "ar": "رد Claude جاهز"
+        },
+        "hint": {
+          "en": "Triggers when Claude has generated a text response from any action card.",
+          "nl": "Triggert wanneer Claude een tekstantwoord heeft gegenereerd vanuit een willekeurige actiekaart.",
+          "de": "Wird ausgelost wenn Claude eine Textantwort aus einer Aktionskarte generiert hat.",
+          "fr": "Se declenche lorsque Claude a genere une reponse textuelle a partir d'une carte d'action.",
+          "it": "Si attiva quando Claude ha generato una risposta testuale da qualsiasi scheda azione.",
+          "sv": "Utloses nar Claude har genererat ett textsvar fran nagot atgardskort.",
+          "no": "Utloses nar Claude har generert et tekstsvar fra et handlingskort.",
+          "es": "Se activa cuando Claude ha generado una respuesta de texto desde cualquier tarjeta de accion.",
+          "da": "Udloses nar Claude har genereret et tekstsvar fra et handlingskort.",
+          "ru": "Срабатывает когда Claude сгенерировал текстовый ответ из любой карточки действия.",
+          "pl": "Wyzwalany gdy Claude wygeneruje odpowiedz tekstowa z dowolnej karty akcji.",
+          "ko": "Claude가 액션 카드에서 텍스트 응답을 생성했을 때 트리거됩니다.",
+          "ar": "يتم تشغيله عندما ينشئ Claude استجابة نصية من اي بطاقة اجراء."
+        },
+        "tokens": [
+          {
+            "name": "response",
+            "type": "string",
+            "title": {
+              "en": "Response",
+              "nl": "Antwoord",
+              "de": "Antwort",
+              "fr": "Reponse",
+              "it": "Risposta",
+              "sv": "Svar",
+              "no": "Svar",
+              "es": "Respuesta",
+              "da": "Svar",
+              "ru": "Ответ",
+              "pl": "Odpowiedz",
+              "ko": "응답",
+              "ar": "الرد"
+            },
+            "example": {
+              "en": "Paris is the capital of France."
+            }
+          },
+          {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+              "en": "Model used",
+              "nl": "Gebruikte model",
+              "de": "Verwendetes Modell",
+              "fr": "Modele utilise",
+              "it": "Modello utilizzato",
+              "sv": "Anvand modell",
+              "no": "Brukt modell",
+              "es": "Modelo utilizado",
+              "da": "Brugt model",
+              "ru": "Используемая модель",
+              "pl": "Uzyty model",
+              "ko": "사용된 모델",
+              "ar": "النموذج المستخدم"
+            },
+            "example": {
+              "en": "claude-haiku-4-5-20251001"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scheduled_command_executed",
+        "title": {
+          "en": "Scheduled command executed",
+          "nl": "Gepland commando uitgevoerd",
+          "de": "Geplanter Befehl ausgefuhrt",
+          "fr": "Commande planifiee executee",
+          "it": "Comando programmato eseguito",
+          "sv": "Schemalgt kommando utfort",
+          "no": "Planlagt kommando utfort",
+          "es": "Comando programado ejecutado",
+          "da": "Planlagt kommando udfrt",
+          "ru": "Запланированная команда выполнена",
+          "pl": "Zaplanowane polecenie wykonane",
+          "ko": "예약된 명령 실행됨",
+          "ar": "تم تنفيذ الامر المجدول"
+        },
+        "hint": {
+          "en": "Triggers when a previously scheduled command has been executed by Claude.",
+          "nl": "Triggert wanneer een eerder gepland commando is uitgevoerd door Claude.",
+          "de": "Wird ausgelost wenn ein zuvor geplanter Befehl von Claude ausgefuhrt wurde.",
+          "fr": "Se declenche lorsqu'une commande precedemment planifiee a ete executee par Claude.",
+          "it": "Si attiva quando un comando precedentemente programmato e stato eseguito da Claude.",
+          "sv": "Utloses nar ett tidigare schemalgt kommando har utforts av Claude.",
+          "no": "Utloses nar en tidligere planlagt kommando har blitt utfort av Claude.",
+          "es": "Se activa cuando un comando previamente programado ha sido ejecutado por Claude.",
+          "da": "Udloses nar en tidligere planlagt kommando er blevet udfrt af Claude.",
+          "ru": "Срабатывает когда ранее запланированная команда была выполнена Claude.",
+          "pl": "Wyzwalany gdy wczesniej zaplanowane polecenie zostalo wykonane przez Claude.",
+          "ko": "이전에 예약된 명령이 Claude에 의해 실행되었을 때 트리거됩니다.",
+          "ar": "يتم تشغيله عندما يتم تنفيذ امر مجدول مسبقا بواسطة Claude."
+        },
+        "tokens": [
+          {
+            "name": "timer_id",
+            "type": "string",
+            "title": {
+              "en": "Timer ID",
+              "nl": "Timer-ID",
+              "de": "Timer-ID",
+              "fr": "ID du minuteur",
+              "it": "ID timer",
+              "sv": "Timer-ID",
+              "no": "Timer-ID",
+              "es": "ID del temporizador",
+              "da": "Timer-ID",
+              "ru": "ID таймера",
+              "pl": "ID timera",
+              "ko": "타이머 ID",
+              "ar": "معرف المؤقت"
+            },
+            "example": {
+              "en": "abc-123"
+            }
+          },
+          {
+            "name": "command",
+            "type": "string",
+            "title": {
+              "en": "Command",
+              "nl": "Commando",
+              "de": "Befehl",
+              "fr": "Commande",
+              "it": "Comando",
+              "sv": "Kommando",
+              "no": "Kommando",
+              "es": "Comando",
+              "da": "Kommando",
+              "ru": "Команда",
+              "pl": "Polecenie",
+              "ko": "명령",
+              "ar": "الامر"
+            },
+            "example": {
+              "en": "Turn off the living room lights"
+            }
+          },
+          {
+            "name": "success",
+            "type": "boolean",
+            "title": {
+              "en": "Success",
+              "nl": "Succesvol",
+              "de": "Erfolgreich",
+              "fr": "Succes",
+              "it": "Successo",
+              "sv": "Framgang",
+              "no": "Suksess",
+              "es": "Exito",
+              "da": "Succes",
+              "ru": "Успех",
+              "pl": "Sukces",
+              "ko": "성공",
+              "ar": "نجاح"
+            },
+            "example": {
+              "en": "true"
+            }
+          },
+          {
+            "name": "response",
+            "type": "string",
+            "title": {
+              "en": "Response",
+              "nl": "Antwoord",
+              "de": "Antwort",
+              "fr": "Reponse",
+              "it": "Risposta",
+              "sv": "Svar",
+              "no": "Svar",
+              "es": "Respuesta",
+              "da": "Svar",
+              "ru": "Ответ",
+              "pl": "Odpowiedz",
+              "ko": "응답",
+              "ar": "الرد"
+            },
+            "example": {
+              "en": "Done! The living room lights have been turned off."
+            }
+          }
+        ]
+      }
+    ],
     "conditions": [
       {
         "id": "response_contains",
@@ -1787,6 +2082,124 @@
         ]
       },
       {
+        "id": "conversation_seed_context",
+        "title": {
+          "en": "Add context to conversation",
+          "nl": "Voeg context toe aan gesprek",
+          "de": "Kontext zum Gesprach hinzufugen",
+          "fr": "Ajouter du contexte a la conversation",
+          "it": "Aggiungi contesto alla conversazione",
+          "sv": "Lagg till kontext till konversation",
+          "no": "Legg til kontekst til samtale",
+          "es": "Agregar contexto a la conversacion",
+          "da": "Tilf kontekst til samtale",
+          "ru": "Добавить контекст к разговору",
+          "pl": "Dodaj kontekst do konwersacji",
+          "ko": "대화에 컨텍스트 추가",
+          "ar": "اضافة سياق الى المحادثة"
+        },
+        "titleFormatted": {
+          "en": "Add context [[context]] to conversation [[conversation_id]]",
+          "nl": "Voeg context [[context]] toe aan gesprek [[conversation_id]]",
+          "de": "Kontext [[context]] zum Gesprach [[conversation_id]] hinzufugen",
+          "fr": "Ajouter le contexte [[context]] a la conversation [[conversation_id]]",
+          "it": "Aggiungi contesto [[context]] alla conversazione [[conversation_id]]",
+          "sv": "Lagg till kontext [[context]] till konversation [[conversation_id]]",
+          "no": "Legg til kontekst [[context]] til samtale [[conversation_id]]",
+          "es": "Agregar contexto [[context]] a la conversacion [[conversation_id]]",
+          "da": "Tilf kontekst [[context]] til samtale [[conversation_id]]",
+          "ru": "Добавить контекст [[context]] к разговору [[conversation_id]]",
+          "pl": "Dodaj kontekst [[context]] do konwersacji [[conversation_id]]",
+          "ko": "대화 [[conversation_id]]에 컨텍스트 [[context]] 추가",
+          "ar": "اضافة سياق [[context]] الى المحادثة [[conversation_id]]"
+        },
+        "hint": {
+          "en": "Injects context into a conversation without sending it to Claude. The context will be available when the next message is sent in this conversation.",
+          "nl": "Injecteert context in een gesprek zonder het naar Claude te sturen. De context is beschikbaar wanneer het volgende bericht in dit gesprek wordt verstuurd.",
+          "de": "Fugt Kontext in ein Gesprach ein ohne es an Claude zu senden. Der Kontext ist verfugbar wenn die nachste Nachricht in diesem Gesprach gesendet wird.",
+          "fr": "Injecte du contexte dans une conversation sans l'envoyer a Claude. Le contexte sera disponible lors de l'envoi du prochain message dans cette conversation.",
+          "it": "Inietta contesto in una conversazione senza inviarlo a Claude. Il contesto sara disponibile quando il prossimo messaggio verra inviato in questa conversazione.",
+          "sv": "Injicerar kontext i en konversation utan att skicka den till Claude. Kontexten kommer att vara tillganglig nar nasta meddelande skickas i denna konversation.",
+          "no": "Injiserer kontekst i en samtale uten a sende den til Claude. Konteksten vil vare tilgjengelig nar neste melding sendes i denne samtalen.",
+          "es": "Inyecta contexto en una conversacion sin enviarlo a Claude. El contexto estara disponible cuando se envie el siguiente mensaje en esta conversacion.",
+          "da": "Injicerer kontekst i en samtale uden at sende den til Claude. Konteksten vil vare tilgangelig nar den naste besked sendes i denne samtale.",
+          "ru": "Добавляет контекст в разговор без отправки его в Claude. Контекст будет доступен при отправке следующего сообщения в этом разговоре.",
+          "pl": "Wstrzykuje kontekst do konwersacji bez wysylania go do Claude. Kontekst bedzie dostepny gdy nastepna wiadomosc zostanie wyslana w tej konwersacji.",
+          "ko": "대화에 컨텍스트를 주입하지만 Claude에 전송하지 않습니다. 이 대화에서 다음 메시지를 보낼 때 컨텍스트를 사용할 수 있습니다.",
+          "ar": "يحقن سياقا في محادثة دون ارساله الى Claude. سيكون السياق متاحا عند ارسال الرسالة التالية في هذه المحادثة."
+        },
+        "args": [
+          {
+            "type": "text",
+            "name": "conversation_id",
+            "title": {
+              "en": "Conversation name",
+              "nl": "Gespreksnaam",
+              "de": "Gesprchsname",
+              "fr": "Nom de la conversation",
+              "it": "Nome della conversazione",
+              "sv": "Konversationsnamn",
+              "no": "Samtalenavn",
+              "es": "Nombre de la conversacion",
+              "da": "Samtalenavn",
+              "ru": "Имя разговора",
+              "pl": "Nazwa konwersacji",
+              "ko": "대화 이름",
+              "ar": "اسم المحادثة"
+            },
+            "placeholder": {
+              "en": "my-conversation",
+              "nl": "mijn-gesprek",
+              "de": "mein-gesprch",
+              "fr": "ma-conversation",
+              "it": "mia-conversazione",
+              "sv": "min-konversation",
+              "no": "min-samtale",
+              "es": "mi-conversacion",
+              "da": "min-samtale",
+              "ru": "мой-разговор",
+              "pl": "moja-rozmowa",
+              "ko": "내-대화",
+              "ar": "محادثتي"
+            }
+          },
+          {
+            "type": "text",
+            "name": "context",
+            "title": {
+              "en": "Context",
+              "nl": "Context",
+              "de": "Kontext",
+              "fr": "Contexte",
+              "it": "Contesto",
+              "sv": "Kontext",
+              "no": "Kontekst",
+              "es": "Contexto",
+              "da": "Kontekst",
+              "ru": "Контекст",
+              "pl": "Kontekst",
+              "ko": "컨텍스트",
+              "ar": "السياق"
+            },
+            "placeholder": {
+              "en": "Motion detected at the front door",
+              "nl": "Beweging gedetecteerd bij de voordeur",
+              "de": "Bewegung an der Haustur erkannt",
+              "fr": "Mouvement detecte a la porte d'entree",
+              "it": "Movimento rilevato alla porta d'ingresso",
+              "sv": "Rorelse upptackt vid ytterdorren",
+              "no": "Bevegelse oppdaget ved ytterdoren",
+              "es": "Movimiento detectado en la puerta principal",
+              "da": "Bevaegelse registreret ved hoveddren",
+              "ru": "Обнаружено движение у входной двери",
+              "pl": "Wykryto ruch przy drzwiach wejsciowych",
+              "ko": "현관문에서 움직임 감지됨",
+              "ar": "تم اكتشاف حركة عند الباب الامامي"
+            }
+          }
+        ]
+      },
+      {
         "id": "generate",
         "title": {
           "en": "Generate text",
@@ -2165,6 +2578,231 @@
               "pl": "claude-haiku-4-5-20251001",
               "ko": "claude-haiku-4-5-20251001",
               "ar": "claude-haiku-4-5-20251001"
+            }
+          }
+        ]
+      },
+      {
+        "id": "schedule_command",
+        "title": {
+          "en": "Schedule a command for Claude",
+          "nl": "Plan een commando voor Claude",
+          "de": "Einen Befehl fur Claude planen",
+          "fr": "Planifier une commande pour Claude",
+          "it": "Programma un comando per Claude",
+          "sv": "Schemalag ett kommando for Claude",
+          "no": "Planlegg en kommando for Claude",
+          "es": "Programar un comando para Claude",
+          "da": "Planlag en kommando for Claude",
+          "ru": "Запланировать команду для Claude",
+          "pl": "Zaplanuj polecenie dla Claude",
+          "ko": "Claude 명령 예약",
+          "ar": "جدولة امر لـ Claude"
+        },
+        "titleFormatted": {
+          "en": "Schedule [[command]] in [[duration]] [[unit]]",
+          "nl": "Plan [[command]] over [[duration]] [[unit]]",
+          "de": "Plane [[command]] in [[duration]] [[unit]]",
+          "fr": "Planifier [[command]] dans [[duration]] [[unit]]",
+          "it": "Programma [[command]] tra [[duration]] [[unit]]",
+          "sv": "Schemalag [[command]] om [[duration]] [[unit]]",
+          "no": "Planlegg [[command]] om [[duration]] [[unit]]",
+          "es": "Programar [[command]] en [[duration]] [[unit]]",
+          "da": "Planlag [[command]] om [[duration]] [[unit]]",
+          "ru": "Запланировать [[command]] через [[duration]] [[unit]]",
+          "pl": "Zaplanuj [[command]] za [[duration]] [[unit]]",
+          "ko": "[[duration]] [[unit]] 후 [[command]] 예약",
+          "ar": "جدولة [[command]] بعد [[duration]] [[unit]]"
+        },
+        "hint": {
+          "en": "Schedules a command to be sent to Claude after a delay. When executed, Claude will process the command (with Homey context if connected) and the 'Scheduled command executed' trigger will fire.",
+          "nl": "Plant een commando dat na een vertraging naar Claude wordt gestuurd. Bij uitvoering verwerkt Claude het commando (met Homey-context indien verbonden) en wordt de 'Gepland commando uitgevoerd' trigger geactiveerd.",
+          "de": "Plant einen Befehl der nach einer Verzogerung an Claude gesendet wird. Bei der Ausfuhrung verarbeitet Claude den Befehl (mit Homey-Kontext wenn verbunden) und der Trigger 'Geplanter Befehl ausgefuhrt' wird ausgelost.",
+          "fr": "Planifie une commande a envoyer a Claude apres un delai. Lors de l'execution Claude traitera la commande (avec le contexte Homey si connecte) et le declencheur 'Commande planifiee executee' sera active.",
+          "it": "Programma un comando da inviare a Claude dopo un ritardo. All'esecuzione Claude elaborera il comando (con contesto Homey se connesso) e il trigger 'Comando programmato eseguito' si attivera.",
+          "sv": "Schemalagger ett kommando som ska skickas till Claude efter en fordrojning. Vid korning bearbetar Claude kommandot (med Homey-kontext om anslutet) och triggern 'Schemalgt kommando utfort' utloses.",
+          "no": "Planlegger en kommando som skal sendes til Claude etter en forsinkelse. Ved utforelse behandler Claude kommandoen (med Homey-kontekst hvis tilkoblet) og triggeren 'Planlagt kommando utfort' utloses.",
+          "es": "Programa un comando para enviarlo a Claude despues de un retraso. Al ejecutarse Claude procesara el comando (con contexto Homey si esta conectado) y se activara el disparador 'Comando programado ejecutado'.",
+          "da": "Planlagger en kommando der skal sendes til Claude efter en forsinkelse. Ved udfrelse behandler Claude kommandoen (med Homey-kontekst hvis forbundet) og triggeren 'Planlagt kommando udfrt' udloses.",
+          "ru": "Планирует команду для отправки Claude через заданное время. При выполнении Claude обработает команду (с контекстом Homey если подключен) и сработает триггер 'Запланированная команда выполнена'.",
+          "pl": "Planuje polecenie do wyslania do Claude po opoznieniu. Po wykonaniu Claude przetworzy polecenie (z kontekstem Homey jesli polaczony) i wyzwalacz 'Zaplanowane polecenie wykonane' zostanie uruchomiony.",
+          "ko": "지연 후 Claude에게 보낼 명령을 예약합니다. 실행 시 Claude가 명령을 처리하고 (연결된 경우 Homey 컨텍스트 포함) '예약된 명령 실행됨' 트리거가 발생합니다.",
+          "ar": "يجدول امرا لارساله الى Claude بعد تاخير. عند التنفيذ سيعالج Claude الامر (مع سياق Homey اذا كان متصلا) وسيتم تشغيل مشغل 'تم تنفيذ الامر المجدول'."
+        },
+        "args": [
+          {
+            "type": "text",
+            "name": "command",
+            "title": {
+              "en": "Command",
+              "nl": "Commando",
+              "de": "Befehl",
+              "fr": "Commande",
+              "it": "Comando",
+              "sv": "Kommando",
+              "no": "Kommando",
+              "es": "Comando",
+              "da": "Kommando",
+              "ru": "Команда",
+              "pl": "Polecenie",
+              "ko": "명령",
+              "ar": "الامر"
+            },
+            "placeholder": {
+              "en": "Turn off the living room lights",
+              "nl": "Zet de woonkamerlampen uit",
+              "de": "Schalte die Wohnzimmerlichter aus",
+              "fr": "Eteins les lumieres du salon",
+              "it": "Spegni le luci del soggiorno",
+              "sv": "Slck av vardagsrumsljusen",
+              "no": "Sl av lyset i stua",
+              "es": "Apaga las luces de la sala",
+              "da": "Sluk lyset i stuen",
+              "ru": "Выключи свет в гостиной",
+              "pl": "Wylacz swiatla w salonie",
+              "ko": "거실 조명을 꺼줘",
+              "ar": "اطفئ اضواء غرفة المعيشة"
+            }
+          },
+          {
+            "type": "number",
+            "name": "duration",
+            "title": {
+              "en": "Duration",
+              "nl": "Duur",
+              "de": "Dauer",
+              "fr": "Duree",
+              "it": "Durata",
+              "sv": "Varaktighet",
+              "no": "Varighet",
+              "es": "Duracion",
+              "da": "Varighed",
+              "ru": "Длительность",
+              "pl": "Czas trwania",
+              "ko": "기간",
+              "ar": "المدة"
+            },
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+              "en": "10"
+            }
+          },
+          {
+            "type": "dropdown",
+            "name": "unit",
+            "title": {
+              "en": "Unit",
+              "nl": "Eenheid",
+              "de": "Einheit",
+              "fr": "Unite",
+              "it": "Unita",
+              "sv": "Enhet",
+              "no": "Enhet",
+              "es": "Unidad",
+              "da": "Enhed",
+              "ru": "Единица",
+              "pl": "Jednostka",
+              "ko": "단위",
+              "ar": "الوحدة"
+            },
+            "values": [
+              {
+                "id": "seconds",
+                "label": {
+                  "en": "Seconds",
+                  "nl": "Seconden",
+                  "de": "Sekunden",
+                  "fr": "Secondes",
+                  "it": "Secondi",
+                  "sv": "Sekunder",
+                  "no": "Sekunder",
+                  "es": "Segundos",
+                  "da": "Sekunder",
+                  "ru": "Секунды",
+                  "pl": "Sekundy",
+                  "ko": "초",
+                  "ar": "ثواني"
+                }
+              },
+              {
+                "id": "minutes",
+                "label": {
+                  "en": "Minutes",
+                  "nl": "Minuten",
+                  "de": "Minuten",
+                  "fr": "Minutes",
+                  "it": "Minuti",
+                  "sv": "Minuter",
+                  "no": "Minutter",
+                  "es": "Minutos",
+                  "da": "Minutter",
+                  "ru": "Минуты",
+                  "pl": "Minuty",
+                  "ko": "분",
+                  "ar": "دقائق"
+                }
+              },
+              {
+                "id": "hours",
+                "label": {
+                  "en": "Hours",
+                  "nl": "Uren",
+                  "de": "Stunden",
+                  "fr": "Heures",
+                  "it": "Ore",
+                  "sv": "Timmar",
+                  "no": "Timer",
+                  "es": "Horas",
+                  "da": "Timer",
+                  "ru": "Часы",
+                  "pl": "Godziny",
+                  "ko": "시간",
+                  "ar": "ساعات"
+                }
+              },
+              {
+                "id": "days",
+                "label": {
+                  "en": "Days",
+                  "nl": "Dagen",
+                  "de": "Tage",
+                  "fr": "Jours",
+                  "it": "Giorni",
+                  "sv": "Dagar",
+                  "no": "Dager",
+                  "es": "Dias",
+                  "da": "Dage",
+                  "ru": "Дни",
+                  "pl": "Dni",
+                  "ko": "일",
+                  "ar": "ايام"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "timer_id",
+            "type": "string",
+            "title": {
+              "en": "Timer ID",
+              "nl": "Timer-ID",
+              "de": "Timer-ID",
+              "fr": "ID du minuteur",
+              "it": "ID timer",
+              "sv": "Timer-ID",
+              "no": "Timer-ID",
+              "es": "ID del temporizador",
+              "da": "Timer-ID",
+              "ru": "ID таймера",
+              "pl": "ID timera",
+              "ko": "타이머 ID",
+              "ar": "معرف المؤقت"
+            },
+            "example": {
+              "en": "abc-123"
             }
           }
         ]

@@ -1,6 +1,6 @@
 import { App } from '@basmilius/homey-common';
 import { Brain } from './brain';
-import { Actions, Conditions } from './flow';
+import { Actions, Conditions, Triggers } from './flow';
 import type { ClaudeApp } from './types';
 
 export default class Claude extends App<ClaudeApp> {
@@ -20,11 +20,36 @@ export default class Claude extends App<ClaudeApp> {
         try {
             this.#registerActions();
             this.#registerConditions();
+            this.#registerTriggers();
+
+            this.#brain.scheduler.restore();
 
             this.log('Claude has been initialized!');
         } catch (err) {
             this.error('Failed initializing Claude.', err);
         }
+    }
+
+    /**
+     * Fires the response_ready trigger with the given response text and model.
+     *
+     * @param response - The response text from Claude.
+     * @param modelUsed - The model that generated the response.
+     */
+    async triggerResponseReady(response: string, modelUsed: string): Promise<void> {
+        const trigger = this.registry.findTrigger(Triggers.ResponseReady);
+        await trigger?.trigger({}, {response, model_used: modelUsed});
+    }
+
+    /**
+     * Fires the image_response_ready trigger with the given response text and model.
+     *
+     * @param response - The image analysis response text from Claude.
+     * @param modelUsed - The model that generated the response.
+     */
+    async triggerImageResponseReady(response: string, modelUsed: string): Promise<void> {
+        const trigger = this.registry.findTrigger(Triggers.ImageResponseReady);
+        await trigger?.trigger({}, {response, model_used: modelUsed});
     }
 
     #registerActions(): void {
@@ -36,8 +61,10 @@ export default class Claude extends App<ClaudeApp> {
         this.registry.action(Actions.ConversationClear);
         this.registry.action(Actions.ConversationMessage);
         this.registry.action(Actions.ConversationMessageWithModel);
+        this.registry.action(Actions.ConversationSeedContext);
         this.registry.action(Actions.Generate);
         this.registry.action(Actions.GenerateWithModel);
+        this.registry.action(Actions.ScheduleCommand);
         this.registry.action(Actions.Summarize);
         this.registry.action(Actions.SummarizeWithModel);
         this.registry.action(Actions.Translate);
@@ -46,5 +73,11 @@ export default class Claude extends App<ClaudeApp> {
 
     #registerConditions(): void {
         this.registry.condition(Conditions.ResponseContains);
+    }
+
+    #registerTriggers(): void {
+        this.registry.trigger(Triggers.ResponseReady);
+        this.registry.trigger(Triggers.ImageResponseReady);
+        this.registry.trigger(Triggers.ScheduledCommandExecuted);
     }
 }

@@ -1,9 +1,9 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { ApiRequest } from '@basmilius/homey-common';
-import { DEFAULT_MAX_TOKENS, DEFAULT_MODEL, HOMEY_MCP_AUTH_ENDPOINT, SETTING_API_KEY, SETTING_DEFAULT_MODEL, SETTING_DEFAULT_SYSTEM_PROMPT, SETTING_MAX_TOKENS } from './src/const';
+import { DEFAULT_MAX_TOKENS, DEFAULT_MODEL, HOMEY_MCP_AUTH_ENDPOINT, SETTING_API_KEY, SETTING_CUSTOM_INSTRUCTIONS, SETTING_DEFAULT_MODEL, SETTING_DEFAULT_SYSTEM_PROMPT, SETTING_MAX_TOKENS } from './src/const';
 import type { ClaudeApp } from './src/types';
 
-type AppRequest<TBody = never> = ApiRequest<ClaudeApp, TBody>;
+type AppRequest<TBody = never, TParams = never> = ApiRequest<ClaudeApp, TBody, TParams>;
 
 /**
  * Stores pending PKCE state between the auth-url request and the OAuth callback.
@@ -18,6 +18,7 @@ module.exports = {
     getSettings({homey}: AppRequest) {
         return {
             apiKey: homey.settings.get(SETTING_API_KEY) ?? null,
+            customInstructions: homey.settings.get(SETTING_CUSTOM_INSTRUCTIONS) ?? null,
             defaultModel: homey.settings.get(SETTING_DEFAULT_MODEL) ?? DEFAULT_MODEL,
             defaultSystemPrompt: homey.settings.get(SETTING_DEFAULT_SYSTEM_PROMPT) ?? null,
             maxTokens: homey.settings.get(SETTING_MAX_TOKENS) ?? DEFAULT_MAX_TOKENS
@@ -106,6 +107,57 @@ module.exports = {
         const app = homey.app as unknown as ClaudeApp;
         app.brain.homeyMcp.disconnect();
         return {success: true};
+    },
+
+    getScheduledCommands({homey}: AppRequest) {
+        const app = homey.app as unknown as ClaudeApp;
+        return app.brain.scheduler.getScheduledCommands();
+    },
+
+    deleteScheduledCommand({homey, params}: AppRequest<never, { id: string }>) {
+        const app = homey.app as unknown as ClaudeApp;
+        const cancelled = app.brain.scheduler.cancel(params.id);
+
+        if (!cancelled) {
+            throw new Error('Scheduled command not found.');
+        }
+
+        return {success: true};
+    },
+
+    async generateInstructions({homey, body}: AppRequest<{ instructions: string }>) {
+        const apiKey = homey.settings.get(SETTING_API_KEY) as string | null;
+
+        if (!apiKey) {
+            throw new Error('API key is not configured.');
+        }
+
+        if (!body.instructions?.trim()) {
+            throw new Error('Instructions are required.');
+        }
+
+        const client = new Anthropic({apiKey});
+
+        const response = await client.messages.create({
+            model: 'claude-haiku-4-5-20251001',
+            max_tokens: 1024,
+            messages: [{
+                role: 'user',
+                content: `Convert the following natural language instructions into a clear, well-structured system prompt for an AI assistant. Keep it concise, actionable, and well-organized. Output only the system prompt, nothing else.\n\nInstructions:\n${body.instructions}`
+            }]
+        });
+
+        const content = response.content[0];
+
+        if (content.type !== 'text') {
+            throw new Error('Unexpected response from Claude.');
+        }
+
+        // Store the custom instructions and the generated system prompt.
+        homey.settings.set(SETTING_CUSTOM_INSTRUCTIONS, body.instructions);
+        homey.settings.set(SETTING_DEFAULT_SYSTEM_PROMPT, content.text);
+
+        return {systemPrompt: content.text};
     }
 };
 

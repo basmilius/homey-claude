@@ -19,6 +19,8 @@ export default class extends FlowActionEntity<ClaudeApp, Args, never, Result> {
             {role: 'assistant' as const, content: answer}
         ]);
 
+        await this.app.triggerResponseReady(answer, model);
+
         return {response: answer, model_used: model};
     }
 }

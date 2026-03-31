@@ -1,0 +1,225 @@
+{
+    "id": "schedule_command",
+    "title": {
+        "en": "Schedule a command for Claude",
+        "nl": "Plan een commando voor Claude",
+        "de": "Einen Befehl fur Claude planen",
+        "fr": "Planifier une commande pour Claude",
+        "it": "Programma un comando per Claude",
+        "sv": "Schemalag ett kommando for Claude",
+        "no": "Planlegg en kommando for Claude",
+        "es": "Programar un comando para Claude",
+        "da": "Planlag en kommando for Claude",
+        "ru": "Запланировать команду для Claude",
+        "pl": "Zaplanuj polecenie dla Claude",
+        "ko": "Claude 명령 예약",
+        "ar": "جدولة امر لـ Claude"
+    },
+    "titleFormatted": {
+        "en": "Schedule [[command]] in [[duration]] [[unit]]",
+        "nl": "Plan [[command]] over [[duration]] [[unit]]",
+        "de": "Plane [[command]] in [[duration]] [[unit]]",
+        "fr": "Planifier [[command]] dans [[duration]] [[unit]]",
+        "it": "Programma [[command]] tra [[duration]] [[unit]]",
+        "sv": "Schemalag [[command]] om [[duration]] [[unit]]",
+        "no": "Planlegg [[command]] om [[duration]] [[unit]]",
+        "es": "Programar [[command]] en [[duration]] [[unit]]",
+        "da": "Planlag [[command]] om [[duration]] [[unit]]",
+        "ru": "Запланировать [[command]] через [[duration]] [[unit]]",
+        "pl": "Zaplanuj [[command]] za [[duration]] [[unit]]",
+        "ko": "[[duration]] [[unit]] 후 [[command]] 예약",
+        "ar": "جدولة [[command]] بعد [[duration]] [[unit]]"
+    },
+    "hint": {
+        "en": "Schedules a command to be sent to Claude after a delay. When executed, Claude will process the command (with Homey context if connected) and the 'Scheduled command executed' trigger will fire.",
+        "nl": "Plant een commando dat na een vertraging naar Claude wordt gestuurd. Bij uitvoering verwerkt Claude het commando (met Homey-context indien verbonden) en wordt de 'Gepland commando uitgevoerd' trigger geactiveerd.",
+        "de": "Plant einen Befehl der nach einer Verzogerung an Claude gesendet wird. Bei der Ausfuhrung verarbeitet Claude den Befehl (mit Homey-Kontext wenn verbunden) und der Trigger 'Geplanter Befehl ausgefuhrt' wird ausgelost.",
+        "fr": "Planifie une commande a envoyer a Claude apres un delai. Lors de l'execution Claude traitera la commande (avec le contexte Homey si connecte) et le declencheur 'Commande planifiee executee' sera active.",
+        "it": "Programma un comando da inviare a Claude dopo un ritardo. All'esecuzione Claude elaborera il comando (con contesto Homey se connesso) e il trigger 'Comando programmato eseguito' si attivera.",
+        "sv": "Schemalagger ett kommando som ska skickas till Claude efter en fordrojning. Vid korning bearbetar Claude kommandot (med Homey-kontext om anslutet) och triggern 'Schemalgt kommando utfort' utloses.",
+        "no": "Planlegger en kommando som skal sendes til Claude etter en forsinkelse. Ved utforelse behandler Claude kommandoen (med Homey-kontekst hvis tilkoblet) og triggeren 'Planlagt kommando utfort' utloses.",
+        "es": "Programa un comando para enviarlo a Claude despues de un retraso. Al ejecutarse Claude procesara el comando (con contexto Homey si esta conectado) y se activara el disparador 'Comando programado ejecutado'.",
+        "da": "Planlagger en kommando der skal sendes til Claude efter en forsinkelse. Ved udfrelse behandler Claude kommandoen (med Homey-kontekst hvis forbundet) og triggeren 'Planlagt kommando udfrt' udloses.",
+        "ru": "Планирует команду для отправки Claude через заданное время. При выполнении Claude обработает команду (с контекстом Homey если подключен) и сработает триггер 'Запланированная команда выполнена'.",
+        "pl": "Planuje polecenie do wyslania do Claude po opoznieniu. Po wykonaniu Claude przetworzy polecenie (z kontekstem Homey jesli polaczony) i wyzwalacz 'Zaplanowane polecenie wykonane' zostanie uruchomiony.",
+        "ko": "지연 후 Claude에게 보낼 명령을 예약합니다. 실행 시 Claude가 명령을 처리하고 (연결된 경우 Homey 컨텍스트 포함) '예약된 명령 실행됨' 트리거가 발생합니다.",
+        "ar": "يجدول امرا لارساله الى Claude بعد تاخير. عند التنفيذ سيعالج Claude الامر (مع سياق Homey اذا كان متصلا) وسيتم تشغيل مشغل 'تم تنفيذ الامر المجدول'."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "command",
+            "title": {
+                "en": "Command",
+                "nl": "Commando",
+                "de": "Befehl",
+                "fr": "Commande",
+                "it": "Comando",
+                "sv": "Kommando",
+                "no": "Kommando",
+                "es": "Comando",
+                "da": "Kommando",
+                "ru": "Команда",
+                "pl": "Polecenie",
+                "ko": "명령",
+                "ar": "الامر"
+            },
+            "placeholder": {
+                "en": "Turn off the living room lights",
+                "nl": "Zet de woonkamerlampen uit",
+                "de": "Schalte die Wohnzimmerlichter aus",
+                "fr": "Eteins les lumieres du salon",
+                "it": "Spegni le luci del soggiorno",
+                "sv": "Slck av vardagsrumsljusen",
+                "no": "Sl av lyset i stua",
+                "es": "Apaga las luces de la sala",
+                "da": "Sluk lyset i stuen",
+                "ru": "Выключи свет в гостиной",
+                "pl": "Wylacz swiatla w salonie",
+                "ko": "거실 조명을 꺼줘",
+                "ar": "اطفئ اضواء غرفة المعيشة"
+            }
+        },
+        {
+            "type": "number",
+            "name": "duration",
+            "title": {
+                "en": "Duration",
+                "nl": "Duur",
+                "de": "Dauer",
+                "fr": "Duree",
+                "it": "Durata",
+                "sv": "Varaktighet",
+                "no": "Varighet",
+                "es": "Duracion",
+                "da": "Varighed",
+                "ru": "Длительность",
+                "pl": "Czas trwania",
+                "ko": "기간",
+                "ar": "المدة"
+            },
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+                "en": "10"
+            }
+        },
+        {
+            "type": "dropdown",
+            "name": "unit",
+            "title": {
+                "en": "Unit",
+                "nl": "Eenheid",
+                "de": "Einheit",
+                "fr": "Unite",
+                "it": "Unita",
+                "sv": "Enhet",
+                "no": "Enhet",
+                "es": "Unidad",
+                "da": "Enhed",
+                "ru": "Единица",
+                "pl": "Jednostka",
+                "ko": "단위",
+                "ar": "الوحدة"
+            },
+            "values": [
+                {
+                    "id": "seconds",
+                    "label": {
+                        "en": "Seconds",
+                        "nl": "Seconden",
+                        "de": "Sekunden",
+                        "fr": "Secondes",
+                        "it": "Secondi",
+                        "sv": "Sekunder",
+                        "no": "Sekunder",
+                        "es": "Segundos",
+                        "da": "Sekunder",
+                        "ru": "Секунды",
+                        "pl": "Sekundy",
+                        "ko": "초",
+                        "ar": "ثواني"
+                    }
+                },
+                {
+                    "id": "minutes",
+                    "label": {
+                        "en": "Minutes",
+                        "nl": "Minuten",
+                        "de": "Minuten",
+                        "fr": "Minutes",
+                        "it": "Minuti",
+                        "sv": "Minuter",
+                        "no": "Minutter",
+                        "es": "Minutos",
+                        "da": "Minutter",
+                        "ru": "Минуты",
+                        "pl": "Minuty",
+                        "ko": "분",
+                        "ar": "دقائق"
+                    }
+                },
+                {
+                    "id": "hours",
+                    "label": {
+                        "en": "Hours",
+                        "nl": "Uren",
+                        "de": "Stunden",
+                        "fr": "Heures",
+                        "it": "Ore",
+                        "sv": "Timmar",
+                        "no": "Timer",
+                        "es": "Horas",
+                        "da": "Timer",
+                        "ru": "Часы",
+                        "pl": "Godziny",
+                        "ko": "시간",
+                        "ar": "ساعات"
+                    }
+                },
+                {
+                    "id": "days",
+                    "label": {
+                        "en": "Days",
+                        "nl": "Dagen",
+                        "de": "Tage",
+                        "fr": "Jours",
+                        "it": "Giorni",
+                        "sv": "Dagar",
+                        "no": "Dager",
+                        "es": "Dias",
+                        "da": "Dage",
+                        "ru": "Дни",
+                        "pl": "Dni",
+                        "ko": "일",
+                        "ar": "ايام"
+                    }
+                }
+            ]
+        }
+    ],
+    "tokens": [
+        {
+            "name": "timer_id",
+            "type": "string",
+            "title": {
+                "en": "Timer ID",
+                "nl": "Timer-ID",
+                "de": "Timer-ID",
+                "fr": "ID du minuteur",
+                "it": "ID timer",
+                "sv": "Timer-ID",
+                "no": "Timer-ID",
+                "es": "ID del temporizador",
+                "da": "Timer-ID",
+                "ru": "ID таймера",
+                "pl": "ID timera",
+                "ko": "타이머 ID",
+                "ar": "معرف المؤقت"
+            },
+            "example": {
+                "en": "abc-123"
+            }
+        }
+    ]
+}

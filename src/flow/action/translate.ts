@@ -11,6 +11,8 @@ export default class extends FlowActionEntity<ClaudeApp, Args, never, Result> {
 
         const {answer, model} = await this.app.brain.claude.ask(prompt);
 
+        await this.app.triggerResponseReady(answer, model);
+
         return {translation: answer, model_used: model};
     }
 }

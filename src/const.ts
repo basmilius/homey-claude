@@ -1,7 +1,9 @@
 export const SETTING_API_KEY = 'claude-api-key';
+export const SETTING_CUSTOM_INSTRUCTIONS = 'claude-custom-instructions';
 export const SETTING_DEFAULT_MODEL = 'claude-default-model';
 export const SETTING_DEFAULT_SYSTEM_PROMPT = 'claude-default-system-prompt';
 export const SETTING_MAX_TOKENS = 'claude-max-tokens';
+export const SETTING_SCHEDULED_COMMANDS = 'claude-scheduled-commands';
 
 export const SETTING_HOMEY_MCP_CLIENT_ID = 'homey-mcp-client-id';
 export const SETTING_HOMEY_MCP_CLIENT_SECRET = 'homey-mcp-client-secret';

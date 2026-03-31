@@ -1,0 +1,123 @@
+{
+    "id": "scheduled_command_executed",
+    "title": {
+        "en": "Scheduled command executed",
+        "nl": "Gepland commando uitgevoerd",
+        "de": "Geplanter Befehl ausgefuhrt",
+        "fr": "Commande planifiee executee",
+        "it": "Comando programmato eseguito",
+        "sv": "Schemalgt kommando utfort",
+        "no": "Planlagt kommando utfort",
+        "es": "Comando programado ejecutado",
+        "da": "Planlagt kommando udfrt",
+        "ru": "Запланированная команда выполнена",
+        "pl": "Zaplanowane polecenie wykonane",
+        "ko": "예약된 명령 실행됨",
+        "ar": "تم تنفيذ الامر المجدول"
+    },
+    "hint": {
+        "en": "Triggers when a previously scheduled command has been executed by Claude.",
+        "nl": "Triggert wanneer een eerder gepland commando is uitgevoerd door Claude.",
+        "de": "Wird ausgelost wenn ein zuvor geplanter Befehl von Claude ausgefuhrt wurde.",
+        "fr": "Se declenche lorsqu'une commande precedemment planifiee a ete executee par Claude.",
+        "it": "Si attiva quando un comando precedentemente programmato e stato eseguito da Claude.",
+        "sv": "Utloses nar ett tidigare schemalgt kommando har utforts av Claude.",
+        "no": "Utloses nar en tidligere planlagt kommando har blitt utfort av Claude.",
+        "es": "Se activa cuando un comando previamente programado ha sido ejecutado por Claude.",
+        "da": "Udloses nar en tidligere planlagt kommando er blevet udfrt af Claude.",
+        "ru": "Срабатывает когда ранее запланированная команда была выполнена Claude.",
+        "pl": "Wyzwalany gdy wczesniej zaplanowane polecenie zostalo wykonane przez Claude.",
+        "ko": "이전에 예약된 명령이 Claude에 의해 실행되었을 때 트리거됩니다.",
+        "ar": "يتم تشغيله عندما يتم تنفيذ امر مجدول مسبقا بواسطة Claude."
+    },
+    "tokens": [
+        {
+            "name": "timer_id",
+            "type": "string",
+            "title": {
+                "en": "Timer ID",
+                "nl": "Timer-ID",
+                "de": "Timer-ID",
+                "fr": "ID du minuteur",
+                "it": "ID timer",
+                "sv": "Timer-ID",
+                "no": "Timer-ID",
+                "es": "ID del temporizador",
+                "da": "Timer-ID",
+                "ru": "ID таймера",
+                "pl": "ID timera",
+                "ko": "타이머 ID",
+                "ar": "معرف المؤقت"
+            },
+            "example": {
+                "en": "abc-123"
+            }
+        },
+        {
+            "name": "command",
+            "type": "string",
+            "title": {
+                "en": "Command",
+                "nl": "Commando",
+                "de": "Befehl",
+                "fr": "Commande",
+                "it": "Comando",
+                "sv": "Kommando",
+                "no": "Kommando",
+                "es": "Comando",
+                "da": "Kommando",
+                "ru": "Команда",
+                "pl": "Polecenie",
+                "ko": "명령",
+                "ar": "الامر"
+            },
+            "example": {
+                "en": "Turn off the living room lights"
+            }
+        },
+        {
+            "name": "success",
+            "type": "boolean",
+            "title": {
+                "en": "Success",
+                "nl": "Succesvol",
+                "de": "Erfolgreich",
+                "fr": "Succes",
+                "it": "Successo",
+                "sv": "Framgang",
+                "no": "Suksess",
+                "es": "Exito",
+                "da": "Succes",
+                "ru": "Успех",
+                "pl": "Sukces",
+                "ko": "성공",
+                "ar": "نجاح"
+            },
+            "example": {
+                "en": "true"
+            }
+        },
+        {
+            "name": "response",
+            "type": "string",
+            "title": {
+                "en": "Response",
+                "nl": "Antwoord",
+                "de": "Antwort",
+                "fr": "Reponse",
+                "it": "Risposta",
+                "sv": "Svar",
+                "no": "Svar",
+                "es": "Respuesta",
+                "da": "Svar",
+                "ru": "Ответ",
+                "pl": "Odpowiedz",
+                "ko": "응답",
+                "ar": "الرد"
+            },
+            "example": {
+                "en": "Done! The living room lights have been turned off."
+            }
+        }
+    ]
+}

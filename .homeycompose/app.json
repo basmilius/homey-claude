@@ -200,6 +200,18 @@
     "deleteHomeyOauthDisconnect": {
       "method": "DELETE",
       "path": "/homey-oauth/disconnect"
+    },
+    "getScheduledCommands": {
+      "method": "GET",
+      "path": "/scheduled-commands"
+    },
+    "deleteScheduledCommand": {
+      "method": "DELETE",
+      "path": "/scheduled-commands/:id"
+    },
+    "generateInstructions": {
+      "method": "POST",
+      "path": "/generate-instructions"
     }
   }
 }

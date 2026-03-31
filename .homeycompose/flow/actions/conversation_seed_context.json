@@ -1,0 +1,118 @@
+{
+    "id": "conversation_seed_context",
+    "title": {
+        "en": "Add context to conversation",
+        "nl": "Voeg context toe aan gesprek",
+        "de": "Kontext zum Gesprach hinzufugen",
+        "fr": "Ajouter du contexte a la conversation",
+        "it": "Aggiungi contesto alla conversazione",
+        "sv": "Lagg till kontext till konversation",
+        "no": "Legg til kontekst til samtale",
+        "es": "Agregar contexto a la conversacion",
+        "da": "Tilf kontekst til samtale",
+        "ru": "Добавить контекст к разговору",
+        "pl": "Dodaj kontekst do konwersacji",
+        "ko": "대화에 컨텍스트 추가",
+        "ar": "اضافة سياق الى المحادثة"
+    },
+    "titleFormatted": {
+        "en": "Add context [[context]] to conversation [[conversation_id]]",
+        "nl": "Voeg context [[context]] toe aan gesprek [[conversation_id]]",
+        "de": "Kontext [[context]] zum Gesprach [[conversation_id]] hinzufugen",
+        "fr": "Ajouter le contexte [[context]] a la conversation [[conversation_id]]",
+        "it": "Aggiungi contesto [[context]] alla conversazione [[conversation_id]]",
+        "sv": "Lagg till kontext [[context]] till konversation [[conversation_id]]",
+        "no": "Legg til kontekst [[context]] til samtale [[conversation_id]]",
+        "es": "Agregar contexto [[context]] a la conversacion [[conversation_id]]",
+        "da": "Tilf kontekst [[context]] til samtale [[conversation_id]]",
+        "ru": "Добавить контекст [[context]] к разговору [[conversation_id]]",
+        "pl": "Dodaj kontekst [[context]] do konwersacji [[conversation_id]]",
+        "ko": "대화 [[conversation_id]]에 컨텍스트 [[context]] 추가",
+        "ar": "اضافة سياق [[context]] الى المحادثة [[conversation_id]]"
+    },
+    "hint": {
+        "en": "Injects context into a conversation without sending it to Claude. The context will be available when the next message is sent in this conversation.",
+        "nl": "Injecteert context in een gesprek zonder het naar Claude te sturen. De context is beschikbaar wanneer het volgende bericht in dit gesprek wordt verstuurd.",
+        "de": "Fugt Kontext in ein Gesprach ein ohne es an Claude zu senden. Der Kontext ist verfugbar wenn die nachste Nachricht in diesem Gesprach gesendet wird.",
+        "fr": "Injecte du contexte dans une conversation sans l'envoyer a Claude. Le contexte sera disponible lors de l'envoi du prochain message dans cette conversation.",
+        "it": "Inietta contesto in una conversazione senza inviarlo a Claude. Il contesto sara disponibile quando il prossimo messaggio verra inviato in questa conversazione.",
+        "sv": "Injicerar kontext i en konversation utan att skicka den till Claude. Kontexten kommer att vara tillganglig nar nasta meddelande skickas i denna konversation.",
+        "no": "Injiserer kontekst i en samtale uten a sende den til Claude. Konteksten vil vare tilgjengelig nar neste melding sendes i denne samtalen.",
+        "es": "Inyecta contexto en una conversacion sin enviarlo a Claude. El contexto estara disponible cuando se envie el siguiente mensaje en esta conversacion.",
+        "da": "Injicerer kontekst i en samtale uden at sende den til Claude. Konteksten vil vare tilgangelig nar den naste besked sendes i denne samtale.",
+        "ru": "Добавляет контекст в разговор без отправки его в Claude. Контекст будет доступен при отправке следующего сообщения в этом разговоре.",
+        "pl": "Wstrzykuje kontekst do konwersacji bez wysylania go do Claude. Kontekst bedzie dostepny gdy nastepna wiadomosc zostanie wyslana w tej konwersacji.",
+        "ko": "대화에 컨텍스트를 주입하지만 Claude에 전송하지 않습니다. 이 대화에서 다음 메시지를 보낼 때 컨텍스트를 사용할 수 있습니다.",
+        "ar": "يحقن سياقا في محادثة دون ارساله الى Claude. سيكون السياق متاحا عند ارسال الرسالة التالية في هذه المحادثة."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "conversation_id",
+            "title": {
+                "en": "Conversation name",
+                "nl": "Gespreksnaam",
+                "de": "Gesprchsname",
+                "fr": "Nom de la conversation",
+                "it": "Nome della conversazione",
+                "sv": "Konversationsnamn",
+                "no": "Samtalenavn",
+                "es": "Nombre de la conversacion",
+                "da": "Samtalenavn",
+                "ru": "Имя разговора",
+                "pl": "Nazwa konwersacji",
+                "ko": "대화 이름",
+                "ar": "اسم المحادثة"
+            },
+            "placeholder": {
+                "en": "my-conversation",
+                "nl": "mijn-gesprek",
+                "de": "mein-gesprch",
+                "fr": "ma-conversation",
+                "it": "mia-conversazione",
+                "sv": "min-konversation",
+                "no": "min-samtale",
+                "es": "mi-conversacion",
+                "da": "min-samtale",
+                "ru": "мой-разговор",
+                "pl": "moja-rozmowa",
+                "ko": "내-대화",
+                "ar": "محادثتي"
+            }
+        },
+        {
+            "type": "text",
+            "name": "context",
+            "title": {
+                "en": "Context",
+                "nl": "Context",
+                "de": "Kontext",
+                "fr": "Contexte",
+                "it": "Contesto",
+                "sv": "Kontext",
+                "no": "Kontekst",
+                "es": "Contexto",
+                "da": "Kontekst",
+                "ru": "Контекст",
+                "pl": "Kontekst",
+                "ko": "컨텍스트",
+                "ar": "السياق"
+            },
+            "placeholder": {
+                "en": "Motion detected at the front door",
+                "nl": "Beweging gedetecteerd bij de voordeur",
+                "de": "Bewegung an der Haustur erkannt",
+                "fr": "Mouvement detecte a la porte d'entree",
+                "it": "Movimento rilevato alla porta d'ingresso",
+                "sv": "Rorelse upptackt vid ytterdorren",
+                "no": "Bevegelse oppdaget ved ytterdoren",
+                "es": "Movimiento detectado en la puerta principal",
+                "da": "Bevaegelse registreret ved hoveddren",
+                "ru": "Обнаружено движение у входной двери",
+                "pl": "Wykryto ruch przy drzwiach wejsciowych",
+                "ko": "현관문에서 움직임 감지됨",
+                "ar": "تم اكتشاف حركة عند الباب الامامي"
+            }
+        }
+    ]
+}

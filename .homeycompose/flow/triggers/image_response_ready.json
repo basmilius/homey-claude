@@ -1,0 +1,79 @@
+{
+    "id": "image_response_ready",
+    "title": {
+        "en": "Claude image analysis ready",
+        "nl": "Claude beeldanalyse gereed",
+        "de": "Claude-Bildanalyse bereit",
+        "fr": "Analyse d'image Claude prete",
+        "it": "Analisi immagine Claude pronta",
+        "sv": "Claude bildanalys klar",
+        "no": "Claude bildeanalyse klar",
+        "es": "Analisis de imagen de Claude listo",
+        "da": "Claude billedanalyse klar",
+        "ru": "Анализ изображения Claude готов",
+        "pl": "Analiza obrazu Claude gotowa",
+        "ko": "Claude 이미지 분석 준비됨",
+        "ar": "تحليل صورة Claude جاهز"
+    },
+    "hint": {
+        "en": "Triggers when Claude has finished analyzing an image.",
+        "nl": "Triggert wanneer Claude klaar is met het analyseren van een afbeelding.",
+        "de": "Wird ausgelost wenn Claude die Analyse eines Bildes abgeschlossen hat.",
+        "fr": "Se declenche lorsque Claude a termine l'analyse d'une image.",
+        "it": "Si attiva quando Claude ha terminato l'analisi di un'immagine.",
+        "sv": "Utloses nar Claude har slutfort analysen av en bild.",
+        "no": "Utloses nar Claude har fullfort analysen av et bilde.",
+        "es": "Se activa cuando Claude ha terminado de analizar una imagen.",
+        "da": "Udloses nar Claude har afsluttet analysen af et billede.",
+        "ru": "Срабатывает когда Claude завершил анализ изображения.",
+        "pl": "Wyzwalany gdy Claude zakonczy analize obrazu.",
+        "ko": "Claude가 이미지 분석을 완료했을 때 트리거됩니다.",
+        "ar": "يتم تشغيله عندما ينتهي Claude من تحليل صورة."
+    },
+    "tokens": [
+        {
+            "name": "response",
+            "type": "string",
+            "title": {
+                "en": "Response",
+                "nl": "Antwoord",
+                "de": "Antwort",
+                "fr": "Reponse",
+                "it": "Risposta",
+                "sv": "Svar",
+                "no": "Svar",
+                "es": "Respuesta",
+                "da": "Svar",
+                "ru": "Ответ",
+                "pl": "Odpowiedz",
+                "ko": "응답",
+                "ar": "الرد"
+            },
+            "example": {
+                "en": "The image shows a living room with a couch and a TV."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model",
+                "de": "Verwendetes Modell",
+                "fr": "Modele utilise",
+                "it": "Modello utilizzato",
+                "sv": "Anvand modell",
+                "no": "Brukt modell",
+                "es": "Modelo utilizado",
+                "da": "Brugt model",
+                "ru": "Используемая модель",
+                "pl": "Uzyty model",
+                "ko": "사용된 모델",
+                "ar": "النموذج المستخدم"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}
