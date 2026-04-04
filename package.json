@@ -5,14 +5,14 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@anthropic-ai/sdk": "^0.80.0",
-        "@basmilius/homey-common": "^1.20.0"
+        "@anthropic-ai/sdk": "^0.82.0",
+        "@basmilius/homey-common": "^1.21.0"
     },
     "devDependencies": {
         "@tsconfig/node22": "^22.0.5",
         "@types/bun": "^1.3.11",
         "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.12",
-        "@types/node": "^25.5.0",
-        "typescript": "^5.9.3"
+        "@types/node": "^25.5.2",
+        "typescript": "^6.0.2"
     }
 }
