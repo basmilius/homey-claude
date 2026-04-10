@@ -1,0 +1,229 @@
+{
+    "id": "apply_mood_with_model",
+    "title": {
+        "en": "Apply mood to home (choose model)",
+        "nl": "Pas sfeer toe op huis (kies model)",
+        "de": "Stimmung auf Zuhause anwenden (Modell wählen)",
+        "fr": "Appliquer l'ambiance à la maison (choisir le modèle)",
+        "it": "Applica atmosfera alla casa (scegli il modello)",
+        "sv": "Applicera stämning på hemmet (välj modell)",
+        "no": "Bruk stemning på hjemmet (velg modell)",
+        "es": "Aplicar ambiente al hogar (elegir modelo)",
+        "da": "Anvend stemning på hjemmet (vælg model)",
+        "ru": "Применить настроение к дому (выбрать модель)",
+        "pl": "Zastosuj nastrój w domu (wybierz model)",
+        "ko": "집에 분위기 적용 (모델 선택)",
+        "ar": "تطبيق الأجواء على المنزل (اختر النموذج)"
+    },
+    "titleFormatted": {
+        "en": "Apply mood ([[model]]): [[mood]]",
+        "nl": "Pas sfeer toe ([[model]]): [[mood]]",
+        "de": "Stimmung anwenden ([[model]]): [[mood]]",
+        "fr": "Appliquer l'ambiance ([[model]]) : [[mood]]",
+        "it": "Applica atmosfera ([[model]]): [[mood]]",
+        "sv": "Applicera stämning ([[model]]): [[mood]]",
+        "no": "Bruk stemning ([[model]]): [[mood]]",
+        "es": "Aplicar ambiente ([[model]]): [[mood]]",
+        "da": "Anvend stemning ([[model]]): [[mood]]",
+        "ru": "Применить настроение ([[model]]): [[mood]]",
+        "pl": "Zastosuj nastrój ([[model]]): [[mood]]",
+        "ko": "분위기 적용 ([[model]]): [[mood]]",
+        "ar": "تطبيق الأجواء ([[model]]): [[mood]]"
+    },
+    "hint": {
+        "en": "Describe a mood or atmosphere and Claude will automatically adjust your devices to match. Lets you choose the model per flow card. Requires Homey MCP authentication in the app settings.",
+        "nl": "Beschrijf een sfeer of atmosfeer en Claude past automatisch je apparaten aan. Laat je het model per flow kaart kiezen. Vereist Homey MCP-authenticatie in de app-instellingen.",
+        "de": "Beschreibe eine Stimmung oder Atmosphäre und Claude passt deine Geräte automatisch an. Ermöglicht die Auswahl des Modells pro Flow-Karte. Erfordert Homey MCP-Authentifizierung in den App-Einstellungen.",
+        "fr": "Décrivez une ambiance ou atmosphère et Claude ajustera automatiquement vos appareils. Vous permet de choisir le modèle par carte de flux. Nécessite l'authentification Homey MCP.",
+        "it": "Descrivi un'atmosfera e Claude regolerà automaticamente i tuoi dispositivi. Consente di scegliere il modello per ogni scheda flusso. Richiede l'autenticazione Homey MCP.",
+        "sv": "Beskriv en stämning eller atmosfär och Claude justerar automatiskt dina enheter. Låter dig välja modell per flödeskort. Kräver Homey MCP-autentisering i appinställningarna.",
+        "no": "Beskriv en stemning eller atmosfære og Claude justerer automatisk enhetene dine. Lar deg velge modell per flytkort. Krever Homey MCP-autentisering i appinnstillingene.",
+        "es": "Describe un ambiente o atmósfera y Claude ajustará automáticamente tus dispositivos. Te permite elegir el modelo por tarjeta de flujo. Requiere autenticación Homey MCP.",
+        "da": "Beskriv en stemning eller atmosfære og Claude justerer automatisk dine enheder. Giver dig mulighed for at vælge model pr. flowkort. Kræver Homey MCP-godkendelse.",
+        "ru": "Опишите настроение или атмосферу, и Claude автоматически настроит ваши устройства. Позволяет выбрать модель для каждой карточки потока. Требует аутентификации Homey MCP.",
+        "pl": "Opisz nastrój lub atmosferę, a Claude automatycznie dostosuje urządzenia. Pozwala wybrać model dla każdej karty przepływu. Wymaga uwierzytelnienia Homey MCP.",
+        "ko": "분위기나 분위기를 설명하면 Claude가 자동으로 기기를 조정합니다. 플로우 카드별로 모델을 선택할 수 있습니다. Homey MCP 인증이 필요합니다.",
+        "ar": "صف أجواء أو مزاجاً وسيقوم Claude بضبط أجهزتك تلقائياً. يتيح لك اختيار النموذج لكل بطاقة تدفق. يتطلب مصادقة Homey MCP."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "mood",
+            "title": {
+                "en": "Mood",
+                "nl": "Sfeer",
+                "de": "Stimmung",
+                "fr": "Ambiance",
+                "it": "Atmosfera",
+                "sv": "Stämning",
+                "no": "Stemning",
+                "es": "Ambiente",
+                "da": "Stemning",
+                "ru": "Настроение",
+                "pl": "Nastrój",
+                "ko": "분위기",
+                "ar": "الأجواء"
+            },
+            "placeholder": {
+                "en": "Movie night with dimmed warm lights",
+                "nl": "Filmavond met gedimde warme verlichting",
+                "de": "Filmabend mit gedimmtem warmem Licht",
+                "fr": "Soirée cinéma avec lumières tamisées chaudes",
+                "it": "Serata cinema con luci calde soffuse",
+                "sv": "Filmkväll med dimmade varma ljus",
+                "no": "Filmkveld med dempede varme lys",
+                "es": "Noche de cine con luces cálidas tenues",
+                "da": "Filmaften med dæmpede varme lys",
+                "ru": "Киновечер с приглушённым тёплым светом",
+                "pl": "Wieczór filmowy z przyciemnionym ciepłym światłem",
+                "ko": "따뜻한 조명이 어두운 영화의 밤",
+                "ar": "ليلة فيلم مع إضاءة دافئة خافتة"
+            }
+        },
+        {
+            "type": "dropdown",
+            "name": "model",
+            "title": {
+                "en": "Model",
+                "nl": "Model",
+                "de": "Modell",
+                "fr": "Modèle",
+                "it": "Modello",
+                "sv": "Modell",
+                "no": "Modell",
+                "es": "Modelo",
+                "da": "Model",
+                "ru": "Модель",
+                "pl": "Model",
+                "ko": "모델",
+                "ar": "النموذج"
+            },
+            "values": [
+                {
+                    "id": "claude-haiku-4-5-20251001",
+                    "label": {
+                        "en": "Claude Haiku 4.5",
+                        "nl": "Claude Haiku 4.5",
+                        "de": "Claude Haiku 4.5",
+                        "fr": "Claude Haiku 4.5",
+                        "it": "Claude Haiku 4.5",
+                        "sv": "Claude Haiku 4.5",
+                        "no": "Claude Haiku 4.5",
+                        "es": "Claude Haiku 4.5",
+                        "da": "Claude Haiku 4.5",
+                        "ru": "Claude Haiku 4.5",
+                        "pl": "Claude Haiku 4.5",
+                        "ko": "Claude Haiku 4.5",
+                        "ar": "Claude Haiku 4.5"
+                    }
+                },
+                {
+                    "id": "claude-sonnet-4-6",
+                    "label": {
+                        "en": "Claude Sonnet 4.6",
+                        "nl": "Claude Sonnet 4.6",
+                        "de": "Claude Sonnet 4.6",
+                        "fr": "Claude Sonnet 4.6",
+                        "it": "Claude Sonnet 4.6",
+                        "sv": "Claude Sonnet 4.6",
+                        "no": "Claude Sonnet 4.6",
+                        "es": "Claude Sonnet 4.6",
+                        "da": "Claude Sonnet 4.6",
+                        "ru": "Claude Sonnet 4.6",
+                        "pl": "Claude Sonnet 4.6",
+                        "ko": "Claude Sonnet 4.6",
+                        "ar": "Claude Sonnet 4.6"
+                    }
+                },
+                {
+                    "id": "claude-opus-4-6",
+                    "label": {
+                        "en": "Claude Opus 4.6",
+                        "nl": "Claude Opus 4.6",
+                        "de": "Claude Opus 4.6",
+                        "fr": "Claude Opus 4.6",
+                        "it": "Claude Opus 4.6",
+                        "sv": "Claude Opus 4.6",
+                        "no": "Claude Opus 4.6",
+                        "es": "Claude Opus 4.6",
+                        "da": "Claude Opus 4.6",
+                        "ru": "Claude Opus 4.6",
+                        "pl": "Claude Opus 4.6",
+                        "ko": "Claude Opus 4.6",
+                        "ar": "Claude Opus 4.6"
+                    }
+                }
+            ]
+        }
+    ],
+    "tokens": [
+        {
+            "name": "result",
+            "type": "string",
+            "title": {
+                "en": "Result",
+                "nl": "Resultaat",
+                "de": "Ergebnis",
+                "fr": "Résultat",
+                "it": "Risultato",
+                "sv": "Resultat",
+                "no": "Resultat",
+                "es": "Resultado",
+                "da": "Resultat",
+                "ru": "Результат",
+                "pl": "Wynik",
+                "ko": "결과",
+                "ar": "النتيجة"
+            },
+            "example": {
+                "en": "I've set up your movie night: living room lights dimmed to 20% with warm orange tones, and the hallway lights turned off.",
+                "nl": "Ik heb je filmavond ingesteld: woonkamerlampen gedimd naar 20% met warme oranje tinten, en de ganglichten uitgeschakeld.",
+                "de": "Ich habe deinen Filmabend eingerichtet: Wohnzimmerbeleuchtung auf 20% gedimmt mit warmen Orangetönen, und die Flurlichter ausgeschaltet.",
+                "fr": "J'ai configuré votre soirée cinéma : lumières du salon tamisées à 20% avec des tons orange chauds, et les lumières du couloir éteintes.",
+                "it": "Ho configurato la tua serata cinema: luci del soggiorno abbassate al 20% con toni arancioni caldi, e le luci del corridoio spente.",
+                "sv": "Jag har ställt in din filmkväll: vardagsrumsbelysning dimmad till 20% med varma orangea toner, och hallbelysningen släckt.",
+                "no": "Jeg har satt opp filmkvelden din: stubelysning dempet til 20% med varme oransje toner, og ganglysene slått av.",
+                "es": "He configurado tu noche de cine: luces del salón al 20% con tonos naranja cálidos, y las luces del pasillo apagadas.",
+                "da": "Jeg har sat din filmaften op: stuebelysning dæmpet til 20% med varme orange toner, og gangbelysningen slukket.",
+                "ru": "Я настроил ваш киновечер: освещение гостиной приглушено до 20% с тёплыми оранжевыми тонами, свет в коридоре выключен.",
+                "pl": "Przygotowałem wieczór filmowy: oświetlenie salonu przyciemnione do 20% z ciepłymi pomarańczowymi tonami, światła w korytarzu wyłączone.",
+                "ko": "영화의 밤을 설정했습니다: 거실 조명을 따뜻한 오렌지 톤으로 20%로 낮추고, 복도 조명을 끄었습니다.",
+                "ar": "لقد أعددت ليلة الفيلم: إضاءة غرفة المعيشة خافتة عند 20% بدرجات برتقالية دافئة، وأضواء الممر مطفأة."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model",
+                "de": "Verwendetes Modell",
+                "fr": "Modèle utilisé",
+                "it": "Modello utilizzato",
+                "sv": "Använd modell",
+                "no": "Brukt modell",
+                "es": "Modelo utilizado",
+                "da": "Brugt model",
+                "ru": "Используемая модель",
+                "pl": "Użyty model",
+                "ko": "사용된 모델",
+                "ar": "النموذج المستخدم"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001",
+                "de": "claude-haiku-4-5-20251001",
+                "fr": "claude-haiku-4-5-20251001",
+                "it": "claude-haiku-4-5-20251001",
+                "sv": "claude-haiku-4-5-20251001",
+                "no": "claude-haiku-4-5-20251001",
+                "es": "claude-haiku-4-5-20251001",
+                "da": "claude-haiku-4-5-20251001",
+                "ru": "claude-haiku-4-5-20251001",
+                "pl": "claude-haiku-4-5-20251001",
+                "ko": "claude-haiku-4-5-20251001",
+                "ar": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

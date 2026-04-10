@@ -1,0 +1,331 @@
+{
+    "id": "classify_intent_with_model",
+    "title": {
+        "en": "Classify intent from text (choose model)",
+        "nl": "Classificeer intentie uit tekst (kies model)",
+        "de": "Absicht aus Text klassifizieren (Modell wählen)",
+        "fr": "Classifier l'intention à partir du texte (choisir le modèle)",
+        "it": "Classifica l'intento dal testo (scegli il modello)",
+        "sv": "Klassificera avsikt från text (välj modell)",
+        "no": "Klassifiser intensjon fra tekst (velg modell)",
+        "es": "Clasificar intención del texto (elegir modelo)",
+        "da": "Klassificer hensigt fra tekst (vælg model)",
+        "ru": "Классифицировать намерение из текста (выбрать модель)",
+        "pl": "Klasyfikuj intencję z tekstu (wybierz model)",
+        "ko": "텍스트에서 의도 분류 (모델 선택)",
+        "ar": "تصنيف النية من النص (اختر النموذج)"
+    },
+    "titleFormatted": {
+        "en": "Classify intent ([[model]]): [[text]] into [[intents]]",
+        "nl": "Classificeer intentie ([[model]]): [[text]] in [[intents]]",
+        "de": "Absicht klassifizieren ([[model]]): [[text]] in [[intents]]",
+        "fr": "Classifier l'intention ([[model]]) : [[text]] dans [[intents]]",
+        "it": "Classifica l'intento ([[model]]): [[text]] in [[intents]]",
+        "sv": "Klassificera avsikt ([[model]]): [[text]] i [[intents]]",
+        "no": "Klassifiser intensjon ([[model]]): [[text]] i [[intents]]",
+        "es": "Clasificar intención ([[model]]): [[text]] en [[intents]]",
+        "da": "Klassificer hensigt ([[model]]): [[text]] i [[intents]]",
+        "ru": "Классифицировать намерение ([[model]]): [[text]] в [[intents]]",
+        "pl": "Klasyfikuj intencję ([[model]]): [[text]] w [[intents]]",
+        "ko": "의도 분류 ([[model]]): [[text]]를 [[intents]]로",
+        "ar": "تصنيف النية ([[model]]): [[text]] إلى [[intents]]"
+    },
+    "hint": {
+        "en": "Classifies text into one of the provided intents using Claude AI. Lets you choose the model per flow card. Ideal for routing voice commands or messages to the right flow.",
+        "nl": "Classificeert tekst in een van de opgegeven intenties met Claude AI. Laat je het model per flow kaart kiezen. Ideaal voor het routeren van spraakcommando's of berichten naar de juiste flow.",
+        "de": "Klassifiziert Text in eine der angegebenen Absichten mithilfe von Claude AI. Ermöglicht die Auswahl des Modells pro Flow-Karte. Ideal zum Weiterleiten von Sprachbefehlen oder Nachrichten.",
+        "fr": "Classifie le texte dans l'une des intentions fournies à l'aide de Claude AI. Vous permet de choisir le modèle par carte de flux. Idéal pour diriger les commandes vocales ou messages.",
+        "it": "Classifica il testo in uno degli intenti forniti utilizzando Claude AI. Consente di scegliere il modello per ogni scheda flusso. Ideale per indirizzare comandi vocali o messaggi.",
+        "sv": "Klassificerar text i en av de angivna avsikterna med Claude AI. Låter dig välja modell per flödeskort. Perfekt för att dirigera röstkommandon eller meddelanden.",
+        "no": "Klassifiserer tekst i en av de oppgitte intensjonene ved hjelp av Claude AI. Lar deg velge modell per flytkort. Ideelt for å rute stemmekommandoer eller meldinger.",
+        "es": "Clasifica texto en una de las intenciones proporcionadas usando Claude AI. Te permite elegir el modelo por tarjeta de flujo. Ideal para dirigir comandos de voz o mensajes.",
+        "da": "Klassificerer tekst i en af de angivne hensigter ved hjælp af Claude AI. Giver dig mulighed for at vælge model pr. flowkort. Ideel til at dirigere stemmekommandoer eller beskeder.",
+        "ru": "Классифицирует текст в одно из предоставленных намерений с помощью Claude AI. Позволяет выбрать модель для каждой карточки потока. Идеально для маршрутизации голосовых команд.",
+        "pl": "Klasyfikuje tekst do jednej z podanych intencji za pomocą Claude AI. Pozwala wybrać model dla każdej karty przepływu. Idealny do kierowania komend głosowych lub wiadomości.",
+        "ko": "Claude AI를 사용하여 텍스트를 제공된 의도 중 하나로 분류합니다. 플로우 카드별로 모델을 선택할 수 있습니다. 음성 명령이나 메시지를 올바른 플로우로 라우팅하는 데 이상적입니다.",
+        "ar": "يصنف النص إلى إحدى النوايا المقدمة باستخدام Claude AI. يتيح لك اختيار النموذج لكل بطاقة تدفق. مثالي لتوجيه الأوامر الصوتية أو الرسائل."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "text",
+            "title": {
+                "en": "Text",
+                "nl": "Tekst",
+                "de": "Text",
+                "fr": "Texte",
+                "it": "Testo",
+                "sv": "Text",
+                "no": "Tekst",
+                "es": "Texto",
+                "da": "Tekst",
+                "ru": "Текст",
+                "pl": "Tekst",
+                "ko": "텍스트",
+                "ar": "نص"
+            },
+            "placeholder": {
+                "en": "Turn on the kitchen lights",
+                "nl": "Zet de keukenlampen aan",
+                "de": "Schalte die Küchenlichter ein",
+                "fr": "Allume les lumières de la cuisine",
+                "it": "Accendi le luci della cucina",
+                "sv": "Tänd köksbelysningen",
+                "no": "Slå på kjøkkenlysene",
+                "es": "Enciende las luces de la cocina",
+                "da": "Tænd køkkenlyset",
+                "ru": "Включи свет на кухне",
+                "pl": "Włącz światła w kuchni",
+                "ko": "주방 조명을 켜줘",
+                "ar": "شغّل أضواء المطبخ"
+            }
+        },
+        {
+            "type": "text",
+            "name": "intents",
+            "title": {
+                "en": "Intents",
+                "nl": "Intenties",
+                "de": "Absichten",
+                "fr": "Intentions",
+                "it": "Intenti",
+                "sv": "Avsikter",
+                "no": "Intensjoner",
+                "es": "Intenciones",
+                "da": "Hensigter",
+                "ru": "Намерения",
+                "pl": "Intencje",
+                "ko": "의도",
+                "ar": "النوايا"
+            },
+            "placeholder": {
+                "en": "lights, music, temperature, alarm",
+                "nl": "lichten, muziek, temperatuur, alarm",
+                "de": "Lichter, Musik, Temperatur, Alarm",
+                "fr": "lumières, musique, température, alarme",
+                "it": "luci, musica, temperatura, allarme",
+                "sv": "ljus, musik, temperatur, larm",
+                "no": "lys, musikk, temperatur, alarm",
+                "es": "luces, música, temperatura, alarma",
+                "da": "lys, musik, temperatur, alarm",
+                "ru": "свет, музыка, температура, будильник",
+                "pl": "światła, muzyka, temperatura, alarm",
+                "ko": "조명, 음악, 온도, 알람",
+                "ar": "أضواء، موسيقى، درجة الحرارة، منبه"
+            }
+        },
+        {
+            "type": "dropdown",
+            "name": "model",
+            "title": {
+                "en": "Model",
+                "nl": "Model",
+                "de": "Modell",
+                "fr": "Modèle",
+                "it": "Modello",
+                "sv": "Modell",
+                "no": "Modell",
+                "es": "Modelo",
+                "da": "Model",
+                "ru": "Модель",
+                "pl": "Model",
+                "ko": "모델",
+                "ar": "النموذج"
+            },
+            "values": [
+                {
+                    "id": "claude-haiku-4-5-20251001",
+                    "label": {
+                        "en": "Claude Haiku 4.5",
+                        "nl": "Claude Haiku 4.5",
+                        "de": "Claude Haiku 4.5",
+                        "fr": "Claude Haiku 4.5",
+                        "it": "Claude Haiku 4.5",
+                        "sv": "Claude Haiku 4.5",
+                        "no": "Claude Haiku 4.5",
+                        "es": "Claude Haiku 4.5",
+                        "da": "Claude Haiku 4.5",
+                        "ru": "Claude Haiku 4.5",
+                        "pl": "Claude Haiku 4.5",
+                        "ko": "Claude Haiku 4.5",
+                        "ar": "Claude Haiku 4.5"
+                    }
+                },
+                {
+                    "id": "claude-sonnet-4-6",
+                    "label": {
+                        "en": "Claude Sonnet 4.6",
+                        "nl": "Claude Sonnet 4.6",
+                        "de": "Claude Sonnet 4.6",
+                        "fr": "Claude Sonnet 4.6",
+                        "it": "Claude Sonnet 4.6",
+                        "sv": "Claude Sonnet 4.6",
+                        "no": "Claude Sonnet 4.6",
+                        "es": "Claude Sonnet 4.6",
+                        "da": "Claude Sonnet 4.6",
+                        "ru": "Claude Sonnet 4.6",
+                        "pl": "Claude Sonnet 4.6",
+                        "ko": "Claude Sonnet 4.6",
+                        "ar": "Claude Sonnet 4.6"
+                    }
+                },
+                {
+                    "id": "claude-opus-4-6",
+                    "label": {
+                        "en": "Claude Opus 4.6",
+                        "nl": "Claude Opus 4.6",
+                        "de": "Claude Opus 4.6",
+                        "fr": "Claude Opus 4.6",
+                        "it": "Claude Opus 4.6",
+                        "sv": "Claude Opus 4.6",
+                        "no": "Claude Opus 4.6",
+                        "es": "Claude Opus 4.6",
+                        "da": "Claude Opus 4.6",
+                        "ru": "Claude Opus 4.6",
+                        "pl": "Claude Opus 4.6",
+                        "ko": "Claude Opus 4.6",
+                        "ar": "Claude Opus 4.6"
+                    }
+                }
+            ]
+        }
+    ],
+    "tokens": [
+        {
+            "name": "intent",
+            "type": "string",
+            "title": {
+                "en": "Intent",
+                "nl": "Intentie",
+                "de": "Absicht",
+                "fr": "Intention",
+                "it": "Intento",
+                "sv": "Avsikt",
+                "no": "Intensjon",
+                "es": "Intención",
+                "da": "Hensigt",
+                "ru": "Намерение",
+                "pl": "Intencja",
+                "ko": "의도",
+                "ar": "النية"
+            },
+            "example": {
+                "en": "lights",
+                "nl": "lichten",
+                "de": "Lichter",
+                "fr": "lumières",
+                "it": "luci",
+                "sv": "ljus",
+                "no": "lys",
+                "es": "luces",
+                "da": "lys",
+                "ru": "свет",
+                "pl": "światła",
+                "ko": "조명",
+                "ar": "أضواء"
+            }
+        },
+        {
+            "name": "confidence",
+            "type": "string",
+            "title": {
+                "en": "Confidence",
+                "nl": "Betrouwbaarheid",
+                "de": "Konfidenz",
+                "fr": "Confiance",
+                "it": "Confidenza",
+                "sv": "Konfidens",
+                "no": "Konfidens",
+                "es": "Confianza",
+                "da": "Konfidens",
+                "ru": "Уверенность",
+                "pl": "Pewność",
+                "ko": "신뢰도",
+                "ar": "الثقة"
+            },
+            "example": {
+                "en": "high",
+                "nl": "high",
+                "de": "high",
+                "fr": "high",
+                "it": "high",
+                "sv": "high",
+                "no": "high",
+                "es": "high",
+                "da": "high",
+                "ru": "high",
+                "pl": "high",
+                "ko": "high",
+                "ar": "high"
+            }
+        },
+        {
+            "name": "parameters",
+            "type": "string",
+            "title": {
+                "en": "Parameters",
+                "nl": "Parameters",
+                "de": "Parameter",
+                "fr": "Paramètres",
+                "it": "Parametri",
+                "sv": "Parametrar",
+                "no": "Parametere",
+                "es": "Parámetros",
+                "da": "Parametre",
+                "ru": "Параметры",
+                "pl": "Parametry",
+                "ko": "매개변수",
+                "ar": "المعلمات"
+            },
+            "example": {
+                "en": "kitchen, on",
+                "nl": "keuken, aan",
+                "de": "Küche, ein",
+                "fr": "cuisine, allumer",
+                "it": "cucina, accendi",
+                "sv": "kök, på",
+                "no": "kjøkken, på",
+                "es": "cocina, encender",
+                "da": "køkken, tænd",
+                "ru": "кухня, включить",
+                "pl": "kuchnia, włącz",
+                "ko": "주방, 켜기",
+                "ar": "المطبخ، تشغيل"
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model",
+                "de": "Verwendetes Modell",
+                "fr": "Modèle utilisé",
+                "it": "Modello utilizzato",
+                "sv": "Använd modell",
+                "no": "Brukt modell",
+                "es": "Modelo utilizado",
+                "da": "Brugt model",
+                "ru": "Используемая модель",
+                "pl": "Użyty model",
+                "ko": "사용된 모델",
+                "ar": "النموذج المستخدم"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001",
+                "de": "claude-haiku-4-5-20251001",
+                "fr": "claude-haiku-4-5-20251001",
+                "it": "claude-haiku-4-5-20251001",
+                "sv": "claude-haiku-4-5-20251001",
+                "no": "claude-haiku-4-5-20251001",
+                "es": "claude-haiku-4-5-20251001",
+                "da": "claude-haiku-4-5-20251001",
+                "ru": "claude-haiku-4-5-20251001",
+                "pl": "claude-haiku-4-5-20251001",
+                "ko": "claude-haiku-4-5-20251001",
+                "ar": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

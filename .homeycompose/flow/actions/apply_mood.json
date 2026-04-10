@@ -1,0 +1,154 @@
+{
+    "id": "apply_mood",
+    "title": {
+        "en": "Apply mood to home",
+        "nl": "Pas sfeer toe op huis",
+        "de": "Stimmung auf Zuhause anwenden",
+        "fr": "Appliquer l'ambiance à la maison",
+        "it": "Applica atmosfera alla casa",
+        "sv": "Applicera stämning på hemmet",
+        "no": "Bruk stemning på hjemmet",
+        "es": "Aplicar ambiente al hogar",
+        "da": "Anvend stemning på hjemmet",
+        "ru": "Применить настроение к дому",
+        "pl": "Zastosuj nastrój w domu",
+        "ko": "집에 분위기 적용",
+        "ar": "تطبيق الأجواء على المنزل"
+    },
+    "titleFormatted": {
+        "en": "Apply mood: [[mood]]",
+        "nl": "Pas sfeer toe: [[mood]]",
+        "de": "Stimmung anwenden: [[mood]]",
+        "fr": "Appliquer l'ambiance : [[mood]]",
+        "it": "Applica atmosfera: [[mood]]",
+        "sv": "Applicera stämning: [[mood]]",
+        "no": "Bruk stemning: [[mood]]",
+        "es": "Aplicar ambiente: [[mood]]",
+        "da": "Anvend stemning: [[mood]]",
+        "ru": "Применить настроение: [[mood]]",
+        "pl": "Zastosuj nastrój: [[mood]]",
+        "ko": "분위기 적용: [[mood]]",
+        "ar": "تطبيق الأجواء: [[mood]]"
+    },
+    "hint": {
+        "en": "Describe a mood or atmosphere and Claude will automatically adjust your devices to match. Controls lighting, temperature, and other devices via Homey MCP. Requires Homey MCP authentication in the app settings.",
+        "nl": "Beschrijf een sfeer of atmosfeer en Claude past automatisch je apparaten aan. Regelt verlichting, temperatuur en andere apparaten via Homey MCP. Vereist Homey MCP-authenticatie in de app-instellingen.",
+        "de": "Beschreibe eine Stimmung oder Atmosphäre und Claude passt deine Geräte automatisch an. Steuert Beleuchtung, Temperatur und andere Geräte über Homey MCP. Erfordert Homey MCP-Authentifizierung in den App-Einstellungen.",
+        "fr": "Décrivez une ambiance ou atmosphère et Claude ajustera automatiquement vos appareils. Contrôle l'éclairage, la température et d'autres appareils via Homey MCP. Nécessite l'authentification Homey MCP dans les paramètres.",
+        "it": "Descrivi un'atmosfera e Claude regolerà automaticamente i tuoi dispositivi. Controlla illuminazione, temperatura e altri dispositivi tramite Homey MCP. Richiede l'autenticazione Homey MCP nelle impostazioni.",
+        "sv": "Beskriv en stämning eller atmosfär och Claude justerar automatiskt dina enheter. Styr belysning, temperatur och andra enheter via Homey MCP. Kräver Homey MCP-autentisering i appinställningarna.",
+        "no": "Beskriv en stemning eller atmosfære og Claude justerer automatisk enhetene dine. Styrer belysning, temperatur og andre enheter via Homey MCP. Krever Homey MCP-autentisering i appinnstillingene.",
+        "es": "Describe un ambiente o atmósfera y Claude ajustará automáticamente tus dispositivos. Controla iluminación, temperatura y otros dispositivos a través de Homey MCP. Requiere autenticación Homey MCP en la configuración.",
+        "da": "Beskriv en stemning eller atmosfære og Claude justerer automatisk dine enheder. Styrer belysning, temperatur og andre enheder via Homey MCP. Kræver Homey MCP-godkendelse i appindstillingerne.",
+        "ru": "Опишите настроение или атмосферу, и Claude автоматически настроит ваши устройства. Управляет освещением, температурой и другими устройствами через Homey MCP. Требует аутентификации Homey MCP в настройках.",
+        "pl": "Opisz nastrój lub atmosferę, a Claude automatycznie dostosuje urządzenia. Steruje oświetleniem, temperaturą i innymi urządzeniami przez Homey MCP. Wymaga uwierzytelnienia Homey MCP w ustawieniach.",
+        "ko": "분위기나 분위기를 설명하면 Claude가 자동으로 기기를 조정합니다. Homey MCP를 통해 조명, 온도 및 기타 기기를 제어합니다. 앱 설정에서 Homey MCP 인증이 필요합니다.",
+        "ar": "صف أجواء أو مزاجاً وسيقوم Claude بضبط أجهزتك تلقائياً. يتحكم في الإضاءة والحرارة والأجهزة الأخرى عبر Homey MCP. يتطلب مصادقة Homey MCP في إعدادات التطبيق."
+    },
+    "args": [
+        {
+            "type": "text",
+            "name": "mood",
+            "title": {
+                "en": "Mood",
+                "nl": "Sfeer",
+                "de": "Stimmung",
+                "fr": "Ambiance",
+                "it": "Atmosfera",
+                "sv": "Stämning",
+                "no": "Stemning",
+                "es": "Ambiente",
+                "da": "Stemning",
+                "ru": "Настроение",
+                "pl": "Nastrój",
+                "ko": "분위기",
+                "ar": "الأجواء"
+            },
+            "placeholder": {
+                "en": "Movie night with dimmed warm lights",
+                "nl": "Filmavond met gedimde warme verlichting",
+                "de": "Filmabend mit gedimmtem warmem Licht",
+                "fr": "Soirée cinéma avec lumières tamisées chaudes",
+                "it": "Serata cinema con luci calde soffuse",
+                "sv": "Filmkväll med dimmade varma ljus",
+                "no": "Filmkveld med dempede varme lys",
+                "es": "Noche de cine con luces cálidas tenues",
+                "da": "Filmaften med dæmpede varme lys",
+                "ru": "Киновечер с приглушённым тёплым светом",
+                "pl": "Wieczór filmowy z przyciemnionym ciepłym światłem",
+                "ko": "따뜻한 조명이 어두운 영화의 밤",
+                "ar": "ليلة فيلم مع إضاءة دافئة خافتة"
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "name": "result",
+            "type": "string",
+            "title": {
+                "en": "Result",
+                "nl": "Resultaat",
+                "de": "Ergebnis",
+                "fr": "Résultat",
+                "it": "Risultato",
+                "sv": "Resultat",
+                "no": "Resultat",
+                "es": "Resultado",
+                "da": "Resultat",
+                "ru": "Результат",
+                "pl": "Wynik",
+                "ko": "결과",
+                "ar": "النتيجة"
+            },
+            "example": {
+                "en": "I've set up your movie night: living room lights dimmed to 20% with warm orange tones, and the hallway lights turned off.",
+                "nl": "Ik heb je filmavond ingesteld: woonkamerlampen gedimd naar 20% met warme oranje tinten, en de ganglichten uitgeschakeld.",
+                "de": "Ich habe deinen Filmabend eingerichtet: Wohnzimmerbeleuchtung auf 20% gedimmt mit warmen Orangetönen, und die Flurlichter ausgeschaltet.",
+                "fr": "J'ai configuré votre soirée cinéma : lumières du salon tamisées à 20% avec des tons orange chauds, et les lumières du couloir éteintes.",
+                "it": "Ho configurato la tua serata cinema: luci del soggiorno abbassate al 20% con toni arancioni caldi, e le luci del corridoio spente.",
+                "sv": "Jag har ställt in din filmkväll: vardagsrumsbelysning dimmad till 20% med varma orangea toner, och hallbelysningen släckt.",
+                "no": "Jeg har satt opp filmkvelden din: stubelysning dempet til 20% med varme oransje toner, og ganglysene slått av.",
+                "es": "He configurado tu noche de cine: luces del salón al 20% con tonos naranja cálidos, y las luces del pasillo apagadas.",
+                "da": "Jeg har sat din filmaften op: stuebelysning dæmpet til 20% med varme orange toner, og gangbelysningen slukket.",
+                "ru": "Я настроил ваш киновечер: освещение гостиной приглушено до 20% с тёплыми оранжевыми тонами, свет в коридоре выключен.",
+                "pl": "Przygotowałem wieczór filmowy: oświetlenie salonu przyciemnione do 20% z ciepłymi pomarańczowymi tonami, światła w korytarzu wyłączone.",
+                "ko": "영화의 밤을 설정했습니다: 거실 조명을 따뜻한 오렌지 톤으로 20%로 낮추고, 복도 조명을 끄었습니다.",
+                "ar": "لقد أعددت ليلة الفيلم: إضاءة غرفة المعيشة خافتة عند 20% بدرجات برتقالية دافئة، وأضواء الممر مطفأة."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model",
+                "de": "Verwendetes Modell",
+                "fr": "Modèle utilisé",
+                "it": "Modello utilizzato",
+                "sv": "Använd modell",
+                "no": "Brukt modell",
+                "es": "Modelo utilizado",
+                "da": "Brugt model",
+                "ru": "Используемая модель",
+                "pl": "Użyty model",
+                "ko": "사용된 모델",
+                "ar": "النموذج المستخدم"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001",
+                "de": "claude-haiku-4-5-20251001",
+                "fr": "claude-haiku-4-5-20251001",
+                "it": "claude-haiku-4-5-20251001",
+                "sv": "claude-haiku-4-5-20251001",
+                "no": "claude-haiku-4-5-20251001",
+                "es": "claude-haiku-4-5-20251001",
+                "da": "claude-haiku-4-5-20251001",
+                "ru": "claude-haiku-4-5-20251001",
+                "pl": "claude-haiku-4-5-20251001",
+                "ko": "claude-haiku-4-5-20251001",
+                "ar": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

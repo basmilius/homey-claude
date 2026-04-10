@@ -1,8 +1,12 @@
 export { default as AnalyzeImage } from './analyzeImage';
 export { default as AnalyzeImageWithModel } from './analyzeImageWithModel';
+export { default as ApplyMood } from './applyMood';
+export { default as ApplyMoodWithModel } from './applyMoodWithModel';
 export { default as Ask } from './ask';
 export { default as AskWithHomey } from './askWithHomey';
 export { default as AskWithModel } from './askWithModel';
+export { default as ClassifyIntent } from './classifyIntent';
+export { default as ClassifyIntentWithModel } from './classifyIntentWithModel';
 export { default as ConversationClear } from './conversationClear';
 export { default as ConversationMessage } from './conversationMessage';
 export { default as ConversationMessageWithModel } from './conversationMessageWithModel';

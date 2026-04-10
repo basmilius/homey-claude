@@ -1,6 +1,6 @@
 import { Shortcuts } from '@basmilius/homey-common';
 import { HOMEY_MCP_SERVER_URL, SETTING_SCHEDULED_COMMANDS } from '../const';
-import { ScheduledCommandExecuted } from '../flow/trigger';
+import { Triggers } from '../flow';
 import type { ClaudeApp, DurationUnit } from '../types';
 
 /**
@@ -169,8 +169,7 @@ export default class Scheduler extends Shortcuts<ClaudeApp> {
         this.app.log(`Executed scheduled command "${entry.id}": success=${success}`);
 
         try {
-            const trigger = this.app.registry.findTrigger(ScheduledCommandExecuted);
-            await trigger?.trigger({}, {
+            await this.registry.fireTrigger(Triggers.ScheduledCommandExecuted, {}, {
                 timer_id: entry.id,
                 command: entry.command,
                 success,

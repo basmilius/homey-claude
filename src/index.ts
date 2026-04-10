@@ -37,8 +37,10 @@ export default class Claude extends App<ClaudeApp> {
      * @param modelUsed - The model that generated the response.
      */
     async triggerResponseReady(response: string, modelUsed: string): Promise<void> {
-        const trigger = this.registry.findTrigger(Triggers.ResponseReady);
-        await trigger?.trigger({}, {response, model_used: modelUsed});
+        await this.registry.fireTrigger(Triggers.ResponseReady, {}, {
+            response,
+            model_used: modelUsed
+        });
     }
 
     /**
@@ -48,16 +50,22 @@ export default class Claude extends App<ClaudeApp> {
      * @param modelUsed - The model that generated the response.
      */
     async triggerImageResponseReady(response: string, modelUsed: string): Promise<void> {
-        const trigger = this.registry.findTrigger(Triggers.ImageResponseReady);
-        await trigger?.trigger({}, {response, model_used: modelUsed});
+        await this.registry.fireTrigger(Triggers.ImageResponseReady, {}, {
+            response,
+            model_used: modelUsed
+        });
     }
 
     #registerActions(): void {
         this.registry.action(Actions.AnalyzeImage);
         this.registry.action(Actions.AnalyzeImageWithModel);
+        this.registry.action(Actions.ApplyMood);
+        this.registry.action(Actions.ApplyMoodWithModel);
         this.registry.action(Actions.Ask);
         this.registry.action(Actions.AskWithHomey);
         this.registry.action(Actions.AskWithModel);
+        this.registry.action(Actions.ClassifyIntent);
+        this.registry.action(Actions.ClassifyIntentWithModel);
         this.registry.action(Actions.ConversationClear);
         this.registry.action(Actions.ConversationMessage);
         this.registry.action(Actions.ConversationMessageWithModel);
