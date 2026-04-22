@@ -4,4 +4,6 @@ settings-ui/
 /CODE_OF_CONDUCT.md
 /CONTRIBUTING.md
 /LICENSE
+
+/build.mjs
 /bun.lock

@@ -2,17 +2,19 @@
     "name": "com.basmilius.claude",
     "version": "0.0.0",
     "scripts": {
-        "build": "tsc"
+        "build": "tsc --noEmit && node build.mjs",
+        "typecheck": "tsc --noEmit"
     },
     "dependencies": {
-        "@anthropic-ai/sdk": "^0.90.0",
         "@basmilius/homey-common": "^1.23.0"
     },
     "devDependencies": {
+        "@anthropic-ai/sdk": "^0.90.0",
         "@tsconfig/node22": "^22.0.5",
         "@types/bun": "^1.3.12",
         "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.12",
         "@types/node": "^25.6.0",
+        "esbuild": "^0.28.0",
         "typescript": "^6.0.3"
     }
 }
