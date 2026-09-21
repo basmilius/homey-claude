@@ -64,6 +64,8 @@ export default class Claude extends App<ClaudeApp> {
         this.registry.action(Actions.Ask);
         this.registry.action(Actions.AskWithHomey);
         this.registry.action(Actions.AskWithModel);
+        this.registry.action(Actions.AskWithWeb);
+        this.registry.action(Actions.AskWithWebWithModel);
         this.registry.action(Actions.ClassifyIntent);
         this.registry.action(Actions.ClassifyIntentWithModel);
         this.registry.action(Actions.ConversationClear);

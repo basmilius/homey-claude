@@ -2038,6 +2038,425 @@
         ]
       },
       {
+        "id": "ask_with_web",
+        "title": {
+          "en": "Ask Claude a question (with web access)",
+          "nl": "Stel Claude een vraag (met webtoegang)",
+          "de": "Claude eine Frage stellen (mit Webzugriff)",
+          "fr": "Poser une question à Claude (avec accès web)",
+          "it": "Fai una domanda a Claude (con accesso al web)",
+          "sv": "Ställ en fråga till Claude (med webbåtkomst)",
+          "no": "Still Claude et spørsmål (med webtilgang)",
+          "es": "Hacer una pregunta a Claude (con acceso web)",
+          "da": "Stil Claude et spørgsmål (med webadgang)",
+          "ru": "Задать вопрос Claude (с доступом к интернету)",
+          "pl": "Zadaj pytanie Claude (z dostępem do sieci)",
+          "ko": "Claude에게 질문하기 (웹 액세스)",
+          "ar": "اسأل Claude سؤالاً (مع الوصول إلى الويب)"
+        },
+        "titleFormatted": {
+          "en": "Ask Claude with web access: [[question]]",
+          "nl": "Vraag Claude met webtoegang: [[question]]",
+          "de": "Frage Claude mit Webzugriff: [[question]]",
+          "fr": "Demande à Claude avec accès web : [[question]]",
+          "it": "Chiedi a Claude con accesso al web: [[question]]",
+          "sv": "Fråga Claude med webbåtkomst: [[question]]",
+          "no": "Spør Claude med webtilgang: [[question]]",
+          "es": "Pregunta a Claude con acceso web: [[question]]",
+          "da": "Spørg Claude med webadgang: [[question]]",
+          "ru": "Спросить Claude с доступом к интернету: [[question]]",
+          "pl": "Zapytaj Claude z dostępem do sieci: [[question]]",
+          "ko": "웹 액세스로 Claude에게 질문: [[question]]",
+          "ar": "اسأل Claude مع الوصول إلى الويب: [[question]]"
+        },
+        "hint": {
+          "en": "Asks Claude a question and lets it search the web and read pages linked in the question. Anthropic charges for each web search on top of token use.",
+          "nl": "Stelt Claude een vraag en laat het zoeken op het web en pagina's lezen die in de vraag staan. Anthropic rekent kosten per zoekopdracht bovenop het tokengebruik.",
+          "de": "Stellt Claude eine Frage und lässt es im Web suchen sowie in der Frage verlinkte Seiten lesen. Anthropic berechnet jede Websuche zusätzlich zur Tokennutzung.",
+          "fr": "Pose une question à Claude et lui permet de chercher sur le web et de lire les pages liées dans la question. Anthropic facture chaque recherche web en plus de l'utilisation des tokens.",
+          "it": "Pone una domanda a Claude e gli consente di cercare sul web e leggere le pagine collegate nella domanda. Anthropic addebita ogni ricerca web oltre all'uso dei token.",
+          "sv": "Ställer en fråga till Claude och låter den söka på webben och läsa sidor som länkas i frågan. Anthropic debiterar varje webbsökning utöver tokenanvändningen.",
+          "no": "Stiller Claude et spørsmål og lar den søke på nettet og lese sider som er lenket i spørsmålet. Anthropic tar betalt for hvert nettsøk i tillegg til tokenbruken.",
+          "es": "Hace una pregunta a Claude y le permite buscar en la web y leer las páginas enlazadas en la pregunta. Anthropic cobra por cada búsqueda web además del uso de tokens.",
+          "da": "Stiller Claude et spørgsmål og lader den søge på nettet og læse sider, der er linket i spørgsmålet. Anthropic opkræver betaling for hver websøgning ud over tokenforbruget.",
+          "ru": "Задаёт Claude вопрос и позволяет искать в интернете и читать страницы по ссылкам из вопроса. Anthropic взимает плату за каждый поиск сверх расхода токенов.",
+          "pl": "Zadaje Claude pytanie i pozwala mu szukać w sieci oraz czytać strony podlinkowane w pytaniu. Anthropic nalicza opłatę za każde wyszukiwanie poza zużyciem tokenów.",
+          "ko": "Claude에게 질문하고 웹 검색 및 질문에 포함된 링크의 페이지 읽기를 허용합니다. Anthropic은 토큰 사용량과 별도로 웹 검색마다 요금을 부과합니다.",
+          "ar": "يسأل Claude سؤالاً ويتيح له البحث في الويب وقراءة الصفحات المرتبطة في السؤال. تفرض Anthropic رسوماً على كل عملية بحث إضافة إلى استخدام الرموز."
+        },
+        "args": [
+          {
+            "type": "text",
+            "name": "question",
+            "title": {
+              "en": "Question",
+              "nl": "Vraag",
+              "de": "Frage",
+              "fr": "Question",
+              "it": "Domanda",
+              "sv": "Fråga",
+              "no": "Spørsmål",
+              "es": "Pregunta",
+              "da": "Spørgsmål",
+              "ru": "Вопрос",
+              "pl": "Pytanie",
+              "ko": "질문",
+              "ar": "سؤال"
+            },
+            "placeholder": {
+              "en": "What is in the news about smart homes today?",
+              "nl": "Wat is er vandaag in het nieuws over smart homes?",
+              "de": "Was steht heute in den Nachrichten über Smart Homes?",
+              "fr": "Qu'y a-t-il dans l'actualité sur la maison connectée aujourd'hui ?",
+              "it": "Cosa dicono oggi le notizie sulle case intelligenti?",
+              "sv": "Vad står det i nyheterna om smarta hem idag?",
+              "no": "Hva står det i nyhetene om smarthjem i dag?",
+              "es": "¿Qué hay hoy en las noticias sobre casas inteligentes?",
+              "da": "Hvad står der i nyhederne om smarte hjem i dag?",
+              "ru": "Что сегодня пишут в новостях об умном доме?",
+              "pl": "Co dziś w wiadomościach o inteligentnych domach?",
+              "ko": "오늘 스마트홈 관련 뉴스에는 무엇이 있나요?",
+              "ar": "ما الذي تتناوله الأخبار اليوم عن المنازل الذكية؟"
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "answer",
+            "type": "string",
+            "title": {
+              "en": "Answer",
+              "nl": "Antwoord",
+              "de": "Antwort",
+              "fr": "Réponse",
+              "it": "Risposta",
+              "sv": "Svar",
+              "no": "Svar",
+              "es": "Respuesta",
+              "da": "Svar",
+              "ru": "Ответ",
+              "pl": "Odpowiedź",
+              "ko": "답변",
+              "ar": "إجابة"
+            },
+            "example": {
+              "en": "Paris is the capital of France.",
+              "nl": "Parijs is de hoofdstad van Frankrijk.",
+              "de": "Paris ist die Hauptstadt von Frankreich.",
+              "fr": "Paris est la capitale de la France.",
+              "it": "Parigi è la capitale della Francia.",
+              "sv": "Paris är Frankrikes huvudstad.",
+              "no": "Paris er Frankrikes hovedstad.",
+              "es": "París es la capital de Francia.",
+              "da": "Paris er Frankrigs hovedstad.",
+              "ru": "Париж — столица Франции.",
+              "pl": "Paryż jest stolicą Francji.",
+              "ko": "파리는 프랑스의 수도입니다.",
+              "ar": "باريس هي عاصمة فرنسا."
+            }
+          },
+          {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+              "en": "Model used",
+              "nl": "Gebruikte model",
+              "de": "Verwendetes Modell",
+              "fr": "Modèle utilisé",
+              "it": "Modello utilizzato",
+              "sv": "Använd modell",
+              "no": "Brukt modell",
+              "es": "Modelo utilizado",
+              "da": "Brugt model",
+              "ru": "Используемая модель",
+              "pl": "Użyty model",
+              "ko": "사용된 모델",
+              "ar": "النموذج المستخدم"
+            },
+            "example": {
+              "en": "claude-haiku-4-5-20251001",
+              "nl": "claude-haiku-4-5-20251001",
+              "de": "claude-haiku-4-5-20251001",
+              "fr": "claude-haiku-4-5-20251001",
+              "it": "claude-haiku-4-5-20251001",
+              "sv": "claude-haiku-4-5-20251001",
+              "no": "claude-haiku-4-5-20251001",
+              "es": "claude-haiku-4-5-20251001",
+              "da": "claude-haiku-4-5-20251001",
+              "ru": "claude-haiku-4-5-20251001",
+              "pl": "claude-haiku-4-5-20251001",
+              "ko": "claude-haiku-4-5-20251001",
+              "ar": "claude-haiku-4-5-20251001"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ask_with_web_with_model",
+        "title": {
+          "en": "Ask Claude a question (with web access, choose model)",
+          "nl": "Stel Claude een vraag (met webtoegang, kies model)",
+          "de": "Claude eine Frage stellen (mit Webzugriff, Modell wählen)",
+          "fr": "Poser une question à Claude (avec accès web, choisir le modèle)",
+          "it": "Fai una domanda a Claude (con accesso al web, scegli il modello)",
+          "sv": "Ställ en fråga till Claude (med webbåtkomst, välj modell)",
+          "no": "Still Claude et spørsmål (med webtilgang, velg modell)",
+          "es": "Hacer una pregunta a Claude (con acceso web, elegir modelo)",
+          "da": "Stil Claude et spørgsmål (med webadgang, vælg model)",
+          "ru": "Задать вопрос Claude (с доступом к интернету, выбрать модель)",
+          "pl": "Zadaj pytanie Claude (z dostępem do sieci, wybierz model)",
+          "ko": "Claude에게 질문하기 (웹 액세스, 모델 선택)",
+          "ar": "اسأل Claude سؤالاً (مع الوصول إلى الويب، اختر النموذج)"
+        },
+        "titleFormatted": {
+          "en": "Ask Claude with web access ([[model]]): [[question]]",
+          "nl": "Vraag Claude met webtoegang ([[model]]): [[question]]",
+          "de": "Frage Claude mit Webzugriff ([[model]]): [[question]]",
+          "fr": "Demande à Claude avec accès web ([[model]]) : [[question]]",
+          "it": "Chiedi a Claude con accesso al web ([[model]]): [[question]]",
+          "sv": "Fråga Claude med webbåtkomst ([[model]]): [[question]]",
+          "no": "Spør Claude med webtilgang ([[model]]): [[question]]",
+          "es": "Pregunta a Claude con acceso web ([[model]]): [[question]]",
+          "da": "Spørg Claude med webadgang ([[model]]): [[question]]",
+          "ru": "Спросить Claude с доступом к интернету ([[model]]): [[question]]",
+          "pl": "Zapytaj Claude z dostępem do sieci ([[model]]): [[question]]",
+          "ko": "웹 액세스로 Claude에게 질문 ([[model]]): [[question]]",
+          "ar": "اسأل Claude مع الوصول إلى الويب ([[model]]): [[question]]"
+        },
+        "hint": {
+          "en": "Asks Claude a question and lets it search the web and read pages linked in the question. Anthropic charges for each web search on top of token use. Lets you choose the model per flow card.",
+          "nl": "Stelt Claude een vraag en laat het zoeken op het web en pagina's lezen die in de vraag staan. Anthropic rekent kosten per zoekopdracht bovenop het tokengebruik. Laat je het model per flow kaart kiezen.",
+          "de": "Stellt Claude eine Frage und lässt es im Web suchen sowie in der Frage verlinkte Seiten lesen. Anthropic berechnet jede Websuche zusätzlich zur Tokennutzung. Ermöglicht die Auswahl des Modells pro Flow-Karte.",
+          "fr": "Pose une question à Claude et lui permet de chercher sur le web et de lire les pages liées dans la question. Anthropic facture chaque recherche web en plus de l'utilisation des tokens. Vous permet de choisir le modèle par carte de flux.",
+          "it": "Pone una domanda a Claude e gli consente di cercare sul web e leggere le pagine collegate nella domanda. Anthropic addebita ogni ricerca web oltre all'uso dei token. Consente di scegliere il modello per ogni scheda flusso.",
+          "sv": "Ställer en fråga till Claude och låter den söka på webben och läsa sidor som länkas i frågan. Anthropic debiterar varje webbsökning utöver tokenanvändningen. Låter dig välja modell per flödeskort.",
+          "no": "Stiller Claude et spørsmål og lar den søke på nettet og lese sider som er lenket i spørsmålet. Anthropic tar betalt for hvert nettsøk i tillegg til tokenbruken. Lar deg velge modell per flydkort.",
+          "es": "Hace una pregunta a Claude y le permite buscar en la web y leer las páginas enlazadas en la pregunta. Anthropic cobra por cada búsqueda web además del uso de tokens. Te permite elegir el modelo por tarjeta de flujo.",
+          "da": "Stiller Claude et spørgsmål og lader den søge på nettet og læse sider, der er linket i spørgsmålet. Anthropic opkræver betaling for hver websøgning ud over tokenforbruget. Giver dig mulighed for at vælge model pr. flowkort.",
+          "ru": "Задаёт Claude вопрос и позволяет искать в интернете и читать страницы по ссылкам из вопроса. Anthropic взимает плату за каждый поиск сверх расхода токенов. Позволяет выбрать модель для каждой карточки потока.",
+          "pl": "Zadaje Claude pytanie i pozwala mu szukać w sieci oraz czytać strony podlinkowane w pytaniu. Anthropic nalicza opłatę za każde wyszukiwanie poza zużyciem tokenów. Pozwala wybrać model dla każdej karty przepływu.",
+          "ko": "Claude에게 질문하고 웹 검색 및 질문에 포함된 링크의 페이지 읽기를 허용합니다. Anthropic은 토큰 사용량과 별도로 웹 검색마다 요금을 부과합니다. 플로우 카드별로 모델을 선택할 수 있습니다.",
+          "ar": "يسأل Claude سؤالاً ويتيح له البحث في الويب وقراءة الصفحات المرتبطة في السؤال. تفرض Anthropic رسوماً على كل عملية بحث إضافة إلى استخدام الرموز. يتيح لك اختيار النموذج لكل بطاقة تدفق."
+        },
+        "args": [
+          {
+            "type": "text",
+            "name": "question",
+            "title": {
+              "en": "Question",
+              "nl": "Vraag",
+              "de": "Frage",
+              "fr": "Question",
+              "it": "Domanda",
+              "sv": "Fråga",
+              "no": "Spørsmål",
+              "es": "Pregunta",
+              "da": "Spørgsmål",
+              "ru": "Вопрос",
+              "pl": "Pytanie",
+              "ko": "질문",
+              "ar": "سؤال"
+            },
+            "placeholder": {
+              "en": "What is in the news about smart homes today?",
+              "nl": "Wat is er vandaag in het nieuws over smart homes?",
+              "de": "Was steht heute in den Nachrichten über Smart Homes?",
+              "fr": "Qu'y a-t-il dans l'actualité sur la maison connectée aujourd'hui ?",
+              "it": "Cosa dicono oggi le notizie sulle case intelligenti?",
+              "sv": "Vad står det i nyheterna om smarta hem idag?",
+              "no": "Hva står det i nyhetene om smarthjem i dag?",
+              "es": "¿Qué hay hoy en las noticias sobre casas inteligentes?",
+              "da": "Hvad står der i nyhederne om smarte hjem i dag?",
+              "ru": "Что сегодня пишут в новостях об умном доме?",
+              "pl": "Co dziś w wiadomościach o inteligentnych domach?",
+              "ko": "오늘 스마트홈 관련 뉴스에는 무엇이 있나요?",
+              "ar": "ما الذي تتناوله الأخبار اليوم عن المنازل الذكية؟"
+            }
+          },
+          {
+            "type": "dropdown",
+            "name": "model",
+            "title": {
+              "en": "Model",
+              "nl": "Model",
+              "de": "Modell",
+              "fr": "Modèle",
+              "it": "Modello",
+              "sv": "Modell",
+              "no": "Modell",
+              "es": "Modelo",
+              "da": "Model",
+              "ru": "Модель",
+              "pl": "Model",
+              "ko": "모델",
+              "ar": "النموذج"
+            },
+            "values": [
+              {
+                "id": "claude-haiku-4-5-20251001",
+                "label": {
+                  "en": "Claude Haiku 4.5",
+                  "nl": "Claude Haiku 4.5",
+                  "de": "Claude Haiku 4.5",
+                  "fr": "Claude Haiku 4.5",
+                  "it": "Claude Haiku 4.5",
+                  "sv": "Claude Haiku 4.5",
+                  "no": "Claude Haiku 4.5",
+                  "es": "Claude Haiku 4.5",
+                  "da": "Claude Haiku 4.5",
+                  "ru": "Claude Haiku 4.5",
+                  "pl": "Claude Haiku 4.5",
+                  "ko": "Claude Haiku 4.5",
+                  "ar": "Claude Haiku 4.5"
+                }
+              },
+              {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
+                "id": "claude-sonnet-4-6",
+                "label": {
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
+                }
+              },
+              {
+                "id": "claude-opus-4-6",
+                "label": {
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "answer",
+            "type": "string",
+            "title": {
+              "en": "Answer",
+              "nl": "Antwoord",
+              "de": "Antwort",
+              "fr": "Réponse",
+              "it": "Risposta",
+              "sv": "Svar",
+              "no": "Svar",
+              "es": "Respuesta",
+              "da": "Svar",
+              "ru": "Ответ",
+              "pl": "Odpowiedź",
+              "ko": "답변",
+              "ar": "إجابة"
+            },
+            "example": {
+              "en": "Paris is the capital of France.",
+              "nl": "Parijs is de hoofdstad van Frankrijk.",
+              "de": "Paris ist die Hauptstadt von Frankreich.",
+              "fr": "Paris est la capitale de la France.",
+              "it": "Parigi è la capitale della Francia.",
+              "sv": "Paris är Frankrikes huvudstad.",
+              "no": "Paris er Frankrikes hovedstad.",
+              "es": "París es la capital de Francia.",
+              "da": "Paris er Frankrigs hovedstad.",
+              "ru": "Париж — столица Франции.",
+              "pl": "Paryż jest stolicą Francji.",
+              "ko": "파리는 프랑스의 수도입니다.",
+              "ar": "باريس هي عاصمة فرنسا."
+            }
+          },
+          {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+              "en": "Model used",
+              "nl": "Gebruikte model",
+              "de": "Verwendetes Modell",
+              "fr": "Modèle utilisé",
+              "it": "Modello utilizzato",
+              "sv": "Använd modell",
+              "no": "Brukt modell",
+              "es": "Modelo utilizado",
+              "da": "Brugt model",
+              "ru": "Используемая модель",
+              "pl": "Użyty model",
+              "ko": "사용된 모델",
+              "ar": "النموذج المستخدم"
+            },
+            "example": {
+              "en": "claude-haiku-4-5-20251001",
+              "nl": "claude-haiku-4-5-20251001",
+              "de": "claude-haiku-4-5-20251001",
+              "fr": "claude-haiku-4-5-20251001",
+              "it": "claude-haiku-4-5-20251001",
+              "sv": "claude-haiku-4-5-20251001",
+              "no": "claude-haiku-4-5-20251001",
+              "es": "claude-haiku-4-5-20251001",
+              "da": "claude-haiku-4-5-20251001",
+              "ru": "claude-haiku-4-5-20251001",
+              "pl": "claude-haiku-4-5-20251001",
+              "ko": "claude-haiku-4-5-20251001",
+              "ar": "claude-haiku-4-5-20251001"
+            }
+          }
+        ]
+      },
+      {
         "id": "classify_intent",
         "title": {
           "en": "Classify intent from text",

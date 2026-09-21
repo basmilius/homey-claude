@@ -2,7 +2,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import type { Base64ImageSource } from '@anthropic-ai/sdk/resources/messages/messages';
 import type { BetaRequestMCPServerURLDefinition } from '@anthropic-ai/sdk/resources/beta/messages/messages';
 import { Shortcuts } from '@basmilius/homey-common';
-import { DEFAULT_MAX_TOKENS, DEFAULT_MODEL, SETTING_API_KEY, SETTING_DEFAULT_MODEL, SETTING_DEFAULT_SYSTEM_PROMPT, SETTING_MAX_TOKENS } from '../const';
+import { DEFAULT_MAX_TOKENS, DEFAULT_MODEL, MAX_SERVER_TOOL_TURNS, MAX_WEB_CONTENT_TOKENS, MAX_WEB_FETCHES, MAX_WEB_SEARCHES, MODELS, SETTING_API_KEY, SETTING_DEFAULT_MODEL, SETTING_DEFAULT_SYSTEM_PROMPT, SETTING_MAX_TOKENS } from '../const';
 import type { ClaudeApp, ConversationMessage } from '../types';
 
 /**
@@ -18,8 +18,9 @@ export default class Claude extends Shortcuts<ClaudeApp> {
      */
     async ask(prompt: string, systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
         const client = this.#createClient();
-        const params = this.#buildParams([{role: 'user', content: prompt}], systemPrompt, model, maxTokens);
-        return this.#executeRequest(client, params);
+        const params = this.#buildParams(systemPrompt, model, maxTokens);
+
+        return this.#execute([{role: 'user', content: prompt}], messages => client.messages.create({...params, messages}));
     }
 
     /**
@@ -27,8 +28,9 @@ export default class Claude extends Shortcuts<ClaudeApp> {
      */
     async askWithHistory(messages: ConversationMessage[], systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
         const client = this.#createClient();
-        const params = this.#buildParams(messages, systemPrompt, model, maxTokens);
-        return this.#executeRequest(client, params);
+        const params = this.#buildParams(systemPrompt, model, maxTokens);
+
+        return this.#execute(messages, history => client.messages.create({...params, messages: history}));
     }
 
     /**
@@ -43,6 +45,7 @@ export default class Claude extends Shortcuts<ClaudeApp> {
      */
     async askWithImage(prompt: string, imageBuffer: Buffer, mimeType: string, systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
         const client = this.#createClient();
+        const params = this.#buildParams(systemPrompt, model, maxTokens);
 
         const imageSource: Base64ImageSource = {
             type: 'base64',
@@ -50,17 +53,15 @@ export default class Claude extends Shortcuts<ClaudeApp> {
             data: imageBuffer.toString('base64')
         };
 
-        const messages: Anthropic.MessageParam[] = [{
+        const message: Anthropic.MessageParam = {
             role: 'user',
             content: [
                 {type: 'image', source: imageSource},
                 {type: 'text', text: prompt}
             ]
-        }];
+        };
 
-        const params = this.#buildParams(messages, systemPrompt, model, maxTokens);
-
-        return this.#executeRequest(client, params);
+        return this.#execute([message], messages => client.messages.create({...params, messages}));
     }
 
     /**
@@ -68,12 +69,30 @@ export default class Claude extends Shortcuts<ClaudeApp> {
      */
     async askWithMcpServers(prompt: string, mcpServers: BetaRequestMCPServerURLDefinition[], systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
         const client = this.#createClient();
-        const params = this.#buildParams([{role: 'user', content: prompt}], systemPrompt, model, maxTokens);
+        const params = this.#buildParams(systemPrompt, model, maxTokens);
 
-        return this.#executeMcpRequest(client, params, mcpServers);
+        return this.#execute([{role: 'user', content: prompt}], messages => client.beta.messages.create({
+            ...params,
+            messages,
+            betas: ['mcp-client-2025-11-20'],
+            mcp_servers: mcpServers,
+            tools: mcpServers.map(server => ({type: 'mcp_toolset', mcp_server_name: server.name}))
+        }));
     }
 
-    #buildParams(messages: ConversationMessage[] | Anthropic.MessageParam[], systemPrompt?: string, model?: string, maxTokens?: number): Anthropic.MessageCreateParamsNonStreaming {
+    /**
+     * Sends a message to Claude with the web search and web fetch tools enabled, so it can
+     * look up current information and read pages linked from the prompt.
+     */
+    async askWithWebTools(prompt: string, systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
+        const client = this.#createClient();
+        const params = this.#buildParams(systemPrompt, model, maxTokens);
+        const tools = webToolsFor(params.model);
+
+        return this.#execute([{role: 'user', content: prompt}], messages => client.messages.create({...params, messages, tools}));
+    }
+
+    #buildParams(systemPrompt?: string, model?: string, maxTokens?: number): RequestParams {
         const resolvedModel = model && model !== 'default'
             ? model
             : (this.settings.get(SETTING_DEFAULT_MODEL) as string | null ?? DEFAULT_MODEL);
@@ -84,10 +103,9 @@ export default class Claude extends Shortcuts<ClaudeApp> {
         const resolvedSystemPrompt = systemPrompt
             ?? (this.settings.get(SETTING_DEFAULT_SYSTEM_PROMPT) as string | null ?? undefined);
 
-        const params: Anthropic.MessageCreateParamsNonStreaming = {
+        const params: RequestParams = {
             model: resolvedModel,
             max_tokens: resolvedMaxTokens,
-            messages,
             stream: false
         };
 
@@ -108,67 +126,103 @@ export default class Claude extends Shortcuts<ClaudeApp> {
         return new Anthropic({apiKey});
     }
 
-    async #executeMcpRequest(client: Anthropic, params: Anthropic.MessageCreateParamsNonStreaming, mcpServers: BetaRequestMCPServerURLDefinition[]): Promise<AskResult> {
+    /**
+     * Sends the request and keeps going while the API pauses the turn, which happens when a
+     * server-side tool needs more work than one response allows. The paused assistant turn has
+     * to be sent back unchanged for the API to resume it.
+     */
+    async #execute(messages: readonly Anthropic.MessageParam[], send: (messages: Anthropic.MessageParam[]) => Promise<Response>): Promise<AskResult> {
+        const history = [...messages];
+
         try {
-            const response = await client.beta.messages.create({
-                ...params,
-                betas: ['mcp-client-2025-11-20'],
-                mcp_servers: mcpServers,
-                tools: mcpServers.map(server => ({type: 'mcp_toolset', mcp_server_name: server.name}))
-            });
+            for (let turn = 0; turn < MAX_SERVER_TOOL_TURNS; ++turn) {
+                const response = await send(history);
 
-            const content = response.content.findLast(block => block.type === 'text');
+                if (response.stop_reason !== 'pause_turn') {
+                    return {answer: answerFrom(response.content), model: response.model};
+                }
 
-            if (!content || content.type !== 'text') {
-                throw new Error('Unexpected response type from Claude API.');
+                history.push({role: 'assistant', content: response.content as Anthropic.ContentBlockParam[]});
             }
-
-            return {answer: content.text, model: response.model};
         } catch (err) {
-            if (err instanceof Anthropic.AuthenticationError) {
-                throw new Error('Invalid API key. Please check your settings.');
-            }
-
-            if (err instanceof Anthropic.APIError) {
-                throw new Error(err.error && typeof err.error === 'object' && 'error' in err.error
-                    ? (err.error as any).error.message
-                    : err.message);
-            }
-
-            throw err;
+            throw asFlowError(err);
         }
+
+        throw new Error('Claude kept working without reaching an answer. Try a simpler question.');
+    }
+}
+
+/**
+ * Returns Claude's closing answer: every text block that follows the last non-text block.
+ * Tool use leaves intermediate remarks earlier in the response, and citations split the
+ * closing answer across consecutive blocks.
+ */
+function answerFrom(content: readonly ContentBlock[]): string {
+    const lastNonText = content.findLastIndex(block => block.type !== 'text');
+
+    const answer = content
+        .slice(lastNonText + 1)
+        .map(block => block.text ?? '')
+        .join('');
+
+    if (!answer) {
+        throw new Error('Unexpected response type from Claude API.');
     }
 
-    async #executeRequest(client: Anthropic, params: Anthropic.MessageCreateParamsNonStreaming): Promise<AskResult> {
-        try {
-            const response = await client.messages.create(params);
-            const content = response.content[0];
+    return answer;
+}
 
-            if (content.type !== 'text') {
-                throw new Error('Unexpected response type from Claude API.');
-            }
-
-            return {
-                answer: content.text,
-                model: response.model
-            };
-        } catch (err) {
-            if (err instanceof Anthropic.AuthenticationError) {
-                throw new Error('Invalid API key. Please check your settings.');
-            }
-
-            if (err instanceof Anthropic.APIError) {
-                throw new Error(err.error && typeof err.error === 'object' && 'error' in err.error
-                    ? (err.error as any).error.message
-                    : err.message);
-            }
-
-            throw err;
-        }
+/**
+ * Turns SDK errors into messages that make sense on a flow card.
+ */
+function asFlowError(err: unknown): Error {
+    if (err instanceof Anthropic.AuthenticationError) {
+        return new Error('Invalid API key. Please check your settings.');
     }
+
+    if (err instanceof Anthropic.APIError) {
+        return new Error(err.error && typeof err.error === 'object' && 'error' in err.error
+            ? (err.error as any).error.message
+            : err.message);
+    }
+
+    return err instanceof Error ? err : new Error(String(err));
+}
+
+/**
+ * Builds the web tool definitions a model accepts. Unknown models fall back to the basic
+ * versions, which every model supports.
+ */
+function webToolsFor(model: string): Anthropic.Messages.ToolUnion[] {
+    const filtersResults = MODELS.find(entry => entry.id === model)?.filtersWebResults ?? false;
+
+    if (!filtersResults) {
+        return [
+            {type: 'web_search_20250305', name: 'web_search', max_uses: MAX_WEB_SEARCHES},
+            {type: 'web_fetch_20250910', name: 'web_fetch', max_uses: MAX_WEB_FETCHES, max_content_tokens: MAX_WEB_CONTENT_TOKENS}
+        ];
+    }
+
+    return [
+        {type: 'web_search_20260318', name: 'web_search', max_uses: MAX_WEB_SEARCHES, response_inclusion: 'excluded'},
+        {type: 'web_fetch_20260318', name: 'web_fetch', max_uses: MAX_WEB_FETCHES, max_content_tokens: MAX_WEB_CONTENT_TOKENS, response_inclusion: 'excluded'}
+    ];
 }
 
 export type AskResult = {
     readonly answer: string;
     readonly model: string;
+};
+
+type ContentBlock = {
+    readonly type: string;
+    readonly text?: string;
+};
+
+type RequestParams = Omit<Anthropic.MessageCreateParamsNonStreaming, 'messages'>;
+
+type Response = {
+    readonly content: readonly ContentBlock[];
+    readonly model: string;
+    readonly stop_reason: string | null;
 };

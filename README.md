@@ -8,13 +8,14 @@ Use Anthropic's Claude in Homey Flows to work with text, analyze images and act 
 - Keep context across messages in a conversation, add context or clear the conversation.
 - Analyze images and classify intent from text.
 - Ask questions with Homey context, apply a mood to the home or schedule a command.
+- Ask questions with web access, so Claude can search the web and read pages linked in the question.
 - Choose a model on supported cards and react to completed responses through triggers.
 
 A Flow can summarize a message before sending a notification, or pass an image to Claude and use the analysis in a later step.
 
 ## Setup
 
-Use a local Homey running version 12.4 or newer and an Anthropic account with API access. Configure your API key in the app settings. Requests go to Anthropic; the content sent depends on the Flow card and its inputs.
+Use a local Homey running version 12.4 or newer and an Anthropic account with API access. Configure your API key in the app settings. Requests go to Anthropic; the content sent depends on the Flow card and its inputs. The web access cards let Anthropic run searches on your behalf, which is billed per search on top of token use.
 
 ## Source layout
 

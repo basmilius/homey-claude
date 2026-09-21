@@ -5,6 +5,8 @@ export { default as ApplyMoodWithModel } from './applyMoodWithModel';
 export { default as Ask } from './ask';
 export { default as AskWithHomey } from './askWithHomey';
 export { default as AskWithModel } from './askWithModel';
+export { default as AskWithWeb } from './askWithWeb';
+export { default as AskWithWebWithModel } from './askWithWebWithModel';
 export { default as ClassifyIntent } from './classifyIntent';
 export { default as ClassifyIntentWithModel } from './classifyIntentWithModel';
 export { default as ConversationClear } from './conversationClear';

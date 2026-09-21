@@ -8,6 +8,7 @@ Mogelijkheden:
 - Vat lange teksten samen
 - Vertaal tekst naar elke taal
 - Voer gesprekken met meerdere berichten en contextueel geheugen
+- Stel vragen met webtoegang, zodat antwoorden actuele informatie gebruiken
 
 Vereisten:
 - Een Anthropic account met API-toegang
