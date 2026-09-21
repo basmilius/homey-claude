@@ -15,9 +15,11 @@ export default class extends FlowActionEntity<ClaudeApp, Args, never, Result> {
     }
 
     async onRun(args: Args): Promise<Result> {
+        const skill = this.app.brain.skills.require(args.skill.id);
+
         const {answer, model} = await this.app.brain.claude.askWithSkills(
             args.question,
-            [args.skill.id],
+            [skill],
             undefined,
             args.model
         );

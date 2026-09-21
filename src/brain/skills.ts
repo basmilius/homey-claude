@@ -48,10 +48,23 @@ export default class Skills extends Shortcuts<ClaudeApp> {
     }
 
     /**
+     * Returns the skill with the given id and fails when the app does not know it.
+     */
+    require(id: string): StoredSkill {
+        const skill = this.find(id);
+
+        if (!skill) {
+            throw new Error('Skill not found.');
+        }
+
+        return skill;
+    }
+
+    /**
      * Deletes a skill. A skill that is already gone upstream is still removed locally.
      */
     async remove(id: string): Promise<void> {
-        const existing = this.#require(id);
+        const existing = this.require(id);
 
         try {
             await this.#client().skills.delete(existing.id);
@@ -69,7 +82,7 @@ export default class Skills extends Shortcuts<ClaudeApp> {
      * a version has to keep the name of the skill it belongs to.
      */
     async update(id: string, input: SkillInput): Promise<StoredSkill> {
-        const existing = this.#require(id);
+        const existing = this.require(id);
         const validated = validate(input);
 
         await this.#client().skills.versions.create(existing.id, {
@@ -90,16 +103,6 @@ export default class Skills extends Shortcuts<ClaudeApp> {
         }
 
         return new Anthropic({apiKey});
-    }
-
-    #require(id: string): StoredSkill {
-        const skill = this.find(id);
-
-        if (!skill) {
-            throw new Error('Skill not found.');
-        }
-
-        return skill;
     }
 
     #store(skills: StoredSkill[]): void {

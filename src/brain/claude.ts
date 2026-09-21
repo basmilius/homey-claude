@@ -3,7 +3,7 @@ import type { Base64ImageSource } from '@anthropic-ai/sdk/resources/messages/mes
 import type { BetaRequestMCPServerURLDefinition } from '@anthropic-ai/sdk/resources/beta/messages/messages';
 import { Shortcuts } from '@basmilius/homey-common';
 import { DEFAULT_MAX_TOKENS, DEFAULT_MODEL, MAX_SERVER_TOOL_TURNS, MAX_WEB_CONTENT_TOKENS, MAX_WEB_FETCHES, MAX_WEB_SEARCHES, MODELS, SETTING_API_KEY, SETTING_DEFAULT_MODEL, SETTING_DEFAULT_SYSTEM_PROMPT, SETTING_MAX_TOKENS } from '../const';
-import type { ClaudeApp, ConversationMessage } from '../types';
+import type { ClaudeApp, ConversationMessage, StoredSkill } from '../types';
 
 /**
  * Wraps the Anthropic SDK and provides methods for interacting with the Claude API.
@@ -83,15 +83,24 @@ export default class Claude extends Shortcuts<ClaudeApp> {
     /**
      * Sends a message to Claude with one or more custom skills loaded. Skills run inside the
      * code execution container, which the tool below provisions.
+     *
+     * Claude only reads a SKILL.md when the question matches the skill description, so the
+     * system prompt names the skills: the flow card already picked them.
      */
-    async askWithSkills(prompt: string, skillIds: string[], systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
+    async askWithSkills(prompt: string, skills: readonly StoredSkill[], systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
         const client = this.#createClient();
         const params = this.#buildParams(systemPrompt, model, maxTokens);
+        const names = skills.map(skill => `\`${skill.name}\``).join(' and ');
+        const noun = skills.length === 1 ? 'skill' : 'skills';
+
+        params.system = [params.system, `Use the ${names} ${noun} for this request. Read the SKILL.md first and follow it, even when the question does not mention it.`]
+            .filter(Boolean)
+            .join('\n\n');
 
         return this.#execute([{role: 'user', content: prompt}], messages => client.messages.create({
             ...params,
             messages,
-            container: {skills: skillIds.map(id => ({type: 'custom', skill_id: id, version: 'latest'}))},
+            container: {skills: skills.map(skill => ({type: 'custom', skill_id: skill.id, version: 'latest'}))},
             tools: [{type: 'code_execution_20260521', name: 'code_execution'}]
         }));
     }

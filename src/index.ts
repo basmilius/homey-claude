@@ -18,8 +18,8 @@ export default class Claude extends App<ClaudeApp> {
 
     async onInit(): Promise<void> {
         try {
-            this.#registerActions();
             this.#registerAutocompleteProviders();
+            this.#registerActions();
             this.#registerConditions();
             this.#registerTriggers();
 
