@@ -210,6 +210,22 @@
       "method": "DELETE",
       "path": "/scheduled-commands/:id"
     },
+    "getSkills": {
+      "method": "GET",
+      "path": "/skills"
+    },
+    "createSkill": {
+      "method": "POST",
+      "path": "/skills"
+    },
+    "updateSkill": {
+      "method": "PUT",
+      "path": "/skills/:id"
+    },
+    "deleteSkill": {
+      "method": "DELETE",
+      "path": "/skills/:id"
+    },
     "generateInstructions": {
       "method": "POST",
       "path": "/generate-instructions"
@@ -1852,6 +1868,463 @@
               "pl": "Jaka jest stolica Francji?",
               "ko": "프랑스의 수도는 어디인가요?",
               "ar": "ما هي عاصمة فرنسا؟"
+            }
+          },
+          {
+            "type": "dropdown",
+            "name": "model",
+            "title": {
+              "en": "Model",
+              "nl": "Model",
+              "de": "Modell",
+              "fr": "Modèle",
+              "it": "Modello",
+              "sv": "Modell",
+              "no": "Modell",
+              "es": "Modelo",
+              "da": "Model",
+              "ru": "Модель",
+              "pl": "Model",
+              "ko": "모델",
+              "ar": "النموذج"
+            },
+            "values": [
+              {
+                "id": "claude-haiku-4-5-20251001",
+                "label": {
+                  "en": "Claude Haiku 4.5",
+                  "nl": "Claude Haiku 4.5",
+                  "de": "Claude Haiku 4.5",
+                  "fr": "Claude Haiku 4.5",
+                  "it": "Claude Haiku 4.5",
+                  "sv": "Claude Haiku 4.5",
+                  "no": "Claude Haiku 4.5",
+                  "es": "Claude Haiku 4.5",
+                  "da": "Claude Haiku 4.5",
+                  "ru": "Claude Haiku 4.5",
+                  "pl": "Claude Haiku 4.5",
+                  "ko": "Claude Haiku 4.5",
+                  "ar": "Claude Haiku 4.5"
+                }
+              },
+              {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
+                "id": "claude-sonnet-4-6",
+                "label": {
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
+                }
+              },
+              {
+                "id": "claude-opus-4-6",
+                "label": {
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "answer",
+            "type": "string",
+            "title": {
+              "en": "Answer",
+              "nl": "Antwoord",
+              "de": "Antwort",
+              "fr": "Réponse",
+              "it": "Risposta",
+              "sv": "Svar",
+              "no": "Svar",
+              "es": "Respuesta",
+              "da": "Svar",
+              "ru": "Ответ",
+              "pl": "Odpowiedź",
+              "ko": "답변",
+              "ar": "إجابة"
+            },
+            "example": {
+              "en": "Paris is the capital of France.",
+              "nl": "Parijs is de hoofdstad van Frankrijk.",
+              "de": "Paris ist die Hauptstadt von Frankreich.",
+              "fr": "Paris est la capitale de la France.",
+              "it": "Parigi è la capitale della Francia.",
+              "sv": "Paris är Frankrikes huvudstad.",
+              "no": "Paris er Frankrikes hovedstad.",
+              "es": "París es la capital de Francia.",
+              "da": "Paris er Frankrigs hovedstad.",
+              "ru": "Париж — столица Франции.",
+              "pl": "Paryż jest stolicą Francji.",
+              "ko": "파리는 프랑스의 수도입니다.",
+              "ar": "باريس هي عاصمة فرنسا."
+            }
+          },
+          {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+              "en": "Model used",
+              "nl": "Gebruikte model",
+              "de": "Verwendetes Modell",
+              "fr": "Modèle utilisé",
+              "it": "Modello utilizzato",
+              "sv": "Använd modell",
+              "no": "Brukt modell",
+              "es": "Modelo utilizado",
+              "da": "Brugt model",
+              "ru": "Используемая модель",
+              "pl": "Użyty model",
+              "ko": "사용된 모델",
+              "ar": "النموذج المستخدم"
+            },
+            "example": {
+              "en": "claude-haiku-4-5-20251001",
+              "nl": "claude-haiku-4-5-20251001",
+              "de": "claude-haiku-4-5-20251001",
+              "fr": "claude-haiku-4-5-20251001",
+              "it": "claude-haiku-4-5-20251001",
+              "sv": "claude-haiku-4-5-20251001",
+              "no": "claude-haiku-4-5-20251001",
+              "es": "claude-haiku-4-5-20251001",
+              "da": "claude-haiku-4-5-20251001",
+              "ru": "claude-haiku-4-5-20251001",
+              "pl": "claude-haiku-4-5-20251001",
+              "ko": "claude-haiku-4-5-20251001",
+              "ar": "claude-haiku-4-5-20251001"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ask_with_skill",
+        "title": {
+          "en": "Ask Claude a question (with a skill)",
+          "nl": "Stel Claude een vraag (met een skill)",
+          "de": "Claude eine Frage stellen (mit einem Skill)",
+          "fr": "Poser une question à Claude (avec une compétence)",
+          "it": "Fai una domanda a Claude (con una skill)",
+          "sv": "Ställ en fråga till Claude (med en färdighet)",
+          "no": "Still Claude et spørsmål (med en ferdighet)",
+          "es": "Hacer una pregunta a Claude (con una habilidad)",
+          "da": "Stil Claude et spørgsmål (med en færdighed)",
+          "ru": "Задать вопрос Claude (с навыком)",
+          "pl": "Zadaj pytanie Claude (z umiejętnością)",
+          "ko": "Claude에게 질문하기 (스킬 사용)",
+          "ar": "اسأل Claude سؤالاً (باستخدام مهارة)"
+        },
+        "titleFormatted": {
+          "en": "Ask Claude with skill [[skill]]: [[question]]",
+          "nl": "Vraag Claude met skill [[skill]]: [[question]]",
+          "de": "Frage Claude mit Skill [[skill]]: [[question]]",
+          "fr": "Demande à Claude avec la compétence [[skill]] : [[question]]",
+          "it": "Chiedi a Claude con la skill [[skill]]: [[question]]",
+          "sv": "Fråga Claude med färdigheten [[skill]]: [[question]]",
+          "no": "Spør Claude med ferdigheten [[skill]]: [[question]]",
+          "es": "Pregunta a Claude con la habilidad [[skill]]: [[question]]",
+          "da": "Spørg Claude med færdigheden [[skill]]: [[question]]",
+          "ru": "Спросить Claude с навыком [[skill]]: [[question]]",
+          "pl": "Zapytaj Claude z umiejętnością [[skill]]: [[question]]",
+          "ko": "스킬 [[skill]]로 Claude에게 질문: [[question]]",
+          "ar": "اسأل Claude باستخدام المهارة [[skill]]: [[question]]"
+        },
+        "hint": {
+          "en": "Asks Claude a question with one of the skills from the app settings loaded. Skills run in a code execution container, so these cards are slower and cost more than a plain question.",
+          "nl": "Stelt Claude een vraag met een van de skills uit de app-instellingen geladen. Skills draaien in een code execution container, dus deze kaarten zijn trager en duurder dan een gewone vraag.",
+          "de": "Stellt Claude eine Frage mit einem der Skills aus den App-Einstellungen. Skills laufen in einem Code-Execution-Container, daher sind diese Karten langsamer und teurer als eine einfache Frage.",
+          "fr": "Pose une question à Claude avec l'une des compétences des réglages de l'app. Les compétences s'exécutent dans un conteneur d'exécution de code, donc ces cartes sont plus lentes et plus coûteuses qu'une question simple.",
+          "it": "Pone una domanda a Claude con una delle skill dalle impostazioni dell'app. Le skill vengono eseguite in un container di code execution, quindi queste schede sono più lente e costose di una domanda semplice.",
+          "sv": "Ställer en fråga till Claude med en av färdigheterna från appinställningarna. Färdigheter körs i en code execution-container, så dessa kort är långsammare och dyrare än en vanlig fråga.",
+          "no": "Stiller Claude et spørsmål med en av ferdighetene fra appinnstillingene. Ferdigheter kjører i en code execution-container, så disse kortene er tregere og dyrere enn et vanlig spørsmål.",
+          "es": "Hace una pregunta a Claude con una de las habilidades de los ajustes de la app. Las habilidades se ejecutan en un contenedor de code execution, por lo que estas tarjetas son más lentas y caras que una pregunta simple.",
+          "da": "Stiller Claude et spørgsmål med en af færdighederne fra app-indstillingerne. Færdigheder kører i en code execution-container, så disse kort er langsommere og dyrere end et almindeligt spørgsmål.",
+          "ru": "Задаёт Claude вопрос с одним из навыков из настроек приложения. Навыки выполняются в контейнере code execution, поэтому такие карточки медленнее и дороже обычного вопроса.",
+          "pl": "Zadaje Claude pytanie z jedną z umiejętności z ustawień aplikacji. Umiejętności działają w kontenerze code execution, więc te karty są wolniejsze i droższe niż zwykłe pytanie.",
+          "ko": "앱 설정의 스킬 중 하나를 불러와 Claude에게 질문합니다. 스킬은 code execution 컨테이너에서 실행되므로 일반 질문보다 느리고 비용이 더 듭니다.",
+          "ar": "يسأل Claude سؤالاً مع تحميل إحدى المهارات من إعدادات التطبيق. تعمل المهارات داخل حاوية تنفيذ التعليمات البرمجية، لذا فإن هذه البطاقات أبطأ وأعلى تكلفة من السؤال العادي."
+        },
+        "args": [
+          {
+            "type": "autocomplete",
+            "name": "skill",
+            "title": {
+              "en": "Skill",
+              "nl": "Skill",
+              "de": "Skill",
+              "fr": "Compétence",
+              "it": "Skill",
+              "sv": "Färdighet",
+              "no": "Ferdighet",
+              "es": "Habilidad",
+              "da": "Færdighed",
+              "ru": "Навык",
+              "pl": "Umiejętność",
+              "ko": "스킬",
+              "ar": "مهارة"
+            }
+          },
+          {
+            "type": "text",
+            "name": "question",
+            "title": {
+              "en": "Question",
+              "nl": "Vraag",
+              "de": "Frage",
+              "fr": "Question",
+              "it": "Domanda",
+              "sv": "Fråga",
+              "no": "Spørsmål",
+              "es": "Pregunta",
+              "da": "Spørgsmål",
+              "ru": "Вопрос",
+              "pl": "Pytanie",
+              "ko": "질문",
+              "ar": "سؤال"
+            },
+            "placeholder": {
+              "en": "Write the morning report for today.",
+              "nl": "Schrijf het ochtendrapport voor vandaag.",
+              "de": "Schreibe den Morgenbericht für heute.",
+              "fr": "Rédige le rapport du matin pour aujourd'hui.",
+              "it": "Scrivi il rapporto mattutino di oggi.",
+              "sv": "Skriv morgonrapporten för idag.",
+              "no": "Skriv morgenrapporten for i dag.",
+              "es": "Escribe el informe matutino de hoy.",
+              "da": "Skriv morgenrapporten for i dag.",
+              "ru": "Напиши утренний отчёт на сегодня.",
+              "pl": "Napisz poranny raport na dziś.",
+              "ko": "오늘의 아침 리포트를 작성해 주세요.",
+              "ar": "اكتب تقرير الصباح لهذا اليوم."
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "answer",
+            "type": "string",
+            "title": {
+              "en": "Answer",
+              "nl": "Antwoord",
+              "de": "Antwort",
+              "fr": "Réponse",
+              "it": "Risposta",
+              "sv": "Svar",
+              "no": "Svar",
+              "es": "Respuesta",
+              "da": "Svar",
+              "ru": "Ответ",
+              "pl": "Odpowiedź",
+              "ko": "답변",
+              "ar": "إجابة"
+            },
+            "example": {
+              "en": "Paris is the capital of France.",
+              "nl": "Parijs is de hoofdstad van Frankrijk.",
+              "de": "Paris ist die Hauptstadt von Frankreich.",
+              "fr": "Paris est la capitale de la France.",
+              "it": "Parigi è la capitale della Francia.",
+              "sv": "Paris är Frankrikes huvudstad.",
+              "no": "Paris er Frankrikes hovedstad.",
+              "es": "París es la capital de Francia.",
+              "da": "Paris er Frankrigs hovedstad.",
+              "ru": "Париж — столица Франции.",
+              "pl": "Paryż jest stolicą Francji.",
+              "ko": "파리는 프랑스의 수도입니다.",
+              "ar": "باريس هي عاصمة فرنسا."
+            }
+          },
+          {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+              "en": "Model used",
+              "nl": "Gebruikte model",
+              "de": "Verwendetes Modell",
+              "fr": "Modèle utilisé",
+              "it": "Modello utilizzato",
+              "sv": "Använd modell",
+              "no": "Brukt modell",
+              "es": "Modelo utilizado",
+              "da": "Brugt model",
+              "ru": "Используемая модель",
+              "pl": "Użyty model",
+              "ko": "사용된 모델",
+              "ar": "النموذج المستخدم"
+            },
+            "example": {
+              "en": "claude-haiku-4-5-20251001",
+              "nl": "claude-haiku-4-5-20251001",
+              "de": "claude-haiku-4-5-20251001",
+              "fr": "claude-haiku-4-5-20251001",
+              "it": "claude-haiku-4-5-20251001",
+              "sv": "claude-haiku-4-5-20251001",
+              "no": "claude-haiku-4-5-20251001",
+              "es": "claude-haiku-4-5-20251001",
+              "da": "claude-haiku-4-5-20251001",
+              "ru": "claude-haiku-4-5-20251001",
+              "pl": "claude-haiku-4-5-20251001",
+              "ko": "claude-haiku-4-5-20251001",
+              "ar": "claude-haiku-4-5-20251001"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ask_with_skill_with_model",
+        "title": {
+          "en": "Ask Claude a question (with a skill, choose model)",
+          "nl": "Stel Claude een vraag (met een skill, kies model)",
+          "de": "Claude eine Frage stellen (mit einem Skill, Modell wählen)",
+          "fr": "Poser une question à Claude (avec une compétence, choisir le modèle)",
+          "it": "Fai una domanda a Claude (con una skill, scegli il modello)",
+          "sv": "Ställ en fråga till Claude (med en färdighet, välj modell)",
+          "no": "Still Claude et spørsmål (med en ferdighet, velg modell)",
+          "es": "Hacer una pregunta a Claude (con una habilidad, elegir modelo)",
+          "da": "Stil Claude et spørgsmål (med en færdighed, vælg model)",
+          "ru": "Задать вопрос Claude (с навыком, выбрать модель)",
+          "pl": "Zadaj pytanie Claude (z umiejętnością, wybierz model)",
+          "ko": "Claude에게 질문하기 (스킬 사용, 모델 선택)",
+          "ar": "اسأل Claude سؤالاً (باستخدام مهارة، اختر النموذج)"
+        },
+        "titleFormatted": {
+          "en": "Ask Claude with skill [[skill]] ([[model]]): [[question]]",
+          "nl": "Vraag Claude met skill [[skill]] ([[model]]): [[question]]",
+          "de": "Frage Claude mit Skill [[skill]] ([[model]]): [[question]]",
+          "fr": "Demande à Claude avec la compétence [[skill]] ([[model]]) : [[question]]",
+          "it": "Chiedi a Claude con la skill [[skill]] ([[model]]): [[question]]",
+          "sv": "Fråga Claude med färdigheten [[skill]] ([[model]]): [[question]]",
+          "no": "Spør Claude med ferdigheten [[skill]] ([[model]]): [[question]]",
+          "es": "Pregunta a Claude con la habilidad [[skill]] ([[model]]): [[question]]",
+          "da": "Spørg Claude med færdigheden [[skill]] ([[model]]): [[question]]",
+          "ru": "Спросить Claude с навыком [[skill]] ([[model]]): [[question]]",
+          "pl": "Zapytaj Claude z umiejętnością [[skill]] ([[model]]): [[question]]",
+          "ko": "스킬 [[skill]] ([[model]])로 Claude에게 질문: [[question]]",
+          "ar": "اسأل Claude باستخدام المهارة [[skill]] ([[model]]): [[question]]"
+        },
+        "hint": {
+          "en": "Asks Claude a question with one of the skills from the app settings loaded. Skills run in a code execution container, so these cards are slower and cost more than a plain question. Lets you choose the model per flow card.",
+          "nl": "Stelt Claude een vraag met een van de skills uit de app-instellingen geladen. Skills draaien in een code execution container, dus deze kaarten zijn trager en duurder dan een gewone vraag. Laat je het model per flow kaart kiezen.",
+          "de": "Stellt Claude eine Frage mit einem der Skills aus den App-Einstellungen. Skills laufen in einem Code-Execution-Container, daher sind diese Karten langsamer und teurer als eine einfache Frage. Ermöglicht die Auswahl des Modells pro Flow-Karte.",
+          "fr": "Pose une question à Claude avec l'une des compétences des réglages de l'app. Les compétences s'exécutent dans un conteneur d'exécution de code, donc ces cartes sont plus lentes et plus coûteuses qu'une question simple. Vous permet de choisir le modèle par carte de flux.",
+          "it": "Pone una domanda a Claude con una delle skill dalle impostazioni dell'app. Le skill vengono eseguite in un container di code execution, quindi queste schede sono più lente e costose di una domanda semplice. Consente di scegliere il modello per ogni scheda flusso.",
+          "sv": "Ställer en fråga till Claude med en av färdigheterna från appinställningarna. Färdigheter körs i en code execution-container, så dessa kort är långsammare och dyrare än en vanlig fråga. Låter dig välja modell per flödeskort.",
+          "no": "Stiller Claude et spørsmål med en av ferdighetene fra appinnstillingene. Ferdigheter kjører i en code execution-container, så disse kortene er tregere og dyrere enn et vanlig spørsmål. Lar deg velge modell per flydkort.",
+          "es": "Hace una pregunta a Claude con una de las habilidades de los ajustes de la app. Las habilidades se ejecutan en un contenedor de code execution, por lo que estas tarjetas son más lentas y caras que una pregunta simple. Te permite elegir el modelo por tarjeta de flujo.",
+          "da": "Stiller Claude et spørgsmål med en af færdighederne fra app-indstillingerne. Færdigheder kører i en code execution-container, så disse kort er langsommere og dyrere end et almindeligt spørgsmål. Giver dig mulighed for at vælge model pr. flowkort.",
+          "ru": "Задаёт Claude вопрос с одним из навыков из настроек приложения. Навыки выполняются в контейнере code execution, поэтому такие карточки медленнее и дороже обычного вопроса. Позволяет выбрать модель для каждой карточки потока.",
+          "pl": "Zadaje Claude pytanie z jedną z umiejętności z ustawień aplikacji. Umiejętności działają w kontenerze code execution, więc te karty są wolniejsze i droższe niż zwykłe pytanie. Pozwala wybrać model dla każdej karty przepływu.",
+          "ko": "앱 설정의 스킬 중 하나를 불러와 Claude에게 질문합니다. 스킬은 code execution 컨테이너에서 실행되므로 일반 질문보다 느리고 비용이 더 듭니다. 플로우 카드별로 모델을 선택할 수 있습니다.",
+          "ar": "يسأل Claude سؤالاً مع تحميل إحدى المهارات من إعدادات التطبيق. تعمل المهارات داخل حاوية تنفيذ التعليمات البرمجية، لذا فإن هذه البطاقات أبطأ وأعلى تكلفة من السؤال العادي. يتيح لك اختيار النموذج لكل بطاقة تدفق."
+        },
+        "args": [
+          {
+            "type": "autocomplete",
+            "name": "skill",
+            "title": {
+              "en": "Skill",
+              "nl": "Skill",
+              "de": "Skill",
+              "fr": "Compétence",
+              "it": "Skill",
+              "sv": "Färdighet",
+              "no": "Ferdighet",
+              "es": "Habilidad",
+              "da": "Færdighed",
+              "ru": "Навык",
+              "pl": "Umiejętność",
+              "ko": "스킬",
+              "ar": "مهارة"
+            }
+          },
+          {
+            "type": "text",
+            "name": "question",
+            "title": {
+              "en": "Question",
+              "nl": "Vraag",
+              "de": "Frage",
+              "fr": "Question",
+              "it": "Domanda",
+              "sv": "Fråga",
+              "no": "Spørsmål",
+              "es": "Pregunta",
+              "da": "Spørgsmål",
+              "ru": "Вопрос",
+              "pl": "Pytanie",
+              "ko": "질문",
+              "ar": "سؤال"
+            },
+            "placeholder": {
+              "en": "Write the morning report for today.",
+              "nl": "Schrijf het ochtendrapport voor vandaag.",
+              "de": "Schreibe den Morgenbericht für heute.",
+              "fr": "Rédige le rapport du matin pour aujourd'hui.",
+              "it": "Scrivi il rapporto mattutino di oggi.",
+              "sv": "Skriv morgonrapporten för idag.",
+              "no": "Skriv morgenrapporten for i dag.",
+              "es": "Escribe el informe matutino de hoy.",
+              "da": "Skriv morgenrapporten for i dag.",
+              "ru": "Напиши утренний отчёт на сегодня.",
+              "pl": "Napisz poranny raport na dziś.",
+              "ko": "오늘의 아침 리포트를 작성해 주세요.",
+              "ar": "اكتب تقرير الصباح لهذا اليوم."
             }
           },
           {

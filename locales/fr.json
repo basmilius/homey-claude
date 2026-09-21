@@ -42,6 +42,23 @@
       "connecting": "Ouverture de l'authentification...",
       "waiting": "En attente d'authentification...",
       "error": "Authentification échouée : {{error}}"
+    },
+    "skills": {
+      "title": "Compétences",
+      "description": "Instructions réutilisables que Claude peut charger pour une tâche. Choisissez une compétence sur les cartes de flux « avec une compétence ». Les compétences sont stockées dans votre espace de travail Anthropic.",
+      "name": "Nom",
+      "summary": "Description",
+      "summary_placeholder": "Quand Claude doit utiliser cette compétence.",
+      "instructions": "Instructions",
+      "instructions_placeholder": "Comment Claude doit exécuter la tâche.",
+      "add": "Ajouter une compétence",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "delete_confirm": "Confirmer",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "empty": "Aucune compétence pour le moment.",
+      "error": "Une erreur s'est produite : {{error}}"
     }
   }
 }

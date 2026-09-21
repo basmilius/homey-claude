@@ -42,6 +42,23 @@
       "connecting": "Otwieranie uwierzytelniania...",
       "waiting": "Oczekiwanie na uwierzytelnienie...",
       "error": "Błąd uwierzytelniania: {{error}}"
+    },
+    "skills": {
+      "title": "Umiejętności",
+      "description": "Wielokrotnego użytku instrukcje, które Claude może wczytać do zadania. Wybierz umiejętność na kartach przepływu „z umiejętnością”. Umiejętności są przechowywane w Twoim workspace Anthropic.",
+      "name": "Nazwa",
+      "summary": "Opis",
+      "summary_placeholder": "Kiedy Claude ma użyć tej umiejętności.",
+      "instructions": "Instrukcje",
+      "instructions_placeholder": "Jak Claude ma wykonać zadanie.",
+      "add": "Dodaj umiejętność",
+      "edit": "Edytuj",
+      "delete": "Usuń",
+      "delete_confirm": "Potwierdź",
+      "save": "Zapisz umiejętność",
+      "cancel": "Anuluj",
+      "empty": "Brak umiejętności.",
+      "error": "Coś poszło nie tak: {{error}}"
     }
   }
 }

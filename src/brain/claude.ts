@@ -81,6 +81,22 @@ export default class Claude extends Shortcuts<ClaudeApp> {
     }
 
     /**
+     * Sends a message to Claude with one or more custom skills loaded. Skills run inside the
+     * code execution container, which the tool below provisions.
+     */
+    async askWithSkills(prompt: string, skillIds: string[], systemPrompt?: string, model?: string, maxTokens?: number): Promise<AskResult> {
+        const client = this.#createClient();
+        const params = this.#buildParams(systemPrompt, model, maxTokens);
+
+        return this.#execute([{role: 'user', content: prompt}], messages => client.messages.create({
+            ...params,
+            messages,
+            container: {skills: skillIds.map(id => ({type: 'custom', skill_id: id, version: 'latest'}))},
+            tools: [{type: 'code_execution_20260521', name: 'code_execution'}]
+        }));
+    }
+
+    /**
      * Sends a message to Claude with the web search and web fetch tools enabled, so it can
      * look up current information and read pages linked from the prompt.
      */

@@ -9,6 +9,7 @@ Features:
 - Translate text to any language
 - Hold multi-turn conversations with contextual memory
 - Ask questions with web access, so answers use current information
+- Write your own skills and load them on a flow card
 
 Requirements:
 - An Anthropic account with API access

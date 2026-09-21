@@ -42,6 +42,23 @@
       "title": "Standaard systeem-prompt",
       "description": "Een optionele systeem-prompt die met elk verzoek meegestuurd wordt. Gebruik dit om Claude een rol te geven of gedragsrichtlijnen in te stellen. Laat leeg om geen systeem-prompt te gebruiken.",
       "placeholder": "Je bent een behulpzame huisassistent..."
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "Herbruikbare instructies die Claude voor een taak kan laden. Kies een skill op de flow kaarten \"met een skill\". Skills staan in je Anthropic workspace.",
+      "name": "Naam",
+      "summary": "Beschrijving",
+      "summary_placeholder": "Wanneer Claude deze skill moet gebruiken.",
+      "instructions": "Instructies",
+      "instructions_placeholder": "Hoe Claude de taak moet uitvoeren.",
+      "add": "Skill toevoegen",
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "delete_confirm": "Bevestigen",
+      "save": "Skill opslaan",
+      "cancel": "Annuleren",
+      "empty": "Nog geen skills.",
+      "error": "Er ging iets mis: {{error}}"
     }
   }
 }

@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { ApiRequest } from '@basmilius/homey-common';
 import { DEFAULT_MAX_TOKENS, DEFAULT_MODEL, HOMEY_MCP_AUTH_ENDPOINT, SETTING_API_KEY, SETTING_CUSTOM_INSTRUCTIONS, SETTING_DEFAULT_MODEL, SETTING_DEFAULT_SYSTEM_PROMPT, SETTING_MAX_TOKENS } from './src/const';
-import type { ClaudeApp } from './src/types';
+import type { ClaudeApp, SkillInput } from './src/types';
 
 type AppRequest<TBody = never, TParams = never> = ApiRequest<ClaudeApp, TBody, TParams>;
 
@@ -121,6 +121,28 @@ module.exports = {
         if (!cancelled) {
             throw new Error('Scheduled command not found.');
         }
+
+        return {success: true};
+    },
+
+    getSkills({homey}: AppRequest) {
+        const app = homey.app as unknown as ClaudeApp;
+        return app.brain.skills.all;
+    },
+
+    async createSkill({homey, body}: AppRequest<SkillInput>) {
+        const app = homey.app as unknown as ClaudeApp;
+        return app.brain.skills.create(body);
+    },
+
+    async updateSkill({homey, body, params}: AppRequest<SkillInput, { id: string }>) {
+        const app = homey.app as unknown as ClaudeApp;
+        return app.brain.skills.update(params.id, body);
+    },
+
+    async deleteSkill({homey, params}: AppRequest<never, { id: string }>) {
+        const app = homey.app as unknown as ClaudeApp;
+        await app.brain.skills.remove(params.id);
 
         return {success: true};
     },

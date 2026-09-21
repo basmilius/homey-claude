@@ -4,3 +4,4 @@ export { default as Claude } from './claude';
 export { default as Conversation } from './conversation';
 export { default as HomeyMcp } from './homeyMcp';
 export { default as Scheduler } from './scheduler';
+export { default as Skills } from './skills';

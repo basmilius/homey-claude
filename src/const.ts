@@ -4,6 +4,7 @@ export const SETTING_DEFAULT_MODEL = 'claude-default-model';
 export const SETTING_DEFAULT_SYSTEM_PROMPT = 'claude-default-system-prompt';
 export const SETTING_MAX_TOKENS = 'claude-max-tokens';
 export const SETTING_SCHEDULED_COMMANDS = 'claude-scheduled-commands';
+export const SETTING_SKILLS = 'claude-skills';
 
 export const SETTING_HOMEY_MCP_CLIENT_ID = 'homey-mcp-client-id';
 export const SETTING_HOMEY_MCP_CLIENT_SECRET = 'homey-mcp-client-secret';
@@ -20,6 +21,8 @@ export const DEFAULT_MODEL = 'claude-haiku-4-5-20251001';
 export const DEFAULT_MAX_TOKENS = 1024;
 
 export const MAX_SERVER_TOOL_TURNS = 8;
+export const MAX_SKILL_NAME_LENGTH = 64;
+export const MAX_SKILL_DESCRIPTION_LENGTH = 1024;
 export const MAX_WEB_CONTENT_TOKENS = 25_000;
 export const MAX_WEB_FETCHES = 5;
 export const MAX_WEB_SEARCHES = 5;

@@ -42,6 +42,23 @@
       "connecting": "Authentifizierung wird geöffnet...",
       "waiting": "Warte auf Authentifizierung...",
       "error": "Authentifizierung fehlgeschlagen: {{error}}"
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "Wiederverwendbare Anweisungen, die Claude für eine Aufgabe laden kann. Wähle einen Skill auf den Flow-Karten \"mit einem Skill\". Skills liegen in deinem Anthropic-Workspace.",
+      "name": "Name",
+      "summary": "Beschreibung",
+      "summary_placeholder": "Wann Claude diesen Skill verwenden soll.",
+      "instructions": "Anweisungen",
+      "instructions_placeholder": "Wie Claude die Aufgabe ausführen soll.",
+      "add": "Skill hinzufügen",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "delete_confirm": "Bestätigen",
+      "save": "Skill speichern",
+      "cancel": "Abbrechen",
+      "empty": "Noch keine Skills.",
+      "error": "Etwas ist schiefgelaufen: {{error}}"
     }
   }
 }

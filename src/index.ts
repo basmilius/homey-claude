@@ -1,6 +1,6 @@
 import { App } from '@basmilius/homey-common';
 import { Brain } from './brain';
-import { Actions, Conditions, Triggers } from './flow';
+import { Actions, AutocompleteProviders, Conditions, Triggers } from './flow';
 import type { ClaudeApp } from './types';
 
 export default class Claude extends App<ClaudeApp> {
@@ -19,6 +19,7 @@ export default class Claude extends App<ClaudeApp> {
     async onInit(): Promise<void> {
         try {
             this.#registerActions();
+            this.#registerAutocompleteProviders();
             this.#registerConditions();
             this.#registerTriggers();
 
@@ -64,6 +65,8 @@ export default class Claude extends App<ClaudeApp> {
         this.registry.action(Actions.Ask);
         this.registry.action(Actions.AskWithHomey);
         this.registry.action(Actions.AskWithModel);
+        this.registry.action(Actions.AskWithSkill);
+        this.registry.action(Actions.AskWithSkillWithModel);
         this.registry.action(Actions.AskWithWeb);
         this.registry.action(Actions.AskWithWebWithModel);
         this.registry.action(Actions.ClassifyIntent);
@@ -79,6 +82,10 @@ export default class Claude extends App<ClaudeApp> {
         this.registry.action(Actions.SummarizeWithModel);
         this.registry.action(Actions.Translate);
         this.registry.action(Actions.TranslateWithModel);
+    }
+
+    #registerAutocompleteProviders(): void {
+        this.registry.autocompleteProvider(AutocompleteProviders.Skill);
     }
 
     #registerConditions(): void {

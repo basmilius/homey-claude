@@ -42,6 +42,23 @@
       "title": "Default System Prompt",
       "description": "An optional system prompt that is sent with every request. Use this to give Claude a persona or set behavioural guidelines. Leave empty to use no system prompt.",
       "placeholder": "You are a helpful home assistant..."
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "Reusable instructions Claude can load for a task. Pick a skill on the \"with a skill\" flow cards. Skills are stored in your Anthropic workspace.",
+      "name": "Name",
+      "summary": "Description",
+      "summary_placeholder": "When Claude should use this skill.",
+      "instructions": "Instructions",
+      "instructions_placeholder": "How Claude should carry out the task.",
+      "add": "Add skill",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Confirm",
+      "save": "Save skill",
+      "cancel": "Cancel",
+      "empty": "No skills yet.",
+      "error": "Something went wrong: {{error}}"
     }
   }
 }

@@ -42,6 +42,23 @@
       "connecting": "Apertura autenticazione...",
       "waiting": "In attesa di autenticazione...",
       "error": "Autenticazione non riuscita: {{error}}"
+    },
+    "skills": {
+      "title": "Skill",
+      "description": "Istruzioni riutilizzabili che Claude può caricare per un compito. Scegli una skill sulle schede flusso \"con una skill\". Le skill sono memorizzate nel tuo workspace Anthropic.",
+      "name": "Nome",
+      "summary": "Descrizione",
+      "summary_placeholder": "Quando Claude deve usare questa skill.",
+      "instructions": "Istruzioni",
+      "instructions_placeholder": "Come Claude deve svolgere il compito.",
+      "add": "Aggiungi skill",
+      "edit": "Modifica",
+      "delete": "Elimina",
+      "delete_confirm": "Conferma",
+      "save": "Salva skill",
+      "cancel": "Annulla",
+      "empty": "Nessuna skill.",
+      "error": "Qualcosa è andato storto: {{error}}"
     }
   }
 }

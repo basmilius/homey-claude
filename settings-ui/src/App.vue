@@ -72,6 +72,8 @@
             </p>
         </FormGroup>
 
+        <SkillManager/>
+
         <FormGroup :title="t('settings.homey_mcp.title')">
             <template #before>
                 <p :class="$style.description">{{ t('settings.homey_mcp.description') }}</p>
@@ -120,7 +122,7 @@
     lang="ts"
     setup>
     import { onMounted, ref } from 'vue';
-    import { ButtonPrimary, ButtonTransparent, Form, FormGroup, FormInput, FormTextarea, Top } from './components';
+    import { ButtonPrimary, ButtonTransparent, Form, FormGroup, FormInput, FormTextarea, SkillManager, Top } from './components';
     import { useTranslate } from './composables';
 
     const MODELS = [

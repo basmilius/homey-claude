@@ -9,6 +9,7 @@ Use Anthropic's Claude in Homey Flows to work with text, analyze images and act 
 - Analyze images and classify intent from text.
 - Ask questions with Homey context, apply a mood to the home or schedule a command.
 - Ask questions with web access, so Claude can search the web and read pages linked in the question.
+- Ask questions with a skill: reusable instructions you write in the app settings and pick per Flow card.
 - Choose a model on supported cards and react to completed responses through triggers.
 
 A Flow can summarize a message before sending a notification, or pass an image to Claude and use the analysis in a later step.
@@ -19,7 +20,7 @@ Use a local Homey running version 12.4 or newer and an Anthropic account with AP
 
 ## Source layout
 
-`src/brain/` contains the Claude integration and supporting services. `src/flow/` exposes them as Homey cards. `api.ts` provides app endpoints, and `settings-ui/` contains the Vue settings interface.
+`src/brain/` contains the Claude integration and supporting services. Skills live in your Anthropic workspace; the app stores a local copy of each skill's fields and uploads a new version on every edit. `src/flow/` exposes them as Homey cards. `api.ts` provides app endpoints, and `settings-ui/` contains the Vue settings interface.
 
 The root build typechecks the app and uses `build.mjs` to bundle the runtime and Anthropic SDK into `.homeybuild/`. Build the settings interface separately when changing it.
 

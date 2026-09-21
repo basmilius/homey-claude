@@ -42,6 +42,23 @@
       "connecting": "Abriendo autenticación...",
       "waiting": "Esperando autenticación...",
       "error": "Autenticación fallida: {{error}}"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "description": "Instrucciones reutilizables que Claude puede cargar para una tarea. Elige una habilidad en las tarjetas de flujo \"con una habilidad\". Las habilidades se guardan en tu espacio de trabajo de Anthropic.",
+      "name": "Nombre",
+      "summary": "Descripción",
+      "summary_placeholder": "Cuándo debe usar Claude esta habilidad.",
+      "instructions": "Instrucciones",
+      "instructions_placeholder": "Cómo debe realizar Claude la tarea.",
+      "add": "Añadir habilidad",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "delete_confirm": "Confirmar",
+      "save": "Guardar habilidad",
+      "cancel": "Cancelar",
+      "empty": "Aún no hay habilidades.",
+      "error": "Algo salió mal: {{error}}"
     }
   }
 }

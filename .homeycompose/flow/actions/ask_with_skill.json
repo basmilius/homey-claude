@@ -1,0 +1,173 @@
+{
+    "id": "ask_with_skill",
+    "title": {
+        "en": "Ask Claude a question (with a skill)",
+        "nl": "Stel Claude een vraag (met een skill)",
+        "de": "Claude eine Frage stellen (mit einem Skill)",
+        "fr": "Poser une question à Claude (avec une compétence)",
+        "it": "Fai una domanda a Claude (con una skill)",
+        "sv": "Ställ en fråga till Claude (med en färdighet)",
+        "no": "Still Claude et spørsmål (med en ferdighet)",
+        "es": "Hacer una pregunta a Claude (con una habilidad)",
+        "da": "Stil Claude et spørgsmål (med en færdighed)",
+        "ru": "Задать вопрос Claude (с навыком)",
+        "pl": "Zadaj pytanie Claude (z umiejętnością)",
+        "ko": "Claude에게 질문하기 (스킬 사용)",
+        "ar": "اسأل Claude سؤالاً (باستخدام مهارة)"
+    },
+    "titleFormatted": {
+        "en": "Ask Claude with skill [[skill]]: [[question]]",
+        "nl": "Vraag Claude met skill [[skill]]: [[question]]",
+        "de": "Frage Claude mit Skill [[skill]]: [[question]]",
+        "fr": "Demande à Claude avec la compétence [[skill]] : [[question]]",
+        "it": "Chiedi a Claude con la skill [[skill]]: [[question]]",
+        "sv": "Fråga Claude med färdigheten [[skill]]: [[question]]",
+        "no": "Spør Claude med ferdigheten [[skill]]: [[question]]",
+        "es": "Pregunta a Claude con la habilidad [[skill]]: [[question]]",
+        "da": "Spørg Claude med færdigheden [[skill]]: [[question]]",
+        "ru": "Спросить Claude с навыком [[skill]]: [[question]]",
+        "pl": "Zapytaj Claude z umiejętnością [[skill]]: [[question]]",
+        "ko": "스킬 [[skill]]로 Claude에게 질문: [[question]]",
+        "ar": "اسأل Claude باستخدام المهارة [[skill]]: [[question]]"
+    },
+    "hint": {
+        "en": "Asks Claude a question with one of the skills from the app settings loaded. Skills run in a code execution container, so these cards are slower and cost more than a plain question.",
+        "nl": "Stelt Claude een vraag met een van de skills uit de app-instellingen geladen. Skills draaien in een code execution container, dus deze kaarten zijn trager en duurder dan een gewone vraag.",
+        "de": "Stellt Claude eine Frage mit einem der Skills aus den App-Einstellungen. Skills laufen in einem Code-Execution-Container, daher sind diese Karten langsamer und teurer als eine einfache Frage.",
+        "fr": "Pose une question à Claude avec l'une des compétences des réglages de l'app. Les compétences s'exécutent dans un conteneur d'exécution de code, donc ces cartes sont plus lentes et plus coûteuses qu'une question simple.",
+        "it": "Pone una domanda a Claude con una delle skill dalle impostazioni dell'app. Le skill vengono eseguite in un container di code execution, quindi queste schede sono più lente e costose di una domanda semplice.",
+        "sv": "Ställer en fråga till Claude med en av färdigheterna från appinställningarna. Färdigheter körs i en code execution-container, så dessa kort är långsammare och dyrare än en vanlig fråga.",
+        "no": "Stiller Claude et spørsmål med en av ferdighetene fra appinnstillingene. Ferdigheter kjører i en code execution-container, så disse kortene er tregere og dyrere enn et vanlig spørsmål.",
+        "es": "Hace una pregunta a Claude con una de las habilidades de los ajustes de la app. Las habilidades se ejecutan en un contenedor de code execution, por lo que estas tarjetas son más lentas y caras que una pregunta simple.",
+        "da": "Stiller Claude et spørgsmål med en af færdighederne fra app-indstillingerne. Færdigheder kører i en code execution-container, så disse kort er langsommere og dyrere end et almindeligt spørgsmål.",
+        "ru": "Задаёт Claude вопрос с одним из навыков из настроек приложения. Навыки выполняются в контейнере code execution, поэтому такие карточки медленнее и дороже обычного вопроса.",
+        "pl": "Zadaje Claude pytanie z jedną z umiejętności z ustawień aplikacji. Umiejętności działają w kontenerze code execution, więc te karty są wolniejsze i droższe niż zwykłe pytanie.",
+        "ko": "앱 설정의 스킬 중 하나를 불러와 Claude에게 질문합니다. 스킬은 code execution 컨테이너에서 실행되므로 일반 질문보다 느리고 비용이 더 듭니다.",
+        "ar": "يسأل Claude سؤالاً مع تحميل إحدى المهارات من إعدادات التطبيق. تعمل المهارات داخل حاوية تنفيذ التعليمات البرمجية، لذا فإن هذه البطاقات أبطأ وأعلى تكلفة من السؤال العادي."
+    },
+    "args": [
+        {
+            "type": "autocomplete",
+            "name": "skill",
+            "title": {
+                "en": "Skill",
+                "nl": "Skill",
+                "de": "Skill",
+                "fr": "Compétence",
+                "it": "Skill",
+                "sv": "Färdighet",
+                "no": "Ferdighet",
+                "es": "Habilidad",
+                "da": "Færdighed",
+                "ru": "Навык",
+                "pl": "Umiejętność",
+                "ko": "스킬",
+                "ar": "مهارة"
+            }
+        },
+        {
+            "type": "text",
+            "name": "question",
+            "title": {
+                "en": "Question",
+                "nl": "Vraag",
+                "de": "Frage",
+                "fr": "Question",
+                "it": "Domanda",
+                "sv": "Fråga",
+                "no": "Spørsmål",
+                "es": "Pregunta",
+                "da": "Spørgsmål",
+                "ru": "Вопрос",
+                "pl": "Pytanie",
+                "ko": "질문",
+                "ar": "سؤال"
+            },
+            "placeholder": {
+                "en": "Write the morning report for today.",
+                "nl": "Schrijf het ochtendrapport voor vandaag.",
+                "de": "Schreibe den Morgenbericht für heute.",
+                "fr": "Rédige le rapport du matin pour aujourd'hui.",
+                "it": "Scrivi il rapporto mattutino di oggi.",
+                "sv": "Skriv morgonrapporten för idag.",
+                "no": "Skriv morgenrapporten for i dag.",
+                "es": "Escribe el informe matutino de hoy.",
+                "da": "Skriv morgenrapporten for i dag.",
+                "ru": "Напиши утренний отчёт на сегодня.",
+                "pl": "Napisz poranny raport na dziś.",
+                "ko": "오늘의 아침 리포트를 작성해 주세요.",
+                "ar": "اكتب تقرير الصباح لهذا اليوم."
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "name": "answer",
+            "type": "string",
+            "title": {
+                "en": "Answer",
+                "nl": "Antwoord",
+                "de": "Antwort",
+                "fr": "Réponse",
+                "it": "Risposta",
+                "sv": "Svar",
+                "no": "Svar",
+                "es": "Respuesta",
+                "da": "Svar",
+                "ru": "Ответ",
+                "pl": "Odpowiedź",
+                "ko": "답변",
+                "ar": "إجابة"
+            },
+            "example": {
+                "en": "Paris is the capital of France.",
+                "nl": "Parijs is de hoofdstad van Frankrijk.",
+                "de": "Paris ist die Hauptstadt von Frankreich.",
+                "fr": "Paris est la capitale de la France.",
+                "it": "Parigi è la capitale della Francia.",
+                "sv": "Paris är Frankrikes huvudstad.",
+                "no": "Paris er Frankrikes hovedstad.",
+                "es": "París es la capital de Francia.",
+                "da": "Paris er Frankrigs hovedstad.",
+                "ru": "Париж — столица Франции.",
+                "pl": "Paryż jest stolicą Francji.",
+                "ko": "파리는 프랑스의 수도입니다.",
+                "ar": "باريس هي عاصمة فرنسا."
+            }
+        },
+        {
+            "name": "model_used",
+            "type": "string",
+            "title": {
+                "en": "Model used",
+                "nl": "Gebruikte model",
+                "de": "Verwendetes Modell",
+                "fr": "Modèle utilisé",
+                "it": "Modello utilizzato",
+                "sv": "Använd modell",
+                "no": "Brukt modell",
+                "es": "Modelo utilizado",
+                "da": "Brugt model",
+                "ru": "Используемая модель",
+                "pl": "Użyty model",
+                "ko": "사용된 모델",
+                "ar": "النموذج المستخدم"
+            },
+            "example": {
+                "en": "claude-haiku-4-5-20251001",
+                "nl": "claude-haiku-4-5-20251001",
+                "de": "claude-haiku-4-5-20251001",
+                "fr": "claude-haiku-4-5-20251001",
+                "it": "claude-haiku-4-5-20251001",
+                "sv": "claude-haiku-4-5-20251001",
+                "no": "claude-haiku-4-5-20251001",
+                "es": "claude-haiku-4-5-20251001",
+                "da": "claude-haiku-4-5-20251001",
+                "ru": "claude-haiku-4-5-20251001",
+                "pl": "claude-haiku-4-5-20251001",
+                "ko": "claude-haiku-4-5-20251001",
+                "ar": "claude-haiku-4-5-20251001"
+            }
+        }
+    ]
+}

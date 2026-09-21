@@ -42,6 +42,23 @@
       "connecting": "Åbner godkendelse...",
       "waiting": "Venter på godkendelse...",
       "error": "Godkendelse mislykkedes: {{error}}"
+    },
+    "skills": {
+      "title": "Færdigheder",
+      "description": "Genbrugelige instruktioner, Claude kan indlæse til en opgave. Vælg en færdighed på flowkortene \"med en færdighed\". Færdigheder gemmes i dit Anthropic-workspace.",
+      "name": "Navn",
+      "summary": "Beskrivelse",
+      "summary_placeholder": "Hvornår Claude skal bruge denne færdighed.",
+      "instructions": "Instruktioner",
+      "instructions_placeholder": "Hvordan Claude skal udføre opgaven.",
+      "add": "Tilføj færdighed",
+      "edit": "Rediger",
+      "delete": "Slet",
+      "delete_confirm": "Bekræft",
+      "save": "Gem færdighed",
+      "cancel": "Annuller",
+      "empty": "Ingen færdigheder endnu.",
+      "error": "Noget gik galt: {{error}}"
     }
   }
 }

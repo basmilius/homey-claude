@@ -42,6 +42,23 @@
       "connecting": "Åpner autentisering...",
       "waiting": "Venter på autentisering...",
       "error": "Autentisering mislyktes: {{error}}"
+    },
+    "skills": {
+      "title": "Ferdigheter",
+      "description": "Gjenbrukbare instruksjoner Claude kan laste for en oppgave. Velg en ferdighet på flytkortene \"med en ferdighet\". Ferdigheter lagres i Anthropic-arbeidsområdet ditt.",
+      "name": "Navn",
+      "summary": "Beskrivelse",
+      "summary_placeholder": "Når Claude skal bruke denne ferdigheten.",
+      "instructions": "Instruksjoner",
+      "instructions_placeholder": "Hvordan Claude skal utføre oppgaven.",
+      "add": "Legg til ferdighet",
+      "edit": "Rediger",
+      "delete": "Slett",
+      "delete_confirm": "Bekreft",
+      "save": "Lagre ferdighet",
+      "cancel": "Avbryt",
+      "empty": "Ingen ferdigheter ennå.",
+      "error": "Noe gikk galt: {{error}}"
     }
   }
 }

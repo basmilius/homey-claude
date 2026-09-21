@@ -42,6 +42,23 @@
       "connecting": "Öppnar autentisering...",
       "waiting": "Väntar på autentisering...",
       "error": "Autentisering misslyckades: {{error}}"
+    },
+    "skills": {
+      "title": "Färdigheter",
+      "description": "Återanvändbara instruktioner som Claude kan ladda för en uppgift. Välj en färdighet på flödeskorten \"med en färdighet\". Färdigheter lagras i din Anthropic-workspace.",
+      "name": "Namn",
+      "summary": "Beskrivning",
+      "summary_placeholder": "När Claude ska använda den här färdigheten.",
+      "instructions": "Instruktioner",
+      "instructions_placeholder": "Hur Claude ska utföra uppgiften.",
+      "add": "Lägg till färdighet",
+      "edit": "Redigera",
+      "delete": "Ta bort",
+      "delete_confirm": "Bekräfta",
+      "save": "Spara färdighet",
+      "cancel": "Avbryt",
+      "empty": "Inga färdigheter än.",
+      "error": "Något gick fel: {{error}}"
     }
   }
 }

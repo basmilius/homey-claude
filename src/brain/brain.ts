@@ -5,6 +5,7 @@ import Claude from './claude';
 import Conversation from './conversation';
 import HomeyMcp from './homeyMcp';
 import Scheduler from './scheduler';
+import Skills from './skills';
 
 /**
  * Orchestrates all brain modules for the Claude app.
@@ -30,11 +31,16 @@ export default class Brain extends Shortcuts<ClaudeApp> {
         return this.#scheduler;
     }
 
+    get skills(): Skills {
+        return this.#skills;
+    }
+
     readonly #callbackServer: CallbackServer;
     readonly #claude: Claude;
     readonly #conversation: Conversation;
     readonly #homeyMcp: HomeyMcp;
     readonly #scheduler: Scheduler;
+    readonly #skills: Skills;
 
     constructor(app: ClaudeApp) {
         super(app);
@@ -44,5 +50,6 @@ export default class Brain extends Shortcuts<ClaudeApp> {
         this.#conversation = new Conversation(app);
         this.#homeyMcp = new HomeyMcp(app);
         this.#scheduler = new Scheduler(app);
+        this.#skills = new Skills(app);
     }
 }
