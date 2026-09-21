@@ -1,233 +1,233 @@
 {
-    "id": "com.basmilius.claude",
-    "version": "1.4.2",
-    "compatibility": ">=12.4.0",
-    "sdk": 3,
-    "brandColor": "#CC785C",
-    "platforms": [
-        "local"
+  "id": "com.basmilius.claude",
+  "version": "1.5.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "brandColor": "#CC785C",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Claude",
+    "nl": "Claude",
+    "de": "Claude",
+    "fr": "Claude",
+    "it": "Claude",
+    "sv": "Claude",
+    "no": "Claude",
+    "es": "Claude",
+    "da": "Claude",
+    "ru": "Claude",
+    "pl": "Claude",
+    "ko": "Claude",
+    "ar": "Claude"
+  },
+  "description": {
+    "en": "Bring Claude AI by Anthropic into your Homey flows.",
+    "nl": "Breng Claude AI van Anthropic in je Homey flows.",
+    "de": "Bringe Claude AI von Anthropic in deine Homey Flows.",
+    "fr": "Intégrez Claude AI d'Anthropic dans vos flux Homey.",
+    "it": "Porta Claude AI di Anthropic nei tuoi flussi Homey.",
+    "sv": "Ta med Claude AI från Anthropic till dina Homey-flöden.",
+    "no": "Ta med Claude AI fra Anthropic inn i Homey-flyene dine.",
+    "es": "Lleva Claude AI de Anthropic a tus flujos de Homey.",
+    "da": "Bring Claude AI fra Anthropic ind i dine Homey-flows.",
+    "ru": "Добавьте Claude AI от Anthropic в свои потоки Homey.",
+    "pl": "Wprowadź Claude AI od Anthropic do swoich przepływów Homey.",
+    "ko": "Anthropic의 Claude AI를 Homey 플로우에 통합하세요.",
+    "ar": "أدرج Claude AI من Anthropic في تدفقات Homey الخاصة بك."
+  },
+  "category": [
+    "tools"
+  ],
+  "tags": {
+    "en": [
+      "ai",
+      "claude",
+      "anthropic",
+      "llm",
+      "chatgpt",
+      "gpt",
+      "automation",
+      "flow",
+      "smart"
     ],
-    "name": {
-        "en": "Claude",
-        "nl": "Claude",
-        "de": "Claude",
-        "fr": "Claude",
-        "it": "Claude",
-        "sv": "Claude",
-        "no": "Claude",
-        "es": "Claude",
-        "da": "Claude",
-        "ru": "Claude",
-        "pl": "Claude",
-        "ko": "Claude",
-        "ar": "Claude"
-    },
-    "description": {
-        "en": "Bring Claude AI by Anthropic into your Homey flows.",
-        "nl": "Breng Claude AI van Anthropic in je Homey flows.",
-        "de": "Bringe Claude AI von Anthropic in deine Homey Flows.",
-        "fr": "Intégrez Claude AI d'Anthropic dans vos flux Homey.",
-        "it": "Porta Claude AI di Anthropic nei tuoi flussi Homey.",
-        "sv": "Ta med Claude AI från Anthropic till dina Homey-flöden.",
-        "no": "Ta med Claude AI fra Anthropic inn i Homey-flyene dine.",
-        "es": "Lleva Claude AI de Anthropic a tus flujos de Homey.",
-        "da": "Bring Claude AI fra Anthropic ind i dine Homey-flows.",
-        "ru": "Добавьте Claude AI от Anthropic в свои потоки Homey.",
-        "pl": "Wprowadź Claude AI od Anthropic do swoich przepływów Homey.",
-        "ko": "Anthropic의 Claude AI를 Homey 플로우에 통합하세요.",
-        "ar": "أدرج Claude AI من Anthropic في تدفقات Homey الخاصة بك."
-    },
-    "category": [
-        "tools"
+    "nl": [
+      "ai",
+      "claude",
+      "anthropic",
+      "automatisering",
+      "flow",
+      "slim"
     ],
-    "tags": {
-        "en": [
-            "ai",
-            "claude",
-            "anthropic",
-            "llm",
-            "chatgpt",
-            "gpt",
-            "automation",
-            "flow",
-            "smart"
-        ],
-        "nl": [
-            "ai",
-            "claude",
-            "anthropic",
-            "automatisering",
-            "flow",
-            "slim"
-        ],
-        "de": [
-            "ki",
-            "claude",
-            "anthropic",
-            "automatisierung",
-            "flow",
-            "smart"
-        ],
-        "fr": [
-            "ia",
-            "claude",
-            "anthropic",
-            "automatisation",
-            "flux",
-            "intelligent"
-        ],
-        "it": [
-            "ia",
-            "claude",
-            "anthropic",
-            "automazione",
-            "flusso",
-            "smart"
-        ],
-        "sv": [
-            "ai",
-            "claude",
-            "anthropic",
-            "automatisering",
-            "flöde",
-            "smart"
-        ],
-        "no": [
-            "ai",
-            "claude",
-            "anthropic",
-            "automatisering",
-            "flyt",
-            "smart"
-        ],
-        "es": [
-            "ia",
-            "claude",
-            "anthropic",
-            "automatización",
-            "flujo",
-            "inteligente"
-        ],
-        "da": [
-            "ai",
-            "claude",
-            "anthropic",
-            "automatisering",
-            "flow",
-            "smart"
-        ],
-        "ru": [
-            "ии",
-            "claude",
-            "anthropic",
-            "автоматизация",
-            "поток",
-            "умный"
-        ],
-        "pl": [
-            "ai",
-            "claude",
-            "anthropic",
-            "automatyzacja",
-            "przepływ",
-            "smart"
-        ],
-        "ko": [
-            "인공지능",
-            "claude",
-            "anthropic",
-            "자동화",
-            "플로우",
-            "스마트"
-        ],
-        "ar": [
-            "الذكاء الاصطناعي",
-            "claude",
-            "anthropic",
-            "أتمتة",
-            "تدفق",
-            "ذكي"
-        ]
-    },
-    "permissions": [],
-    "images": {
-        "small": "/assets/images/small.png",
-        "large": "/assets/images/large.png",
-        "xlarge": "/assets/images/xlarge.png"
-    },
-    "author": {
-        "name": "Bas Milius",
-        "email": "bas@mili.us"
-    },
-    "bugs": {
-        "url": "https://github.com/basmilius/homey-claude/issues"
-    },
-    "homepage": "https://bas.dev",
-    "source": "https://github.com/basmilius/homey-claude",
-    "support": "https://github.com/basmilius/homey-claude/issues",
-    "homeyCommunityTopicId": 152648,
-    "contributing": {
-        "donate": {
-            "paypal": {
-                "username": "basmilius"
-            },
-            "githubSponsors": {
-                "username": "basmilius"
-            }
-        }
-    },
-    "api": {
-        "getSettings": {
-            "method": "GET",
-            "path": "/settings"
-        },
-        "saveSettings": {
-            "method": "PUT",
-            "path": "/settings"
-        },
-        "testConnection": {
-            "method": "POST",
-            "path": "/test-connection"
-        },
-        "getHomeyOauthAuthUrl": {
-            "method": "GET",
-            "path": "/homey-oauth/auth-url"
-        },
-        "getHomeyOauthStatus": {
-            "method": "GET",
-            "path": "/homey-oauth/status"
-        },
-        "deleteHomeyOauthDisconnect": {
-            "method": "DELETE",
-            "path": "/homey-oauth/disconnect"
-        },
-        "getScheduledCommands": {
-            "method": "GET",
-            "path": "/scheduled-commands"
-        },
-        "deleteScheduledCommand": {
-            "method": "DELETE",
-            "path": "/scheduled-commands/:id"
-        },
-        "getSkills": {
-            "method": "GET",
-            "path": "/skills"
-        },
-        "createSkill": {
-            "method": "POST",
-            "path": "/skills"
-        },
-        "updateSkill": {
-            "method": "PUT",
-            "path": "/skills/:id"
-        },
-        "deleteSkill": {
-            "method": "DELETE",
-            "path": "/skills/:id"
-        },
-        "generateInstructions": {
-            "method": "POST",
-            "path": "/generate-instructions"
-        }
+    "de": [
+      "ki",
+      "claude",
+      "anthropic",
+      "automatisierung",
+      "flow",
+      "smart"
+    ],
+    "fr": [
+      "ia",
+      "claude",
+      "anthropic",
+      "automatisation",
+      "flux",
+      "intelligent"
+    ],
+    "it": [
+      "ia",
+      "claude",
+      "anthropic",
+      "automazione",
+      "flusso",
+      "smart"
+    ],
+    "sv": [
+      "ai",
+      "claude",
+      "anthropic",
+      "automatisering",
+      "flöde",
+      "smart"
+    ],
+    "no": [
+      "ai",
+      "claude",
+      "anthropic",
+      "automatisering",
+      "flyt",
+      "smart"
+    ],
+    "es": [
+      "ia",
+      "claude",
+      "anthropic",
+      "automatización",
+      "flujo",
+      "inteligente"
+    ],
+    "da": [
+      "ai",
+      "claude",
+      "anthropic",
+      "automatisering",
+      "flow",
+      "smart"
+    ],
+    "ru": [
+      "ии",
+      "claude",
+      "anthropic",
+      "автоматизация",
+      "поток",
+      "умный"
+    ],
+    "pl": [
+      "ai",
+      "claude",
+      "anthropic",
+      "automatyzacja",
+      "przepływ",
+      "smart"
+    ],
+    "ko": [
+      "인공지능",
+      "claude",
+      "anthropic",
+      "자동화",
+      "플로우",
+      "스마트"
+    ],
+    "ar": [
+      "الذكاء الاصطناعي",
+      "claude",
+      "anthropic",
+      "أتمتة",
+      "تدفق",
+      "ذكي"
+    ]
+  },
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Bas Milius",
+    "email": "bas@mili.us"
+  },
+  "bugs": {
+    "url": "https://github.com/basmilius/homey-claude/issues"
+  },
+  "homepage": "https://bas.dev",
+  "source": "https://github.com/basmilius/homey-claude",
+  "support": "https://github.com/basmilius/homey-claude/issues",
+  "homeyCommunityTopicId": 152648,
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "basmilius"
+      },
+      "githubSponsors": {
+        "username": "basmilius"
+      }
     }
+  },
+  "api": {
+    "getSettings": {
+      "method": "GET",
+      "path": "/settings"
+    },
+    "saveSettings": {
+      "method": "PUT",
+      "path": "/settings"
+    },
+    "testConnection": {
+      "method": "POST",
+      "path": "/test-connection"
+    },
+    "getHomeyOauthAuthUrl": {
+      "method": "GET",
+      "path": "/homey-oauth/auth-url"
+    },
+    "getHomeyOauthStatus": {
+      "method": "GET",
+      "path": "/homey-oauth/status"
+    },
+    "deleteHomeyOauthDisconnect": {
+      "method": "DELETE",
+      "path": "/homey-oauth/disconnect"
+    },
+    "getScheduledCommands": {
+      "method": "GET",
+      "path": "/scheduled-commands"
+    },
+    "deleteScheduledCommand": {
+      "method": "DELETE",
+      "path": "/scheduled-commands/:id"
+    },
+    "getSkills": {
+      "method": "GET",
+      "path": "/skills"
+    },
+    "createSkill": {
+      "method": "POST",
+      "path": "/skills"
+    },
+    "updateSkill": {
+      "method": "PUT",
+      "path": "/skills/:id"
+    },
+    "deleteSkill": {
+      "method": "DELETE",
+      "path": "/skills/:id"
+    },
+    "generateInstructions": {
+      "method": "POST",
+      "path": "/generate-instructions"
+    }
+  }
 }
