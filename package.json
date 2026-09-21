@@ -1,6 +1,7 @@
 {
     "name": "com.basmilius.claude",
     "version": "0.0.0",
+    "license": "MIT",
     "scripts": {
         "build": "tsc --noEmit && node build.mjs",
         "typecheck": "tsc --noEmit"
