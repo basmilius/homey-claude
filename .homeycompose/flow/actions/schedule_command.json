@@ -3,17 +3,17 @@
     "title": {
         "en": "Schedule a command for Claude",
         "nl": "Plan een commando voor Claude",
-        "de": "Einen Befehl fur Claude planen",
+        "de": "Einen Befehl für Claude planen",
         "fr": "Planifier une commande pour Claude",
         "it": "Programma un comando per Claude",
-        "sv": "Schemalag ett kommando for Claude",
+        "sv": "Schemalägg ett kommando för Claude",
         "no": "Planlegg en kommando for Claude",
         "es": "Programar un comando para Claude",
-        "da": "Planlag en kommando for Claude",
+        "da": "Planlæg en kommando for Claude",
         "ru": "Запланировать команду для Claude",
         "pl": "Zaplanuj polecenie dla Claude",
         "ko": "Claude 명령 예약",
-        "ar": "جدولة امر لـ Claude"
+        "ar": "جدولة أمر لـ Claude"
     },
     "titleFormatted": {
         "en": "Schedule [[command]] in [[duration]] [[unit]]",
@@ -21,10 +21,10 @@
         "de": "Plane [[command]] in [[duration]] [[unit]]",
         "fr": "Planifier [[command]] dans [[duration]] [[unit]]",
         "it": "Programma [[command]] tra [[duration]] [[unit]]",
-        "sv": "Schemalag [[command]] om [[duration]] [[unit]]",
+        "sv": "Schemalägg [[command]] om [[duration]] [[unit]]",
         "no": "Planlegg [[command]] om [[duration]] [[unit]]",
         "es": "Programar [[command]] en [[duration]] [[unit]]",
-        "da": "Planlag [[command]] om [[duration]] [[unit]]",
+        "da": "Planlæg [[command]] om [[duration]] [[unit]]",
         "ru": "Запланировать [[command]] через [[duration]] [[unit]]",
         "pl": "Zaplanuj [[command]] za [[duration]] [[unit]]",
         "ko": "[[duration]] [[unit]] 후 [[command]] 예약",
@@ -33,17 +33,17 @@
     "hint": {
         "en": "Schedules a command to be sent to Claude after a delay. When executed, Claude will process the command (with Homey context if connected) and the 'Scheduled command executed' trigger will fire.",
         "nl": "Plant een commando dat na een vertraging naar Claude wordt gestuurd. Bij uitvoering verwerkt Claude het commando (met Homey-context indien verbonden) en wordt de 'Gepland commando uitgevoerd' trigger geactiveerd.",
-        "de": "Plant einen Befehl der nach einer Verzogerung an Claude gesendet wird. Bei der Ausfuhrung verarbeitet Claude den Befehl (mit Homey-Kontext wenn verbunden) und der Trigger 'Geplanter Befehl ausgefuhrt' wird ausgelost.",
-        "fr": "Planifie une commande a envoyer a Claude apres un delai. Lors de l'execution Claude traitera la commande (avec le contexte Homey si connecte) et le declencheur 'Commande planifiee executee' sera active.",
-        "it": "Programma un comando da inviare a Claude dopo un ritardo. All'esecuzione Claude elaborera il comando (con contesto Homey se connesso) e il trigger 'Comando programmato eseguito' si attivera.",
-        "sv": "Schemalagger ett kommando som ska skickas till Claude efter en fordrojning. Vid korning bearbetar Claude kommandot (med Homey-kontext om anslutet) och triggern 'Schemalgt kommando utfort' utloses.",
-        "no": "Planlegger en kommando som skal sendes til Claude etter en forsinkelse. Ved utforelse behandler Claude kommandoen (med Homey-kontekst hvis tilkoblet) og triggeren 'Planlagt kommando utfort' utloses.",
-        "es": "Programa un comando para enviarlo a Claude despues de un retraso. Al ejecutarse Claude procesara el comando (con contexto Homey si esta conectado) y se activara el disparador 'Comando programado ejecutado'.",
-        "da": "Planlagger en kommando der skal sendes til Claude efter en forsinkelse. Ved udfrelse behandler Claude kommandoen (med Homey-kontekst hvis forbundet) og triggeren 'Planlagt kommando udfrt' udloses.",
+        "de": "Plant einen Befehl der nach einer Verzögerung an Claude gesendet wird. Bei der Ausführung verarbeitet Claude den Befehl (mit Homey-Kontext wenn verbunden) und der Trigger 'Geplanter Befehl ausgeführt' wird ausgelöst.",
+        "fr": "Planifie une commande à envoyer à Claude après un délai. Lors de l'exécution Claude traitera la commande (avec le contexte Homey si connecté) et le déclencheur 'Commande planifiée exécutée' sera activé.",
+        "it": "Programma un comando da inviare a Claude dopo un ritardo. All'esecuzione Claude elaborerà il comando (con contesto Homey se connesso) e il trigger 'Comando programmato eseguito' si attiverà.",
+        "sv": "Schemalägger ett kommando som ska skickas till Claude efter en fördröjning. Vid körning bearbetar Claude kommandot (med Homey-kontext om anslutet) och triggern 'Schemalagt kommando utfört' utlöses.",
+        "no": "Planlegger en kommando som skal sendes til Claude etter en forsinkelse. Ved utførelse behandler Claude kommandoen (med Homey-kontekst hvis tilkoblet) og triggeren 'Planlagt kommando utført' utløses.",
+        "es": "Programa un comando para enviarlo a Claude después de un retraso. Al ejecutarse Claude procesará el comando (con contexto Homey si está conectado) y se activará el disparador 'Comando programado ejecutado'.",
+        "da": "Planlægger en kommando der skal sendes til Claude efter en forsinkelse. Ved udførelse behandler Claude kommandoen (med Homey-kontekst hvis forbundet) og triggeren 'Planlagt kommando udført' udløses.",
         "ru": "Планирует команду для отправки Claude через заданное время. При выполнении Claude обработает команду (с контекстом Homey если подключен) и сработает триггер 'Запланированная команда выполнена'.",
-        "pl": "Planuje polecenie do wyslania do Claude po opoznieniu. Po wykonaniu Claude przetworzy polecenie (z kontekstem Homey jesli polaczony) i wyzwalacz 'Zaplanowane polecenie wykonane' zostanie uruchomiony.",
+        "pl": "Planuje polecenie do wysłania do Claude po opóźnieniu. Po wykonaniu Claude przetworzy polecenie (z kontekstem Homey jeśli połączony) i wyzwalacz 'Zaplanowane polecenie wykonane' zostanie uruchomiony.",
         "ko": "지연 후 Claude에게 보낼 명령을 예약합니다. 실행 시 Claude가 명령을 처리하고 (연결된 경우 Homey 컨텍스트 포함) '예약된 명령 실행됨' 트리거가 발생합니다.",
-        "ar": "يجدول امرا لارساله الى Claude بعد تاخير. عند التنفيذ سيعالج Claude الامر (مع سياق Homey اذا كان متصلا) وسيتم تشغيل مشغل 'تم تنفيذ الامر المجدول'."
+        "ar": "يجدول أمراً لإرساله إلى Claude بعد تأخير. عند التنفيذ سيعالج Claude الأمر (مع سياق Homey إذا كان متصلاً) وسيتم تشغيل مشغل 'تم تنفيذ الأمر المجدول'."
     },
     "args": [
         {
@@ -62,22 +62,22 @@
                 "ru": "Команда",
                 "pl": "Polecenie",
                 "ko": "명령",
-                "ar": "الامر"
+                "ar": "الأمر"
             },
             "placeholder": {
                 "en": "Turn off the living room lights",
                 "nl": "Zet de woonkamerlampen uit",
                 "de": "Schalte die Wohnzimmerlichter aus",
-                "fr": "Eteins les lumieres du salon",
+                "fr": "Éteins les lumières du salon",
                 "it": "Spegni le luci del soggiorno",
-                "sv": "Slck av vardagsrumsljusen",
-                "no": "Sl av lyset i stua",
+                "sv": "Släck vardagsrumsljusen",
+                "no": "Slå av lyset i stua",
                 "es": "Apaga las luces de la sala",
                 "da": "Sluk lyset i stuen",
                 "ru": "Выключи свет в гостиной",
                 "pl": "Wylacz swiatla w salonie",
                 "ko": "거실 조명을 꺼줘",
-                "ar": "اطفئ اضواء غرفة المعيشة"
+                "ar": "أطفئ أضواء غرفة المعيشة"
             }
         },
         {
@@ -87,11 +87,11 @@
                 "en": "Duration",
                 "nl": "Duur",
                 "de": "Dauer",
-                "fr": "Duree",
+                "fr": "Durée",
                 "it": "Durata",
                 "sv": "Varaktighet",
                 "no": "Varighet",
-                "es": "Duracion",
+                "es": "Duración",
                 "da": "Varighed",
                 "ru": "Длительность",
                 "pl": "Czas trwania",
@@ -111,8 +111,8 @@
                 "en": "Unit",
                 "nl": "Eenheid",
                 "de": "Einheit",
-                "fr": "Unite",
-                "it": "Unita",
+                "fr": "Unité",
+                "it": "Unità",
                 "sv": "Enhet",
                 "no": "Enhet",
                 "es": "Unidad",
@@ -187,12 +187,12 @@
                         "it": "Giorni",
                         "sv": "Dagar",
                         "no": "Dager",
-                        "es": "Dias",
+                        "es": "Días",
                         "da": "Dage",
                         "ru": "Дни",
                         "pl": "Dni",
                         "ko": "일",
-                        "ar": "ايام"
+                        "ar": "أيام"
                     }
                 }
             ]
