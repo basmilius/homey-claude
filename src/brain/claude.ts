@@ -112,9 +112,9 @@ export default class Claude extends Shortcuts<ClaudeApp> {
         try {
             const response = await client.beta.messages.create({
                 ...params,
-                mcp_servers: mcpServers
-            }, {
-                headers: {'anthropic-beta': 'mcp-client-2025-04-04'}
+                betas: ['mcp-client-2025-11-20'],
+                mcp_servers: mcpServers,
+                tools: mcpServers.map(server => ({type: 'mcp_toolset', mcp_server_name: server.name}))
             });
 
             const content = response.content.findLast(block => block.type === 'text');

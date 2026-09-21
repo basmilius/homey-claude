@@ -900,39 +900,75 @@
                 }
               },
               {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
                 "id": "claude-sonnet-4-6",
                 "label": {
-                  "en": "Claude Sonnet 4.6",
-                  "nl": "Claude Sonnet 4.6",
-                  "de": "Claude Sonnet 4.6",
-                  "fr": "Claude Sonnet 4.6",
-                  "it": "Claude Sonnet 4.6",
-                  "sv": "Claude Sonnet 4.6",
-                  "no": "Claude Sonnet 4.6",
-                  "es": "Claude Sonnet 4.6",
-                  "da": "Claude Sonnet 4.6",
-                  "ru": "Claude Sonnet 4.6",
-                  "pl": "Claude Sonnet 4.6",
-                  "ko": "Claude Sonnet 4.6",
-                  "ar": "Claude Sonnet 4.6"
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
                 }
               },
               {
                 "id": "claude-opus-4-6",
                 "label": {
-                  "en": "Claude Opus 4.6",
-                  "nl": "Claude Opus 4.6",
-                  "de": "Claude Opus 4.6",
-                  "fr": "Claude Opus 4.6",
-                  "it": "Claude Opus 4.6",
-                  "sv": "Claude Opus 4.6",
-                  "no": "Claude Opus 4.6",
-                  "es": "Claude Opus 4.6",
-                  "da": "Claude Opus 4.6",
-                  "ru": "Claude Opus 4.6",
-                  "pl": "Claude Opus 4.6",
-                  "ko": "Claude Opus 4.6",
-                  "ar": "Claude Opus 4.6"
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
                 }
               }
             ]
@@ -1283,39 +1319,75 @@
                 }
               },
               {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
                 "id": "claude-sonnet-4-6",
                 "label": {
-                  "en": "Claude Sonnet 4.6",
-                  "nl": "Claude Sonnet 4.6",
-                  "de": "Claude Sonnet 4.6",
-                  "fr": "Claude Sonnet 4.6",
-                  "it": "Claude Sonnet 4.6",
-                  "sv": "Claude Sonnet 4.6",
-                  "no": "Claude Sonnet 4.6",
-                  "es": "Claude Sonnet 4.6",
-                  "da": "Claude Sonnet 4.6",
-                  "ru": "Claude Sonnet 4.6",
-                  "pl": "Claude Sonnet 4.6",
-                  "ko": "Claude Sonnet 4.6",
-                  "ar": "Claude Sonnet 4.6"
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
                 }
               },
               {
                 "id": "claude-opus-4-6",
                 "label": {
-                  "en": "Claude Opus 4.6",
-                  "nl": "Claude Opus 4.6",
-                  "de": "Claude Opus 4.6",
-                  "fr": "Claude Opus 4.6",
-                  "it": "Claude Opus 4.6",
-                  "sv": "Claude Opus 4.6",
-                  "no": "Claude Opus 4.6",
-                  "es": "Claude Opus 4.6",
-                  "da": "Claude Opus 4.6",
-                  "ru": "Claude Opus 4.6",
-                  "pl": "Claude Opus 4.6",
-                  "ko": "Claude Opus 4.6",
-                  "ar": "Claude Opus 4.6"
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
                 }
               }
             ]
@@ -1820,39 +1892,75 @@
                 }
               },
               {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
                 "id": "claude-sonnet-4-6",
                 "label": {
-                  "en": "Claude Sonnet 4.6",
-                  "nl": "Claude Sonnet 4.6",
-                  "de": "Claude Sonnet 4.6",
-                  "fr": "Claude Sonnet 4.6",
-                  "it": "Claude Sonnet 4.6",
-                  "sv": "Claude Sonnet 4.6",
-                  "no": "Claude Sonnet 4.6",
-                  "es": "Claude Sonnet 4.6",
-                  "da": "Claude Sonnet 4.6",
-                  "ru": "Claude Sonnet 4.6",
-                  "pl": "Claude Sonnet 4.6",
-                  "ko": "Claude Sonnet 4.6",
-                  "ar": "Claude Sonnet 4.6"
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
                 }
               },
               {
                 "id": "claude-opus-4-6",
                 "label": {
-                  "en": "Claude Opus 4.6",
-                  "nl": "Claude Opus 4.6",
-                  "de": "Claude Opus 4.6",
-                  "fr": "Claude Opus 4.6",
-                  "it": "Claude Opus 4.6",
-                  "sv": "Claude Opus 4.6",
-                  "no": "Claude Opus 4.6",
-                  "es": "Claude Opus 4.6",
-                  "da": "Claude Opus 4.6",
-                  "ru": "Claude Opus 4.6",
-                  "pl": "Claude Opus 4.6",
-                  "ko": "Claude Opus 4.6",
-                  "ar": "Claude Opus 4.6"
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
                 }
               }
             ]
@@ -2339,39 +2447,75 @@
                 }
               },
               {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
                 "id": "claude-sonnet-4-6",
                 "label": {
-                  "en": "Claude Sonnet 4.6",
-                  "nl": "Claude Sonnet 4.6",
-                  "de": "Claude Sonnet 4.6",
-                  "fr": "Claude Sonnet 4.6",
-                  "it": "Claude Sonnet 4.6",
-                  "sv": "Claude Sonnet 4.6",
-                  "no": "Claude Sonnet 4.6",
-                  "es": "Claude Sonnet 4.6",
-                  "da": "Claude Sonnet 4.6",
-                  "ru": "Claude Sonnet 4.6",
-                  "pl": "Claude Sonnet 4.6",
-                  "ko": "Claude Sonnet 4.6",
-                  "ar": "Claude Sonnet 4.6"
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
                 }
               },
               {
                 "id": "claude-opus-4-6",
                 "label": {
-                  "en": "Claude Opus 4.6",
-                  "nl": "Claude Opus 4.6",
-                  "de": "Claude Opus 4.6",
-                  "fr": "Claude Opus 4.6",
-                  "it": "Claude Opus 4.6",
-                  "sv": "Claude Opus 4.6",
-                  "no": "Claude Opus 4.6",
-                  "es": "Claude Opus 4.6",
-                  "da": "Claude Opus 4.6",
-                  "ru": "Claude Opus 4.6",
-                  "pl": "Claude Opus 4.6",
-                  "ko": "Claude Opus 4.6",
-                  "ar": "Claude Opus 4.6"
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
                 }
               }
             ]
@@ -2942,39 +3086,75 @@
                 }
               },
               {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
                 "id": "claude-sonnet-4-6",
                 "label": {
-                  "en": "Claude Sonnet 4.6",
-                  "nl": "Claude Sonnet 4.6",
-                  "de": "Claude Sonnet 4.6",
-                  "fr": "Claude Sonnet 4.6",
-                  "it": "Claude Sonnet 4.6",
-                  "sv": "Claude Sonnet 4.6",
-                  "no": "Claude Sonnet 4.6",
-                  "es": "Claude Sonnet 4.6",
-                  "da": "Claude Sonnet 4.6",
-                  "ru": "Claude Sonnet 4.6",
-                  "pl": "Claude Sonnet 4.6",
-                  "ko": "Claude Sonnet 4.6",
-                  "ar": "Claude Sonnet 4.6"
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
                 }
               },
               {
                 "id": "claude-opus-4-6",
                 "label": {
-                  "en": "Claude Opus 4.6",
-                  "nl": "Claude Opus 4.6",
-                  "de": "Claude Opus 4.6",
-                  "fr": "Claude Opus 4.6",
-                  "it": "Claude Opus 4.6",
-                  "sv": "Claude Opus 4.6",
-                  "no": "Claude Opus 4.6",
-                  "es": "Claude Opus 4.6",
-                  "da": "Claude Opus 4.6",
-                  "ru": "Claude Opus 4.6",
-                  "pl": "Claude Opus 4.6",
-                  "ko": "Claude Opus 4.6",
-                  "ar": "Claude Opus 4.6"
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
                 }
               }
             ]
@@ -3443,39 +3623,75 @@
                 }
               },
               {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
                 "id": "claude-sonnet-4-6",
                 "label": {
-                  "en": "Claude Sonnet 4.6",
-                  "nl": "Claude Sonnet 4.6",
-                  "de": "Claude Sonnet 4.6",
-                  "fr": "Claude Sonnet 4.6",
-                  "it": "Claude Sonnet 4.6",
-                  "sv": "Claude Sonnet 4.6",
-                  "no": "Claude Sonnet 4.6",
-                  "es": "Claude Sonnet 4.6",
-                  "da": "Claude Sonnet 4.6",
-                  "ru": "Claude Sonnet 4.6",
-                  "pl": "Claude Sonnet 4.6",
-                  "ko": "Claude Sonnet 4.6",
-                  "ar": "Claude Sonnet 4.6"
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
                 }
               },
               {
                 "id": "claude-opus-4-6",
                 "label": {
-                  "en": "Claude Opus 4.6",
-                  "nl": "Claude Opus 4.6",
-                  "de": "Claude Opus 4.6",
-                  "fr": "Claude Opus 4.6",
-                  "it": "Claude Opus 4.6",
-                  "sv": "Claude Opus 4.6",
-                  "no": "Claude Opus 4.6",
-                  "es": "Claude Opus 4.6",
-                  "da": "Claude Opus 4.6",
-                  "ru": "Claude Opus 4.6",
-                  "pl": "Claude Opus 4.6",
-                  "ko": "Claude Opus 4.6",
-                  "ar": "Claude Opus 4.6"
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
                 }
               }
             ]
@@ -4345,39 +4561,75 @@
                 }
               },
               {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
                 "id": "claude-sonnet-4-6",
                 "label": {
-                  "en": "Claude Sonnet 4.6",
-                  "nl": "Claude Sonnet 4.6",
-                  "de": "Claude Sonnet 4.6",
-                  "fr": "Claude Sonnet 4.6",
-                  "it": "Claude Sonnet 4.6",
-                  "sv": "Claude Sonnet 4.6",
-                  "no": "Claude Sonnet 4.6",
-                  "es": "Claude Sonnet 4.6",
-                  "da": "Claude Sonnet 4.6",
-                  "ru": "Claude Sonnet 4.6",
-                  "pl": "Claude Sonnet 4.6",
-                  "ko": "Claude Sonnet 4.6",
-                  "ar": "Claude Sonnet 4.6"
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
                 }
               },
               {
                 "id": "claude-opus-4-6",
                 "label": {
-                  "en": "Claude Opus 4.6",
-                  "nl": "Claude Opus 4.6",
-                  "de": "Claude Opus 4.6",
-                  "fr": "Claude Opus 4.6",
-                  "it": "Claude Opus 4.6",
-                  "sv": "Claude Opus 4.6",
-                  "no": "Claude Opus 4.6",
-                  "es": "Claude Opus 4.6",
-                  "da": "Claude Opus 4.6",
-                  "ru": "Claude Opus 4.6",
-                  "pl": "Claude Opus 4.6",
-                  "ko": "Claude Opus 4.6",
-                  "ar": "Claude Opus 4.6"
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
                 }
               }
             ]
@@ -4796,39 +5048,75 @@
                 }
               },
               {
+                "id": "claude-sonnet-5",
+                "label": {
+                  "en": "Claude Sonnet 5",
+                  "nl": "Claude Sonnet 5",
+                  "de": "Claude Sonnet 5",
+                  "fr": "Claude Sonnet 5",
+                  "it": "Claude Sonnet 5",
+                  "sv": "Claude Sonnet 5",
+                  "no": "Claude Sonnet 5",
+                  "es": "Claude Sonnet 5",
+                  "da": "Claude Sonnet 5",
+                  "ru": "Claude Sonnet 5",
+                  "pl": "Claude Sonnet 5",
+                  "ko": "Claude Sonnet 5",
+                  "ar": "Claude Sonnet 5"
+                }
+              },
+              {
+                "id": "claude-opus-5",
+                "label": {
+                  "en": "Claude Opus 5",
+                  "nl": "Claude Opus 5",
+                  "de": "Claude Opus 5",
+                  "fr": "Claude Opus 5",
+                  "it": "Claude Opus 5",
+                  "sv": "Claude Opus 5",
+                  "no": "Claude Opus 5",
+                  "es": "Claude Opus 5",
+                  "da": "Claude Opus 5",
+                  "ru": "Claude Opus 5",
+                  "pl": "Claude Opus 5",
+                  "ko": "Claude Opus 5",
+                  "ar": "Claude Opus 5"
+                }
+              },
+              {
                 "id": "claude-sonnet-4-6",
                 "label": {
-                  "en": "Claude Sonnet 4.6",
-                  "nl": "Claude Sonnet 4.6",
-                  "de": "Claude Sonnet 4.6",
-                  "fr": "Claude Sonnet 4.6",
-                  "it": "Claude Sonnet 4.6",
-                  "sv": "Claude Sonnet 4.6",
-                  "no": "Claude Sonnet 4.6",
-                  "es": "Claude Sonnet 4.6",
-                  "da": "Claude Sonnet 4.6",
-                  "ru": "Claude Sonnet 4.6",
-                  "pl": "Claude Sonnet 4.6",
-                  "ko": "Claude Sonnet 4.6",
-                  "ar": "Claude Sonnet 4.6"
+                  "en": "Claude Sonnet 4.6 (deprecated)",
+                  "nl": "Claude Sonnet 4.6 (verouderd)",
+                  "de": "Claude Sonnet 4.6 (veraltet)",
+                  "fr": "Claude Sonnet 4.6 (obsolète)",
+                  "it": "Claude Sonnet 4.6 (obsoleto)",
+                  "sv": "Claude Sonnet 4.6 (föråldrad)",
+                  "no": "Claude Sonnet 4.6 (utdatert)",
+                  "es": "Claude Sonnet 4.6 (obsoleto)",
+                  "da": "Claude Sonnet 4.6 (forældet)",
+                  "ru": "Claude Sonnet 4.6 (устарело)",
+                  "pl": "Claude Sonnet 4.6 (przestarzałe)",
+                  "ko": "Claude Sonnet 4.6 (지원 중단)",
+                  "ar": "Claude Sonnet 4.6 (قديم)"
                 }
               },
               {
                 "id": "claude-opus-4-6",
                 "label": {
-                  "en": "Claude Opus 4.6",
-                  "nl": "Claude Opus 4.6",
-                  "de": "Claude Opus 4.6",
-                  "fr": "Claude Opus 4.6",
-                  "it": "Claude Opus 4.6",
-                  "sv": "Claude Opus 4.6",
-                  "no": "Claude Opus 4.6",
-                  "es": "Claude Opus 4.6",
-                  "da": "Claude Opus 4.6",
-                  "ru": "Claude Opus 4.6",
-                  "pl": "Claude Opus 4.6",
-                  "ko": "Claude Opus 4.6",
-                  "ar": "Claude Opus 4.6"
+                  "en": "Claude Opus 4.6 (deprecated)",
+                  "nl": "Claude Opus 4.6 (verouderd)",
+                  "de": "Claude Opus 4.6 (veraltet)",
+                  "fr": "Claude Opus 4.6 (obsolète)",
+                  "it": "Claude Opus 4.6 (obsoleto)",
+                  "sv": "Claude Opus 4.6 (föråldrad)",
+                  "no": "Claude Opus 4.6 (utdatert)",
+                  "es": "Claude Opus 4.6 (obsoleto)",
+                  "da": "Claude Opus 4.6 (forældet)",
+                  "ru": "Claude Opus 4.6 (устарело)",
+                  "pl": "Claude Opus 4.6 (przestarzałe)",
+                  "ko": "Claude Opus 4.6 (지원 중단)",
+                  "ar": "Claude Opus 4.6 (قديم)"
                 }
               }
             ]
