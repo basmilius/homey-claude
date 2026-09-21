@@ -28,5 +28,9 @@
     "1.4.2": {
         "en": "Optimize app-size.",
         "nl": "App-grootte geoptimaliseerd."
+    },
+    "1.5.0": {
+        "en": "Added custom skills. Write reusable instructions in the app settings and load one on a flow card. Added web search and web fetch cards. Refreshed the model list and restored the Homey MCP connection.",
+        "nl": "Eigen skills toegevoegd. Schrijf herbruikbare instructies in de app-instellingen en laad er een op een flow-kaart. Kaarten toegevoegd om op het web te zoeken en een pagina te lezen. Modellenlijst vernieuwd en de Homey MCP-verbinding hersteld."
     }
 }
