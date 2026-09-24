@@ -5,7 +5,7 @@
     "": {
       "name": "com.basmilius.claude",
       "dependencies": {
-        "@basmilius/homey-common": "^1.24.0",
+        "@basmilius/homey-common": "^1.25.0",
       },
       "devDependencies": {
         "@anthropic-ai/sdk": "^0.127.0",
@@ -23,7 +23,7 @@
 
     "@babel/runtime": ["@babel/runtime@7.29.7", "", {}, "sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw=="],
 
-    "@basmilius/homey-common": ["@basmilius/homey-common@1.24.0", "", {}, "sha512-6cS5yL6zb+sygcypa6ifaXAWj1LOFVOPiFpQ1nJBZx5BrsMOXd55soqAWCqR5KjBhjSxNwRPmnFrpO7lYAsreg=="],
+    "@basmilius/homey-common": ["@basmilius/homey-common@1.25.0", "", { "dependencies": { "@tsconfig/node22": "^22.0.6" } }, "sha512-hmExesTqshMAas72t70EUWVmPYEt9RO4OQeAdIX28Uwvjkkn+UJi5AA0tk2YigadpVpPtf7zH5jDIYVvb5G8Kw=="],
 
     "@esbuild/aix-ppc64": ["@esbuild/aix-ppc64@0.28.2", "", { "os": "aix", "cpu": "ppc64" }, "sha512-XExcO+dvLKvVtNTibSTBej1NCAbaGhWn9Ww1ZPx80qsahhPFe/8jgWP0IchNe0F3HwkU7n8ejhH8bjonqht8mQ=="],
 
